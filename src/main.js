@@ -1,6 +1,19 @@
-import { example } from './data.js';
-// import data from './data/atletas/atletas.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
-console.log(example, data);
+const pokeData = document.getElementById('pokeData');
+
+let showData = '';
+data.pokemon.forEach((elem) => {
+  const pokeDat = `
+  <section id="pokeCard" class="pokeCard">
+  <div class="number" id="number">${elem.num}</div>
+  <div class="imgPoke" id="imgPoke"><img src=${elem.img} alt="" class="imgPkm"></div>
+  <div class="namePoke" id="namePoke">${elem.name.toUpperCase()}</div>
+  </section>
+  `;
+  showData += pokeDat;
+});
+
+pokeData.innerHTML = showData;
+
+console.log(data);
