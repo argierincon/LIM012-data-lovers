@@ -1,17 +1,12 @@
 import data from './data/pokemon/pokemon.js';
+import { dataCards, orderData } from './data.js';
+
 
 const pokeData = document.getElementById('pokeData');
+pokeData.innerHTML = dataCards(data.pokemon);
 
-let showData = '';
-data.pokemon.forEach((element) => {
-  const pokeDat = `
-  <section id="pokeCard" class="pokeCard">
-  <div class="number" id="number">${element.num}</div>
-  <div class="imgPoke" id="imgPoke"><img src=${element.img} alt="" class="imgPkm"></div>
-  <div class="namePoke" id="namePoke">${element.name.toUpperCase()}</div>
-  </section>
-  `;
-  showData += pokeDat;
-});
+const pokeData1 = document.getElementById('pokeData1');
+pokeData1.innerHTML = dataCards(orderData(data.pokemon));
 
-pokeData.innerHTML = showData;
+const pokeData2 = document.getElementById('pokeData2');
+pokeData2.innerHTML = dataCards(orderData(data.pokemon).reverse());
