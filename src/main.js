@@ -15,4 +15,3 @@ data.pokemon.forEach((element) => {
 });
 
 pokeData.innerHTML = showData;
-// console.log(data);
