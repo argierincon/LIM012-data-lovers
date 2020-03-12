@@ -1,6 +1,4 @@
 import data from './data/pokemon/pokemon.js';
-import { orderAZ } from './data.js';
-
 
 const pokeData = document.getElementById('pokeData');
 
@@ -17,7 +15,4 @@ data.pokemon.forEach((element) => {
 });
 
 pokeData.innerHTML = showData;
-
-const pokeData1 = document.getElementById('pokeData1');
-pokeData1.innerHTML = orderAZ.sortData(data);
 // console.log(data);

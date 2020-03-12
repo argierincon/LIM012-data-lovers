@@ -1,9 +1,5 @@
 // estas funciones son de ejemplo
 
-export const orderAZ = (data) => {
-  const sort = data.sort((abc, bcd) => abc.name.localeCompare(bcd.name));
-  return sort;
-};
-
+export const example = () => 'example';
 
 export const anotherExample = () => 'OMG';
