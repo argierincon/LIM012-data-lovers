@@ -4,7 +4,6 @@ import { dataCards, orderData } from './data.js';
 
 const pokeData = document.getElementById('pokeData');
 pokeData.innerHTML = dataCards(data.pokemon);
-// console.log(data);
 
 const pokeData1 = document.getElementById('pokeData1');
 pokeData1.innerHTML = dataCards(orderData(data.pokemon));
