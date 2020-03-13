@@ -1,5 +1,10 @@
 import data from './data/pokemon/pokemon.js';
-import { dataCards, orderData, dataMaxCP, orderMaxCP } from './data.js';
+import {
+  dataCards,
+  orderData,
+  dataMaxCP,
+  orderMaxCP,
+} from './data.js';
 
 const pokeData = document.getElementById('pokeData');
 pokeData.innerHTML = dataCards(data.pokemon);
