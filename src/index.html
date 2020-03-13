@@ -13,34 +13,29 @@
   <header class="headerStyle">
 
   </header>
+
   <main class="mainStyle">
 
     <section class="imgSlogan">
       <img src="img/pokemon-go-logo.png" alt="" class="logo">
       <h1 class="slogan">¡Explora, descubre y colecciona!</h1>
     </section>
-    <section class="options">
 
-      <ul>
-        <li id="order" class="selectStyle">Ordenar</li>
-        <ul>
-          <li id="orderAZ" class="select">A-Z</li>
-          <li id="orderZA" class="select">Z-A</li>
-        </ul>
+    <select name="order" id="order" class="selectStyle">
+      <option selected disabled>Ordenar</option>
+      <option id="orderAZ">A-Z</option>
+      <option id="orderZA">Z-A</option>
+    </select>
 
-        <li class="selectStyle">Max CP </li>
-        <ul>
-          <li class="select">Ascendente</li>
-          <li class="select">Descendente</li>
-        </ul>
-      </ul>
+    <select name="orderMaxCP" id="orderMaxCP" class="selectStyle">
+      <option selected disabled>Max CP</option>
+      <option id="asc">Ascendente</option>
+      <option id="des">Descendente</option>
+    </select>
 
-    </section>
-    
     <section id="pokeData" class="data"></section>
     <section id="pokeData1" class="data"></section>
     <section id="pokeData2" class="data"></section>
-   
 
   </main>
   <footer class="footerStyle">
@@ -62,8 +57,6 @@
     <section class="copyright">
       <p class="authors"> © 2020 Diana & Argie </p>
     </section>
-
-
   </footer>
 
 
