@@ -1,141 +1,4 @@
 * {
-    margin: 0;
-    /* padding: 0; */
-}
-
-body{
-    background: url(img/fondo1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-}
-
-.headerStyle{
-    width: 100%;
-    height: 50px;
-    background: #8BA6B8;
-}
-.selectStyle{
-width: 158px;
-height: 60px;
-left: 91px;
-top: 457px;
-background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
-border-radius: 15px;
-list-style: none;
-
-}
-
-.pokeCard{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
-    
-}
-
-.namePoke{
-   
-    position: relative;
-    bottom: 20px;
-    font-size: 12px;
-    font-family: sans-serif, "Nanum Gothic";
-    font-weight: bold;
-}
-
-.imgPoke{
-    width: 135px;
-    height: 135px;
-    background: #F2F2F2;
-    border-radius: 8px;
-   
-}
-.imgPkm{
-    position: relative;
-    left: 17px;
-    top: 14px;
-    width: 100px;
-}
-.number{
-    width: 35px;
-    height: 35px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
-    border: 1px solid #554F4F;
-    box-sizing: border-box;
-    border-radius: 20px;
-    text-align: center;
-    position: relative;
-    top: 20px;
-    font-size: 12px;
-    padding-top: 9.5px;
-    font-family: sans-serif, "Nanum Gothic";
-    font-weight: bold;
-
-}
-
-.footerStyle{
-    background: black;
-    height: 150px;
-    width: 100%;
-}
-
-.rrssLogo{
-    color: #FFFFFF;
-    font-size: 30px;
-}
-
-.authors{
-    color: #FFFFFF;
-}
-
-
-.maxCP{
-    width: 135px;
-    height: 135px;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
-    border: 1px solid #554F4F;
-    box-sizing: border-box;
-    
-}
-
-.cp{
-    font-family: sans-serif, "Nanum Gothic";
-    font-size: 11px;
-    position: relative;
-    top:20px;
-    left: 35px;
-}
-
-/* .pokeback {
-    position: relative;
-}
-
-.backPoke {
-    width: 3.5%;
-    position: relative;
-    left: 480px;
-    bottom: 50px;
-} */
-
-
-
-.data{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 70%;
-}
-
-/* .dataGeneral {
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-} */
   margin: 0;
   /* padding: 0; */
 }
@@ -163,62 +26,6 @@ body {
   list-style: none;
 }
 
-.selectStyle option {
-  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
-}
-
-.options ul {
-  display: flex;
-  list-style: none;
-}
-
-.options ul ul {
-  display: none;
-}
-
-.options a {
-  display: block;
-  padding: 15px 20px;
-  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
-  border-radius: 15px;
-  margin: 0% 2% 0% 2%;
-}
-
-.options a {
-  text-decoration: none;
-}
-
-li {
-  text-align: center;
-}
-
-.options a:hover {
-  background: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-.options ul li:hover ul {
-  display: block;
-  position: absolute;
-}
-
-.imgSlogan {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo {
-  width: 26%;
-  margin-top: 3.4%;
-  margin-bottom: 3.4%;
-}
-
-.slogan {
-  font-size: 1em;
-  margin-bottom: 6%;
-}
-
 .pokeCard {
   display: flex;
   justify-content: center;
@@ -229,10 +36,11 @@ li {
 }
 
 .namePoke {
-
   position: relative;
   bottom: 20px;
   font-size: 12px;
+  font-family: sans-serif, "Nanum Gothic";
+  font-weight: bold;
 }
 
 .imgPoke {
@@ -240,7 +48,6 @@ li {
   height: 135px;
   background: #F2F2F2;
   border-radius: 8px;
-
 }
 
 .imgPkm {
@@ -262,6 +69,8 @@ li {
   top: 20px;
   font-size: 12px;
   padding-top: 9.5px;
+  font-family: sans-serif, "Nanum Gothic";
+  font-weight: bold;
 }
 
 .footerStyle {
@@ -279,10 +88,43 @@ li {
   color: #FFFFFF;
 }
 
+
+.maxCP {
+  width: 135px;
+  height: 135px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+}
+
+.cp {
+  font-family: sans-serif, "Nanum Gothic";
+  font-size: 11px;
+  position: relative;
+  top: 20px;
+  left: 35px;
+}
+
 .data {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
-
+  width: 70%;
 }
+
+.slogan {
+  font-size: 1em;
+  margin-bottom: 6%;
+}
+
+/* .pokeback {
+    position: relative;
+}
+
+.backPoke {
+    width: 3.5%;
+    position: relative;
+    left: 480px;
+    bottom: 50px;
+} */
