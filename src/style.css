@@ -23,6 +23,7 @@ top: 457px;
 background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
 border-radius: 15px;
 list-style: none;
+
 }
 
 .pokeCard{
@@ -32,6 +33,7 @@ list-style: none;
     flex-direction: column;
     margin-left: 5px;
     margin-right: 5px;
+    
 }
 
 .namePoke{
@@ -39,6 +41,8 @@ list-style: none;
     position: relative;
     bottom: 20px;
     font-size: 12px;
+    font-family: sans-serif, "Nanum Gothic";
+    font-weight: bold;
 }
 
 .imgPoke{
@@ -65,7 +69,10 @@ list-style: none;
     position: relative;
     top: 20px;
     font-size: 12px;
-    padding-top: 9.5px;  
+    padding-top: 9.5px;
+    font-family: sans-serif, "Nanum Gothic";
+    font-weight: bold;
+
 }
 
 .footerStyle{
@@ -83,10 +90,49 @@ list-style: none;
     color: #FFFFFF;
 }
 
+
+.maxCP{
+    width: 135px;
+    height: 135px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
+    border: 1px solid #554F4F;
+    box-sizing: border-box;
+    
+}
+
+.cp{
+    font-family: sans-serif, "Nanum Gothic";
+    font-size: 11px;
+    position: relative;
+    top:20px;
+    left: 35px;
+}
+
+/* .pokeback {
+    position: relative;
+}
+
+.backPoke {
+    width: 3.5%;
+    position: relative;
+    left: 480px;
+    bottom: 50px;
+} */
+
+
+
 .data{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
-    
+    width: 70%;
 }
+
+/* .dataGeneral {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+} */

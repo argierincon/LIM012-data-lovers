@@ -24,3 +24,22 @@ export const orderData = (data) => {
   });
   return order;
 };
+
+export const dataMaxCP = (dataPokemon) => {
+  let showData = '';
+  dataPokemon.forEach((element) => {
+    const pokeDat = `
+        <section id="pokeCard2" class="pokeCard">
+        <div class="number" id="number">${element.num}</div>
+        <div class="maxCP" id="maxCP"><span class="cp">Max-CP: ${element.stats['max-cp']}</span></div>
+        </section>
+   `;
+    showData += pokeDat;
+  });
+  return showData;
+};
+
+export const orderMaxCP = (data) => {
+  const order = data.sort((a, b) => a.stats['max-cp'] - b.stats['max-cp']);
+  return order;
+};
