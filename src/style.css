@@ -1,112 +1,183 @@
 * {
-    margin: 0;
-    /* padding: 0; */
+  margin: 0;
+  /* padding: 0; */
 }
 
-body{
-    background: url(img/fondo1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+body {
+  background: url(img/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
-.headerStyle{
-    width: 100%;
-    height: 50px;
-    background: #8BA6B8;
-}
-.selectStyle{
-width: 158px;
-height: 60px;
-left: 91px;
-top: 457px;
-background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
-border-radius: 15px;
-list-style: none;
-
+/* AREA GENERAL */
+/* PRIMERO EL HEADER */
+.headerStyle {
+  width: 100%;
+  height: 50px;
+  background: #8BA6B8;
 }
 
-.pokeCard{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
-    
+/* SEGUNDO LA SECCION DE LOGO Y SLOGAN */
+.imgSlogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.namePoke{
-   
-    position: relative;
-    bottom: 20px;
-    font-size: 12px;
-    font-family: sans-serif, "Nanum Gothic";
-    font-weight: bold;
+/* TERCERO EL LOGO POKEMON GO */
+.logo {
+  width: 26%;
+  margin-top: 4%;
 }
 
-.imgPoke{
-    width: 135px;
-    height: 135px;
-    background: #F2F2F2;
-    border-radius: 8px;
-   
-}
-.imgPkm{
-    position: relative;
-    left: 17px;
-    top: 14px;
-    width: 100px;
-}
-.number{
-    width: 35px;
-    height: 35px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
-    border: 1px solid #554F4F;
-    box-sizing: border-box;
-    border-radius: 20px;
-    text-align: center;
-    position: relative;
-    top: 20px;
-    font-size: 12px;
-    padding-top: 9.5px;
-    font-family: sans-serif, "Nanum Gothic";
-    font-weight: bold;
-
+/* CUARTO EL SLOGAN */
+.slogan {
+  font-size: 1em;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
-.footerStyle{
-    background: black;
-    height: 150px;
-    width: 100%;
-}
-
-.rrssLogo{
-    color: #FFFFFF;
-    font-size: 30px;
-}
-
-.authors{
-    color: #FFFFFF;
+/* QUINTO LA SECCIÓN DE LOS BOTONES (POSICIONES)*/
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  text-align-last: center;
 }
 
 
-.maxCP{
-    width: 135px;
-    height: 135px;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
-    border: 1px solid #554F4F;
-    box-sizing: border-box;
-    
+/* SEXTO EL ESTILO DE LOS BOTONES */
+.selectStyle {
+  width: 25%;
+  height: 30px;
+  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
+  border-radius: 15px;
+  list-style: none;
 }
 
-.cp{
-    font-family: sans-serif, "Nanum Gothic";
-    font-size: 11px;
-    position: relative;
-    top:20px;
-    left: 35px;
+/* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
+.data {
+  margin: 110px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* AREA DE LAS TARJEJAS, SUS ESTILOS Y EFECTOS */
+/* PRIMERO EL ESTILO DE LA TARJETA CONTENEDORA */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+}
+
+/* SEGUNDO EL EFECTO CUANDO PASE EL MOUSE */
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+/* TERCERO EL ESTILO DE LOS LADOS DE LA TARJETA */
+.side {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+/* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
+.back {
+  transform: rotateY(180deg);
+}
+
+/* QUINTO EL CONTENEDOR DE LOS ELEMENTOS DE LA TARJETA*/
+.pokeCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-left: 5px;
+  margin-right: 5px; */
+}
+
+/* SEXTO LOS ESTILOS DEL NUMERO DEL POKEMON */
+.number {
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  font-size: 12px;
+  padding-top: 9.5px;
+  font-family: sans-serif, "Nanum Gothic";
+  font-weight: bold;
+
+}
+
+/* SEPTIMO EL FONDO DE LA IMG POKE */
+.imgPoke {
+  width: 135px;
+  height: 135px;
+  background: #F2F2F2;
+  border-radius: 8px;
+}
+
+/* OCTAVO EL TAMAÑO DE LA IMG */
+.imgPkm {
+  position: relative;
+  left: 17px;
+  top: 14px;
+  width: 100px;
+}
+
+/* NOVENO EL NOMBRE DEL POKEMON */
+.namePoke {
+  text-align: center;
+  position: relative;
+  bottom: 20px;
+  font-size: 12px;
+  font-family: sans-serif, "Nanum Gothic";
+  font-weight: bold;
+}
+
+.footerStyle {
+  background: black;
+  height: 150px;
+  width: 100%;
+}
+
+.rrssLogo {
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.authors {
+  color: #FFFFFF;
+}
+
+
+.maxCP {
+  width: 135px;
+  height: 135px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+
+}
+
+.cp {
+  text-align: center;
+  font-family: sans-serif, "Nanum Gothic";
+  font-size: 11px;
+  position: relative;
+  top: 20px;
+  left: 35px;
 }
 
 /* .pokeback {
@@ -119,11 +190,3 @@ list-style: none;
     left: 480px;
     bottom: 50px;
 } */
-
-
-.data{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 70%;
-}

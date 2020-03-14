@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
+  <script src="main.js" type="module"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <header class="headerStyle">
-
   </header>
 
   <main class="mainStyle">
@@ -21,29 +21,29 @@
       <h1 class="slogan">¡Explora, descubre y colecciona!</h1>
     </section>
 
-    <select name="order" id="order" class="selectStyle">
-      <option selected disabled>Ordenar</option>
-      <option id="orderAZ">A-Z</option>
-      <option id="orderZA">Z-A</option>
-    </select>
+    <!-- CONTENEDOR DE LOS BOTONES DE FILTRADO -->
+    <section class="options">
+      <select name="order" id="order" class="selectStyle">
+        <option selected disabled>Ordenar</option>
+        <option id="orderAZ">A-Z</span></option>
+        <option id="orderZA">Z-A</option>
+      </select>
 
-    <select name="orderMaxCP" id="orderMaxCP" class="selectStyle">
-      <option selected disabled>Max CP</option>
-      <option id="asc">Ascendente</option>
-      <option id="des">Descendente</option>
-    </select>
+      <select name="orderMaxCP" id="orderMaxCP" class="selectStyle">
+        <option selected disabled>Max CP</option>
+        <option id="asc">Ascendente</option>
+        <option id="des">Descendente</option>
+      </select>
+    </section>
 
     <section class="dataGeneral">
       <section id="pokeData" class="data"></section>
-      <section id="pokeData1" class="data"></section>
+      <!-- <section id="pokeData1" class="data"></section>
       <section id="pokeData2" class="data"></section>
       <section id="pokeData3" class="data"></section>
-      <section id="pokeData4" class="data"></section>
+      <section id="pokeData4" class="data"></section> -->
     </section>
 
-
-
-   
   </main>
   <footer class="footerStyle">
     <section class="rrss">
@@ -68,7 +68,6 @@
 
 
   <script src="https://kit.fontawesome.com/7e57db430e.js" crossorigin="anonymous"></script>
-  <script src="main.js" type="module"></script>
 </body>
 
 
