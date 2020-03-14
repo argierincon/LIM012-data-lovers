@@ -3,11 +3,18 @@
     /* padding: 0; */
 }
 
+
+/* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
+.hide{
+  display: none;
+} 
+
 body{
     background: url(img/fondo1.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-attachment: fixed;
+    /* background-size: 100% 100%; */
 }
 
 .headerStyle{
@@ -24,6 +31,14 @@ background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
 border-radius: 15px;
 list-style: none;
 
+.selectStyle{
+  width: 158px;
+  height: 60px;
+  left: 91px;
+  top: 457px;
+  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
+  border-radius: 15px;
+  list-style: none;
 }
 
 .pokeCard{
@@ -50,7 +65,6 @@ list-style: none;
     height: 135px;
     background: #F2F2F2;
     border-radius: 8px;
-   
 }
 .imgPkm{
     position: relative;
@@ -72,7 +86,6 @@ list-style: none;
     padding-top: 9.5px;
     font-family: sans-serif, "Nanum Gothic";
     font-weight: bold;
-
 }
 
 .footerStyle{
@@ -127,3 +140,4 @@ list-style: none;
     flex-wrap: wrap;
     width: 70%;
 }
+
