@@ -3,11 +3,18 @@
   /* padding: 0; */
 }
 
-body {
-  background: url(img/fondo1.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
+
+/* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
+.hide{
+  display: none;
+} 
+
+body{
+    background: url(img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-size: 100% 100%; */
 }
 
 /* AREA GENERAL */
@@ -190,3 +197,12 @@ body {
     left: 480px;
     bottom: 50px;
 } */
+
+
+.data{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
