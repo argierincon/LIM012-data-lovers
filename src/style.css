@@ -5,16 +5,16 @@
 
 
 /* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
-.hide{
+.hide {
   display: none;
-} 
+}
 
-body{
-    background: url(img/fondo1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    /* background-size: 100% 100%; */
+body {
+  background: url(img/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-size: 100% 100%; */
 }
 
 /* AREA GENERAL */
@@ -156,11 +156,27 @@ body{
   background: black;
   height: 150px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .rrssLogo {
   color: #FFFFFF;
   font-size: 30px;
+}
+
+.GeneralInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GeneralInformation>a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .authors {
@@ -197,4 +213,3 @@ body{
     left: 480px;
     bottom: 50px;
 } */
-
