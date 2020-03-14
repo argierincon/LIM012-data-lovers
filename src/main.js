@@ -42,7 +42,7 @@ orderAlfabetic.addEventListener('change', () => {
   }
   return dataCards(orderData(data.pokemon, 'name', orderSelect).reverse());
 });
-
+// se aunmento orderMax
 const orderMax = document.querySelector('#orderMaxCP');
 orderMax.addEventListener('change', () => {
   const orderSelectcp = orderMax.value;
