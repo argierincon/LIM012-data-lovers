@@ -5,9 +5,8 @@
 export const dataCards = (dataPokemon) => {
   let showData = '';
   dataPokemon.forEach((element, idx) => {
-    if (idx > 5) return;
+    if (idx > 11) return;
     const pokeDat = `
-  <section class="data">
     <section class="card">
       <section class="side front">
         <section id="pokeCard" class="pokeCard">
@@ -27,8 +26,7 @@ export const dataCards = (dataPokemon) => {
           </div>
         </section>
       </section>
-    </section>
-  </section>     
+    </section>   
    `;
     showData += pokeDat;
   });

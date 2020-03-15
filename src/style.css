@@ -3,6 +3,16 @@
   /* padding: 0; */
 }
 
+/* Argie: LE AÑADÍ LAS FUENTES*/
+@font-face {
+  font-family: NanumG;
+  src: url(./fonts/Nanum_Gothic/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis;
+  src: url(./fonts/Dosis/Dosis-VariableFont_wght.ttf);
+}
 
 /* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
 .hide {
@@ -43,12 +53,19 @@ body {
   font-size: 1em;
   margin-top: 4%;
   margin-bottom: 4%;
+  font-family: Dosis, sans-serif;
 }
 
 /* QUINTO LA SECCIÓN DE LOS BOTONES (POSICIONES)*/
 .options {
   display: flex;
   justify-content: space-evenly;
+  text-align-last: center;
+}
+
+.options>select {
+  font-family: NanumG, sans-serif;
+  font-weight: bold;
   text-align-last: center;
 }
 
@@ -64,7 +81,6 @@ body {
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
 .data {
-  margin: 110px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -73,8 +89,8 @@ body {
 /* AREA DE LAS TARJEJAS, SUS ESTILOS Y EFECTOS */
 /* PRIMERO EL ESTILO DE LA TARJETA CONTENEDORA */
 .card {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 30%;
   position: relative;
   transform-style: preserve-3d;
   transition: 1.5s;
@@ -121,7 +137,7 @@ body {
   top: 20px;
   font-size: 12px;
   padding-top: 9.5px;
-  font-family: sans-serif, "Nanum Gothic";
+  font-family: NanumG, sans-serif;
   font-weight: bold;
 
 }
@@ -148,7 +164,7 @@ body {
   position: relative;
   bottom: 20px;
   font-size: 12px;
-  font-family: sans-serif, "Nanum Gothic";
+  font-family: NanumG, sans-serif;
   font-weight: bold;
 }
 
@@ -160,6 +176,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  position: fixed;
+  bottom: -1px;
+}
+
+.rrss {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rrssLogo {
@@ -177,10 +201,13 @@ body {
   font-size: 12px;
   text-decoration: none;
   color: #fff;
+  font-family: Dosis, sans-serif;
 }
 
 .authors {
+  font-size: 12px;
   color: #FFFFFF;
+  font-family: Dosis, sans-serif;
 }
 
 
@@ -196,7 +223,7 @@ body {
 
 .cp {
   text-align: center;
-  font-family: sans-serif, "Nanum Gothic";
+  font-family: NanumG, sans-serif;
   font-size: 11px;
   position: relative;
   top: 20px;
@@ -213,3 +240,13 @@ body {
     left: 480px;
     bottom: 50px;
 } */
+
+.data{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
+}
