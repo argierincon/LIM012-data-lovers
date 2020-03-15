@@ -46,6 +46,22 @@ header label:hover {
   color: #fff;
 }
 
+.logoSlogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoSlogan img {
+  width: 25%;
+  margin: 4% 0% 0%;
+}
+
+.logoSlogan h1 {
+  /* font-size: 12px; */
+  margin: 4% 0%;
+}
+
 @media (max-width: 768px) {
   header label {
     display: block;
@@ -67,8 +83,12 @@ header label:hover {
     border-top: 1px solid #fff;
   }
 
-  #btnMenu:checked ~ .menu {
+  #btnMenu:checked~.menu {
     margin: 0;
+  }
+
+  .logoSlogan h1 {
+    font-size: 12px;
   }
 
 
