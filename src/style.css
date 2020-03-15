@@ -6,6 +6,8 @@ body {
   background-image: url(./img/pkmgo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 header {
@@ -71,10 +73,6 @@ header label:hover {
 @media (max-width: 768px) {
   header label {
     display: block;
-  }
-
-  body {
-    background-size: auto;
   }
 
   .menu {
