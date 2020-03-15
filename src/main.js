@@ -37,17 +37,11 @@ dataCards(data.pokemon);
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
   const orderSelect = orderAlfabetic.value;
-  if (orderSelect === 'a-z') {
-    return dataCards(orderData(data.pokemon, 'name', orderSelect));
-  }
-  return dataCards(orderData(data.pokemon, 'name', orderSelect).reverse());
+  return dataCards(orderData(data.pokemon, 'name', orderSelect));
 });
 
 const orderMax = document.querySelector('#orderMaxCP');
 orderMax.addEventListener('change', () => {
   const orderSelectcp = orderMax.value;
-  if (orderSelectcp === 'ascendente') {
-    return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
-  }
-  return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp).reverse());
+  return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
 });
