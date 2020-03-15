@@ -5,14 +5,7 @@ import {
 } from './data.js';
 
 const pokeData = document.getElementById('pokeData');
-// diana: no estoy usando los pokedata 1,2,3,4 para nada pero los deje porsiaca
-// const pokeData1 = document.getElementById('pokeData1');
-// const pokeData2 = document.getElementById('pokeData2');
-// const pokeData3 = document.getElementById('pokeData3');
-// const pokeData4 = document.getElementById('pokeData4');
 
-// diana: agregue la parte delantera y trasera de la tarjeta, es más eficiente y vi que era
-//   más practico para darle el efecto de giro, lo vi en un video x
 const dataCards = (dataPokemon) => {
   let showData = '';
   dataPokemon.forEach((element) => {
@@ -58,7 +51,5 @@ orderMax.addEventListener('change', () => {
   }
   return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp).reverse());
 });
-// diana: no estoy usando los pokedata 1,2,3,4 para nada pero los deje porsiaca
-// pokeData2.innerHTML = dataCards(orderData(data.pokemon).reverse());
-// pokeData3.innerHTML = dataMaxCP(orderMaxCP(data.pokemon));
-// pokeData4.innerHTML = dataMaxCP(orderMaxCP(data.pokemon).reverse());
+
+
