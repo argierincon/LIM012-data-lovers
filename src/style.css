@@ -89,7 +89,7 @@ header label:hover {
 }
 
 .container {
-  height: 154px;
+  height: 140px;
   width: 124px;
   /* background-color: beige; */
   /* margin: auto; */
@@ -131,11 +131,13 @@ header label:hover {
 .pokeImgName {
   background-color: #F2F2F2;
   width: 124px;
-  height: 124px;
+  height: 110px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .pokeNumber {
@@ -146,11 +148,15 @@ header label:hover {
   box-sizing: border-box;
   border-radius: 15px;
   font-family: dosis, sans-serif;
+  text-align: center;
+  padding-top: 4px;
+  position: absolute;
 }
 
 .pokeImg {
   width: 80px;
   height: 80px;
+  margin: 2px;
 }
 
 .pokeName {
