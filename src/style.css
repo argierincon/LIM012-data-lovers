@@ -42,10 +42,17 @@ header label:hover {
 }
 
 .menu ul {
+  background-color: #378B7D;
+  background: linear-gradient(to right, #639d25, #427768);
   margin: 0;
   list-style: none;
   padding: 0;
   display: flex;
+}
+
+
+.menu ul ul {
+  display: none;
 }
 
 /* .menu li {
@@ -62,6 +69,20 @@ header label:hover {
   padding: 20px;
   color: #fff;
 }
+
+.menu li i {
+  margin-left: 10px;
+}
+
+/* IMPORTANTE */
+.menu ul li:hover ul {
+  display: block;
+  position: absolute;
+}
+
+/* .menu ul li:hover ul {
+  display: none;
+} */
 
 .logoSlogan {
   display: flex;
@@ -118,9 +139,9 @@ header label:hover {
   align-items: center;
 }
 
-.front {
-  /* background-color: brown; */
-}
+/* .front {
+background-color: brown;
+} */
 
 .back {
   /* background-color: cadetblue; */
@@ -180,9 +201,6 @@ header label:hover {
   font-weight: bold;
 }
 
-
-
-
 .footerStyle {
   background-color: #378B7D;
   background: linear-gradient(to right, #639d25, #427768);
@@ -237,8 +255,8 @@ header label:hover {
     position: absolute;
     background-color: #378B7D;
     background: linear-gradient(to right, #639d25, #427768);
-    width: 70%;
-    margin-left: -70%;
+    width: 40%;
+    margin-left: -40%;
     transition: all 0.5s;
     z-index: 1;
   }
@@ -258,6 +276,15 @@ header label:hover {
   .logoSlogan h1 {
     font-size: 12px;
   }
+
+  .menu li i {
+    position: absolute;
+    right: 20px;
+  }
+
+  /* .menu ul li:hover ul {
+    display: none;
+  } */
 
   .footerStyle {
     background-color: #378B7D;
