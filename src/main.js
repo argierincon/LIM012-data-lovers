@@ -30,9 +30,9 @@ const dataCards = (dataPokemon) => {
        `;
     showData += pokeDat;
   });
-  return showData;
+  pokeData.innerHTML = showData;
 };
-pokeData.innerHTML = dataCards(data.pokemon);
+dataCards(data.pokemon);
 
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
@@ -51,5 +51,3 @@ orderMax.addEventListener('change', () => {
   }
   return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp).reverse());
 });
-
-
