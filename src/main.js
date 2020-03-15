@@ -1,9 +1,14 @@
-import { showCards } from './data.js';
-// import data from './data/atletas/atletas.js';
-// import data from './data/lol/lol.js';
+import {
+  showCards,
+} from './data.js';
+
 import data from './data/pokemon/pokemon.js';
 
-console.log(data.pokemon[0]);
+document.querySelectorAll('.menu>ul>li>span').forEach((elem) => {
+  elem.addEventListener('click', (e) => {
+    e.currentTarget.parentElement.querySelector('.subMenu').classList.toggle('hide');
+  });
+});
 
 const dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);

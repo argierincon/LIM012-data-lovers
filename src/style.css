@@ -3,6 +3,16 @@
   font-family: dosis, sans-serif;
 }
 
+.hide{
+  display: none !important;
+}
+
+.subMenu{
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
 @font-face {
   font-family: dosis;
   src: url(./fonts/Dosis-VariableFont_wght.ttf);
@@ -51,9 +61,9 @@ header label:hover {
 }
 
 
-.menu ul ul {
+/* .menu ul ul {
   display: none;
-}
+} */
 
 /* .menu li {
   border-right: 1PX SOLID #fff;
@@ -75,10 +85,10 @@ header label:hover {
 }
 
 /* IMPORTANTE */
-.menu ul li:hover ul {
+/* .menu ul li:hover ul {
   display: block;
   position: absolute;
-}
+} */
 
 /* .menu ul li:hover ul {
   display: none;
@@ -285,6 +295,10 @@ background-color: brown;
   /* .menu ul li:hover ul {
     display: none;
   } */
+
+  
+
+
 
   .footerStyle {
     background-color: #378B7D;
