@@ -94,7 +94,7 @@ body {
 }
 
 /* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
-.back {
+.back{
   transform: rotateY(180deg);
 }
 
