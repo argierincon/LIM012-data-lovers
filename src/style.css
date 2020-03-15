@@ -71,10 +71,14 @@ header label:hover {
   margin: 4% 0%;
 }
 
+.dataContainer {
+  display: flex;
+}
+
 .container {
   height: 200px;
   width: 200px;
-  background-color: beige;
+  /* background-color: beige; */
   margin: auto;
   -webkit-perspective: 700;
 }
