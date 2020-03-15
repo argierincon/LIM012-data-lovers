@@ -54,9 +54,23 @@ header label:hover {
   .menu {
     position: absolute;
     background: skyblue;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
   }
 
   .menu ul {
     flex-direction: column;
   }
+
+  .menu li {
+    border-top: 1px solid #fff;
+  }
+
+  #btnMenu:checked ~ .menu {
+    margin: 0;
+  }
+
+
+
 }
