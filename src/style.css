@@ -1,8 +1,62 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    width: 100%;
+  width: 100%;
+  background: skyblue;
+}
+
+#btnMenu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width: 30px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+
+header label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  border-right: 1PX SOLID #fff;
+}
+
+.menu li:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.menu li span {
+  display: block;
+  padding: 20px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header label {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
     background: skyblue;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
 }
