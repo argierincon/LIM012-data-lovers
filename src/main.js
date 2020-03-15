@@ -10,7 +10,7 @@ const dataCards = (dataPokemon) => {
   let showData = '';
   dataPokemon.forEach((element) => {
     const pokeDat = `
-       <section class="data"> 
+       <section class="data1"> 
         <section class="card">  
          <section class="side front">    
           <section id="pokeCard" class="pokeCard">

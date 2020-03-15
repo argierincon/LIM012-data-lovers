@@ -1,6 +1,6 @@
 ﻿* {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
 }
 
 
@@ -44,14 +44,14 @@ body {
 
 /* TERCERO EL LOGO POKEMON GO */
 .logo {
-  width: 26%;
-  margin-top: 4%;
+  width: 24%;
+  margin-top: 2%;
 }
 
 /* CUARTO EL SLOGAN */
 .slogan {
   font-size: 1em;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-bottom: 4%;
 }
 
@@ -64,7 +64,7 @@ body {
 
 
 /* SEXTO EL ESTILO DE LOS BOTONES */
-.selectStyle {
+.selectStyle{
   width: 25%;
   height: 30px;
   background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
@@ -74,7 +74,14 @@ body {
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
 .data {
-  margin: 110px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.data1{
+  margin: 100px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -86,6 +93,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  bottom: 50px;
   transform-style: preserve-3d;
   transition: 1.5s;
 }
@@ -93,6 +101,7 @@ body {
 /* SEGUNDO EL EFECTO CUANDO PASE EL MOUSE */
 .card:hover {
   transform: rotateY(180deg);
+  background-color: #50EA56;
 }
 
 /* TERCERO EL ESTILO DE LOS LADOS DE LA TARJETA */
@@ -106,6 +115,7 @@ body {
 /* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
 .back{
   transform: rotateY(180deg);
+  backface-visibility: inherit;
 }
 
 /* QUINTO EL CONTENEDOR DE LOS ELEMENTOS DE LA TARJETA*/
@@ -187,6 +197,7 @@ body {
   font-size: 12px;
   text-decoration: none;
   color: #fff;
+  font-family: Dosis, sans-serif;
 }
 
 .authors {
@@ -220,12 +231,6 @@ body {
   justify-content : space-between;
 }
 
-.GeneralInformation>a {
-  font-size: 12px;
-  text-decoration:none;
-  color: #FFFFFF;
-  font-family: Dosis, sans-serif;
-}
 
 
 /* .pokeback {
