@@ -12,7 +12,8 @@ body {
 
 header {
   width: 100%;
-  background: skyblue;
+  background-color: #378B7D;
+  background: linear-gradient(to right, #639d25, #427768);
 }
 
 #btnMenu {
@@ -75,7 +76,8 @@ header label:hover {
 
 
 .footerStyle {
-  background: black;
+  background-color: #378B7D;
+  background: linear-gradient(to right, #639d25, #427768);
   height: 150px;
   width: 100%;
   display: flex;
@@ -121,7 +123,8 @@ header label:hover {
 
   .menu {
     position: absolute;
-    background: skyblue;
+    background-color: #378B7D;
+    background: linear-gradient(to right, #639d25, #427768);
     width: 70%;
     margin-left: -70%;
     transition: all 0.5s;
