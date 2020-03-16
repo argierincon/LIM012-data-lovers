@@ -10,6 +10,7 @@ const dataCards = (dataPokemon) => {
   let showData = '';
   dataPokemon.forEach((element) => {
     const pokeDat = `
+
        <section class="data1"> 
         <section class="card">  
          <section class="side front">    
@@ -31,9 +32,11 @@ const dataCards = (dataPokemon) => {
        `;
     showData += pokeDat;
   });
+
   pokeData.innerHTML = showData;
 };
 dataCards(data.pokemon);
+};
 
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
