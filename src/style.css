@@ -84,10 +84,10 @@ header label:hover {
   color: #F5F5F5;
 }
 
-.menu ul li:hover ul {
+/* .menu ul li:hover ul {
   display: block;
   position: absolute;
-}
+} */
 
 .menu li i {
   margin-left: 10px;
