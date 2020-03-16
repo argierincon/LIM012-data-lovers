@@ -3,14 +3,8 @@
   font-family: dosis, sans-serif;
 }
 
-.hide{
+.hide {
   display: none !important;
-}
-
-.subMenu{
-  display: block;
-  color: #fff;
-  text-align: center;
 }
 
 @font-face {
@@ -40,10 +34,12 @@ header {
 
 header label {
   display: none;
-  width: 30px;
-  padding: 10px;
-  border-right: 1px solid #fff;
-  color: #fff;
+  height: 20px;
+  width: 16px;
+  padding: 10px 15px 18px;
+  border-right: 1px solid rgba(245, 245, 245, 0.6);
+  color: #F5F5F5;
+  font-size: 20px;
 }
 
 header label:hover {
@@ -60,13 +56,22 @@ header label:hover {
   display: flex;
 }
 
+.subMenu {
+  display: block;
+  color: #F5F5F5;
+  text-align: center;
+}
+
+.subMenu li {
+  border-top: none !important;
+}
 
 /* .menu ul ul {
   display: none;
 } */
 
 /* .menu li {
-  border-right: 1PX SOLID #fff;
+  border-right: 1PX SOLID #F5F5F5;
 } */
 
 .menu li:hover {
@@ -77,7 +82,7 @@ header label:hover {
 .menu li span {
   display: block;
   padding: 20px;
-  color: #fff;
+  color: #F5F5F5;
 }
 
 .menu li i {
@@ -98,17 +103,17 @@ header label:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 12%;
+  padding-top: 2.5%;
 }
 
 .logoSlogan img {
-  width: 25%;
+  width: 20%;
   margin: 4% 0% 0%;
 }
 
 .logoSlogan h1 {
   /* font-size: 12px; */
-  margin: 4% 0%;
+  margin: 2% 0%;
 }
 
 .dataContainer {
@@ -119,12 +124,13 @@ header label:hover {
 }
 
 .container {
-  height: 140px;
-  width: 124px;
-  /* background-color: beige; */
-  /* margin: auto; */
+
+  height: 160px;
+  width: 144px;
+  /* height: 140px;
+  width: 124px; */
   -webkit-perspective: 700;
-  margin: 4%;
+  margin: 3%;
 }
 
 .card {
@@ -132,7 +138,7 @@ header label:hover {
   width: 100%;
   position: relrelative;
   transform-style: preserve-3d;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 .card:hover {
@@ -142,7 +148,7 @@ header label:hover {
 .side {
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  backface-visibility: inherit;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -160,8 +166,10 @@ background-color: brown;
 
 .pokeImgName {
   background-color: #F2F2F2;
-  width: 124px;
-  height: 110px;
+  width: 144px;
+  height: 130px;
+  /* width: 124px;
+  height: 110px; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -184,8 +192,10 @@ background-color: brown;
 }
 
 .pokeImg {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
+  /* width: 80px;
+  height: 80px; */
   margin: 2px;
 }
 
@@ -196,8 +206,8 @@ background-color: brown;
 
 .pokeInfo {
   background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
-  width: 124px;
-  height: 110px;
+  width: 134px;
+  height: 130px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -229,7 +239,7 @@ background-color: brown;
 }
 
 .rrssLogo {
-  color: #FFFFFF;
+  color: #F5F5F5;
   font-size: 40px;
 }
 
@@ -244,7 +254,7 @@ background-color: brown;
 .GeneralInformation>a {
   font-size: 20px;
   text-decoration: none;
-  color: #fff;
+  color: #F5F5F5;
 }
 
 .copyright {
@@ -253,7 +263,7 @@ background-color: brown;
 
 .authors {
   font-size: 20px;
-  color: #FFFFFF;
+  color: #F5F5F5;
 }
 
 @media (max-width: 768px) {
@@ -276,7 +286,7 @@ background-color: brown;
   }
 
   .menu li {
-    border-top: 1px solid #fff;
+    border-top: 1px solid rgba(245, 245, 245, 0.6);
   }
 
   #btnMenu:checked~.menu {
@@ -296,9 +306,56 @@ background-color: brown;
     display: none;
   } */
 
-  
+  .logoSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12%;
+  }
 
+  .logoSlogan img {
+    width: 25%;
+    margin: 4% 0% 0%;
+  }
 
+  .logoSlogan h1 {
+    /* font-size: 12px; */
+    margin: 4% 0%;
+  }
+
+  .container {
+    height: 140px;
+    width: 124px;
+    -webkit-perspective: 700;
+    margin: 4%;
+  }
+
+  .pokeImgName {
+    background-color: #F2F2F2;
+    width: 124px;
+    height: 110px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  .pokeImg {
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+  }
+
+  .pokeName {
+    font-size: 14px;
+  }
+
+  .pokeInfo {
+    width: 114px;
+    font-size: 14px;
+  }
 
   .footerStyle {
     background-color: #378B7D;
@@ -318,7 +375,7 @@ background-color: brown;
   }
 
   .rrssLogo {
-    color: #FFFFFF;
+    color: #F5F5F5;
     font-size: 30px;
   }
 
@@ -331,7 +388,7 @@ background-color: brown;
   .GeneralInformation>a {
     font-size: 12px;
     text-decoration: none;
-    color: #fff;
+    color: #F5F5F5;
   }
 
   .copyright {
@@ -340,7 +397,7 @@ background-color: brown;
 
   .authors {
     font-size: 12px;
-    color: #FFFFFF;
+    color: #F5F5F5;
   }
 
 }
