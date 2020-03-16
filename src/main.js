@@ -5,19 +5,13 @@ import {
 } from './data.js';
 
 const pokeData = document.getElementById('pokeData');
-// diana: no estoy usando los pokedata 1,2,3,4 para nada pero los deje porsiaca
-// const pokeData1 = document.getElementById('pokeData1');
-// const pokeData2 = document.getElementById('pokeData2');
-// const pokeData3 = document.getElementById('pokeData3');
-// const pokeData4 = document.getElementById('pokeData4');
 
-// diana: agregue la parte delantera y trasera de la tarjeta, es más eficiente y vi que era
-//   más practico para darle el efecto de giro, lo vi en un video x
 const dataCards = (dataPokemon) => {
   let showData = '';
   dataPokemon.forEach((element) => {
     const pokeDat = `
-       <section class="data"> 
+
+       <section class="data1"> 
         <section class="card">  
          <section class="side front">    
           <section id="pokeCard" class="pokeCard">
@@ -30,6 +24,7 @@ const dataCards = (dataPokemon) => {
           <section id="pokeCard2" class="pokeCard">
             <div class="number" id="number">${element.num}</div>
             <div class="maxCP" id="maxCP"><span class="cp"><span class:"blond">Max-CP:</span> ${element.stats['max-cp']}</span></div>
+            <div class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></div>
           </section>
          </section> 
         </section>
@@ -37,28 +32,20 @@ const dataCards = (dataPokemon) => {
        `;
     showData += pokeDat;
   });
-  return showData;
+
+  pokeData.innerHTML = showData;
 };
-pokeData.innerHTML = dataCards(data.pokemon);
+dataCards(data.pokemon);
+};
 
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
   const orderSelect = orderAlfabetic.value;
-  if (orderSelect === 'a-z') {
-    return dataCards(orderData(data.pokemon, 'name', orderSelect));
-  }
-  return dataCards(orderData(data.pokemon, 'name', orderSelect).reverse());
+  return dataCards(orderData(data.pokemon, 'name', orderSelect));
 });
 
 const orderMax = document.querySelector('#orderMaxCP');
 orderMax.addEventListener('change', () => {
   const orderSelectcp = orderMax.value;
-  if (orderSelectcp === 'ascendente') {
-    return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
-  }
-  return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp).reverse());
+  return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
 });
-// diana: no estoy usando los pokedata 1,2,3,4 para nada pero los deje porsiaca
-// pokeData2.innerHTML = dataCards(orderData(data.pokemon).reverse());
-// pokeData3.innerHTML = dataMaxCP(orderMaxCP(data.pokemon));
-// pokeData4.innerHTML = dataMaxCP(orderMaxCP(data.pokemon).reverse());

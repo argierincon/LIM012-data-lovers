@@ -1,6 +1,6 @@
-* {
+﻿* {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
 }
 
 /* Argie: LE AÑADÍ LAS FUENTES*/
@@ -17,6 +17,16 @@
 /* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
 .hide {
   display: none;
+}
+
+@font-face {
+  font-family: NanumG;
+  src: url(./fonts/Nanum_Gothic/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis;
+  src: url(./fonts/Dosis/Dosis-VariableFont_wght.ttf);
 }
 
 body {
@@ -44,16 +54,16 @@ body {
 
 /* TERCERO EL LOGO POKEMON GO */
 .logo {
-  width: 26%;
-  margin-top: 4%;
+  width: 24%;
+  margin-top: 0.5%;
 }
 
 /* CUARTO EL SLOGAN */
 .slogan {
   font-size: 1em;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  font-family: Dosis, sans-serif;
+  margin-top: 2%;
+  margin-bottom: 3%;
+/*   font-family: Dosis, sans-serif; */
 }
 
 /* QUINTO LA SECCIÓN DE LOS BOTONES (POSICIONES)*/
@@ -71,8 +81,8 @@ body {
 
 
 /* SEXTO EL ESTILO DE LOS BOTONES */
-.selectStyle {
-  width: 25%;
+.selectStyle{
+  width: 30%;
   height: 30px;
   background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
   border-radius: 15px;
@@ -80,10 +90,19 @@ body {
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
-.data {
+.data { 
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.data1{
+  margin: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 110px;
 }
 
 /* AREA DE LAS TARJEJAS, SUS ESTILOS Y EFECTOS */
@@ -92,6 +111,7 @@ body {
   width: 50%;
   height: 30%;
   position: relative;
+  bottom: 40px;
   transform-style: preserve-3d;
   transition: 1.5s;
 }
@@ -99,6 +119,7 @@ body {
 /* SEGUNDO EL EFECTO CUANDO PASE EL MOUSE */
 .card:hover {
   transform: rotateY(180deg);
+  background-color: #50EA56;
 }
 
 /* TERCERO EL ESTILO DE LOS LADOS DE LA TARJETA */
@@ -112,6 +133,7 @@ body {
 /* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
 .back{
   transform: rotateY(180deg);
+  backface-visibility: inherit;
 }
 
 /* QUINTO EL CONTENEDOR DE LOS ELEMENTOS DE LA TARJETA*/
@@ -210,7 +232,6 @@ body {
   font-family: Dosis, sans-serif;
 }
 
-
 .maxCP {
   width: 135px;
   height: 135px;
@@ -229,6 +250,14 @@ body {
   top: 20px;
   left: 35px;
 }
+
+.rrss {
+  width: 70%;
+  display: flex;
+  justify-content : space-between;
+}
+
+
 
 /* .pokeback {
     position: relative;
