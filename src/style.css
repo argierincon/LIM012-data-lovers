@@ -45,14 +45,14 @@ body {
 /* TERCERO EL LOGO POKEMON GO */
 .logo {
   width: 24%;
-  margin-top: 2%;
+  margin-top: 0.5%;
 }
 
 /* CUARTO EL SLOGAN */
 .slogan {
   font-size: 1em;
   margin-top: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
 }
 
 /* QUINTO LA SECCIÓN DE LOS BOTONES (POSICIONES)*/
@@ -65,7 +65,7 @@ body {
 
 /* SEXTO EL ESTILO DE LOS BOTONES */
 .selectStyle{
-  width: 25%;
+  width: 30%;
   height: 30px;
   background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
   border-radius: 15px;
@@ -74,17 +74,19 @@ body {
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
 .data {
+  
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .data1{
-  margin: 100px;
+  margin: 90px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 110px;
 }
 
 /* AREA DE LAS TARJEJAS, SUS ESTILOS Y EFECTOS */
@@ -93,7 +95,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  bottom: 50px;
+  bottom: 40px;
   transform-style: preserve-3d;
   transition: 1.5s;
 }

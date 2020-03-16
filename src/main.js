@@ -23,6 +23,7 @@ const dataCards = (dataPokemon) => {
           <section id="pokeCard2" class="pokeCard">
             <div class="number" id="number">${element.num}</div>
             <div class="maxCP" id="maxCP"><span class="cp"><span class:"blond">Max-CP:</span> ${element.stats['max-cp']}</span></div>
+            <div class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></div>
           </section>
          </section> 
         </section>
