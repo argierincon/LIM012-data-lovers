@@ -35,11 +35,7 @@ export const showCards = (arrPkm) => {
 };
 
 export const ascMaxCP = (arrPkm) => {
-  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
-    if (pkm1.stats['max-cp'] > pkm2.stats['max-cp']) return 1;
-    if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
-    return -1;
-  });
+  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm1.stats['max-cp'] - pkm2.stats['max-cp']);
   return arrMaxCP;
 };
 
@@ -51,3 +47,21 @@ export const desMaxCP = (arrPkm) => {
   });
   return arrMaxCP;
 };
+
+// export const ascMaxCP = (arrPkm) => {
+//   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
+//     if (pkm1.stats['max-cp'] > pkm2.stats['max-cp']) return 1;
+//     if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
+//     return -1;
+//   });
+//   return arrMaxCP;
+// };
+
+// export const desMaxCP = (arrPkm) => {
+//   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
+//     if (pkm1.stats['max-cp'] < pkm2.stats['max-cp']) return 1;
+//     if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
+//     return -1;
+//   });
+//   return arrMaxCP;
+// };
