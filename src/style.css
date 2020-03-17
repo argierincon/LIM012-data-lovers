@@ -64,7 +64,6 @@ header label:hover {
 
 .subMenu li {
   border-top: none !important;
-  margin: 8px 14px;
 }
 
 /* .menu ul ul {
@@ -393,8 +392,17 @@ header label:hover {
 }
 
 @media (min-width: 768px) {
-  .menu ul li:hover ul {
-    display: block;
+  .menu ul li:hover ul.hide {
+    display: block !important;
     position: absolute;
+  }
+
+  .menu>ul>li {
+    width: 114px;
+  }
+
+  .subMenu li {
+    padding: 15px;
+    width: 84px;
   }
 }
