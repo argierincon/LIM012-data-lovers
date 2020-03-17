@@ -33,3 +33,7 @@ export const showCards = (arrPkm) => {
   });
   return cards;
 };
+
+const sortFleeRate = (arrPkm) => {
+  const arrFleeRate = arrPkm.sort();
+};
