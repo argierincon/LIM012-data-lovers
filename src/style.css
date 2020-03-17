@@ -85,11 +85,6 @@ header label:hover {
   color: #F5F5F5;
 }
 
-/* .menu ul li:hover ul {
-  display: block;
-  position: absolute;
-} */
-
 .menu li i {
   margin-left: 10px;
 }
@@ -283,7 +278,7 @@ header label:hover {
   #btnMenu:checked~.menu {
     margin: 0;
   }
-  
+
   .subMenu li {
     margin: 8px 0px;
   }
@@ -395,4 +390,11 @@ header label:hover {
     color: #F5F5F5;
   }
 
+}
+
+@media (min-width: 768px) {
+  .menu ul li:hover ul {
+    display: block;
+    position: absolute;
+  }
 }

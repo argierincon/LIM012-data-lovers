@@ -1,4 +1,7 @@
-// estas funciones son de ejemplo
+export const device = () => {
+  const dv = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|SymbianOS|Windows Phone/i.test(window.navigator.userAgent) ? 'Mobile' : 'Desktop';
+  return dv;
+};
 
 export const showCards = (arrPkm) => {
   let cards = '';
