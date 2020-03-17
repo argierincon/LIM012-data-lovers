@@ -11,14 +11,14 @@ export const showCards = (arrPkm) => {
     const templateCard = `<section class="container">
       <section class="card">
         <div class="side front">
-          <div class="pokeNumber">${element.num}</div>
+          <p class="pokeNumber">${element.num}</p>
           <div class="pokeImgName">
             <img src="${element.img}" alt="Pokémon Image" class="pokeImg">
             <p class="pokeName">${element.name}</p>
           </div>
         </div>
         <div class="side back">
-          <div class="pokeNumber">${element.num}</div>
+          <p class="pokeNumber">${element.num}</p>
           <div class="pokeInfo">
             <p><span>Tipo: </span>${element.type[0]}</p>
             <p><span>Región: </span>${element.generation.name}</p>
