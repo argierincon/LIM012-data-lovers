@@ -23,7 +23,6 @@ let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
 
-
 // FUNCIONES QUE ORDENAN POR MAX-CP ASC Y DESC
 const ascMaxCP = document.getElementById('ascMaxCP');
 
