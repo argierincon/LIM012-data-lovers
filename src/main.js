@@ -1,7 +1,9 @@
 import {
   showCards,
-  ascFleeRate,
-  desFleeRate,
+  ascMaxCP,
+  desMaxCP,
+  // ascFleeRate,
+  // desFleeRate,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -16,16 +18,31 @@ document.querySelectorAll('.menu>ul>li>span').forEach((elem) => {
 let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
-const ascRate = document.getElementById('ascRate');
+const ascMaxCPd = document.getElementById('ascMaxCP');
 
-ascRate.addEventListener('click', () => {
+ascMaxCPd.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
-  dataContainer.innerHTML = showCards(ascFleeRate(data.pokemon));
+  dataContainer.innerHTML = showCards(desMaxCP(data.pokemon));
 });
 
-const desRate = document.getElementById('desRate');
+const desMaxCPd = document.getElementById('desMaxCP');
 
-desRate.addEventListener('click', () => {
+desMaxCPd.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
-  dataContainer.innerHTML = showCards(desFleeRate(data.pokemon));
+  dataContainer.innerHTML = showCards(ascMaxCP(data.pokemon));
 });
+
+
+// const ascRate = document.getElementById('ascRate');
+
+// ascRate.addEventListener('click', () => {
+//   dataContainer = document.getElementById('dataContainer');
+//   dataContainer.innerHTML = showCards(ascFleeRate(data.pokemon));
+// });
+
+// const desRate = document.getElementById('desRate');
+
+// desRate.addEventListener('click', () => {
+//   dataContainer = document.getElementById('dataContainer');
+//   dataContainer.innerHTML = showCards(desFleeRate(data.pokemon));
+// });

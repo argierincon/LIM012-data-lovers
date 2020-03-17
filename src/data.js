@@ -34,20 +34,20 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
-export const ascFleeRate = (arrPkm) => {
-  const arrFleeRate = arrPkm.sort((pkm1, pkm2) => {
-    if (pkm1.encounter['base-flee-rate'] > pkm2.encounter['base-flee-rate']) return 1;
-    if (pkm1.encounter['base-flee-rate'] === pkm2.encounter['base-flee-rate']) return 0;
+export const ascMaxCP = (arrPkm) => {
+  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.stats['max-cp'] > pkm2.stats['max-cp']) return 1;
+    if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
     return -1;
   });
-  return arrFleeRate;
+  return arrMaxCP;
 };
 
-export const desFleeRate = (arrPkm) => {
-  const arrFleeRate = arrPkm.sort((pkm1, pkm2) => {
-    if (pkm1.encounter['base-flee-rate'] < pkm2.encounter['base-flee-rate']) return 1;
-    if (pkm1.encounter['base-flee-rate'] === pkm2.encounter['base-flee-rate']) return 0;
+export const desMaxCP = (arrPkm) => {
+  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.stats['max-cp'] < pkm2.stats['max-cp']) return 1;
+    if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
     return -1;
   });
-  return arrFleeRate;
+  return arrMaxCP;
 };
