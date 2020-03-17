@@ -36,7 +36,6 @@ const dataCards = (dataPokemon) => {
   pokeData.innerHTML = showData;
 };
 dataCards(data.pokemon);
-};
 
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
