@@ -64,6 +64,7 @@ header label:hover {
 
 .subMenu li {
   border-top: none !important;
+  margin: 8px 14px;
 }
 
 /* .menu ul ul {
@@ -281,6 +282,10 @@ header label:hover {
 
   #btnMenu:checked~.menu {
     margin: 0;
+  }
+  
+  .subMenu li {
+    margin: 8px 0px;
   }
 
   .logoSlogan h1 {

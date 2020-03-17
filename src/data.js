@@ -1,10 +1,5 @@
 // estas funciones son de ejemplo
 
-export const example = () => 'example';
-
-export const anotherExample = () => 'OMG';
-
-
 export const showCards = (arrPkm) => {
   let cards = '';
   arrPkm.forEach((element) => {
@@ -34,45 +29,31 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
-
-export const orderMaxCP = (data, property, condition) => {
-  let resultCP;
-  if (condition === 'ascendente') {
-    resultCP = data.sort((pkm1, pkm2) => (pkm1.stats[property] - pkm2.stats[property]));
-  } else {
-    resultCP = data.sort((pkm1, pkm2) => (pkm2.stats[property] - pkm1.stats[property]));
-  }
-  return resultCP;
-};
-
-export const ascMaxCP = (arrPkm) => {
+export const orderAscMaxCP = (arrPkm) => {
   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm1.stats['max-cp'] - pkm2.stats['max-cp']);
   return arrMaxCP;
 };
 
-export const desMaxCP = (arrPkm) => {
-  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
-    if (pkm1.stats['max-cp'] < pkm2.stats['max-cp']) return 1;
-    if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
-    return -1;
-  });
+export const orderDesMaxCP = (arrPkm) => {
+  const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm2.stats['max-cp'] - pkm1.stats['max-cp']);
   return arrMaxCP;
 };
 
-// export const ascMaxCP = (arrPkm) => {
-//   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
-//     if (pkm1.stats['max-cp'] > pkm2.stats['max-cp']) return 1;
-//     if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
-//     return -1;
-//   });
-//   return arrMaxCP;
-// };
 
-// export const desMaxCP = (arrPkm) => {
-//   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => {
-//     if (pkm1.stats['max-cp'] < pkm2.stats['max-cp']) return 1;
-//     if (pkm1.stats['max-cp'] === pkm2.stats['max-cp']) return 0;
-//     return -1;
-//   });
-//   return arrMaxCP;
-// };
+export const filterFleeRate = (arrPkm, condition) => {
+  let fleeRate = [];
+  switch (condition) {
+    case 'high':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.21 && parseFloat(pkm.encounter['base-flee-rate']) < 1.00);
+      return fleeRate;
+    case 'medium':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.11 && parseFloat(pkm.encounter['base-flee-rate']) < 0.2);
+      return fleeRate;
+    case 'low':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.0 && parseFloat(pkm.encounter['base-flee-rate']) < 0.1);
+      return fleeRate;
+    default:
+      fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
+      return fleeRate;
+  }
+};

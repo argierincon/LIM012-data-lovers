@@ -1,9 +1,8 @@
 import {
   showCards,
-  ascMaxCP,
-  desMaxCP,
-  // ascFleeRate,
-  // desFleeRate,
+  orderAscMaxCP,
+  orderDesMaxCP,
+  filterFleeRate,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -19,24 +18,46 @@ document.querySelectorAll('.menu>ul>li>span').forEach((elem) => {
 let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
-const ascMaxCPd = document.getElementById('ascMaxCP');
-const desMaxCPd = document.getElementById('desMaxCP');
 
-ascMaxCPd.addEventListener('click', () => {
+// FUNCIONES QUE ORDENAN POR MAX-CP ASC Y DESC
+const ascMaxCP = document.getElementById('ascMaxCP');
+
+ascMaxCP.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
-  dataContainer.innerHTML = showCards(desMaxCP(data.pokemon));
+  dataContainer.innerHTML = showCards(orderAscMaxCP(data.pokemon));
 });
 
-// const ascRate = document.getElementById('ascRate');
+const desMaxCP = document.getElementById('desMaxCP');
 
-// ascRate.addEventListener('click', () => {
-//   dataContainer = document.getElementById('dataContainer');
-//   dataContainer.innerHTML = showCards(ascFleeRate(data.pokemon));
-// });
+desMaxCP.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(orderDesMaxCP(data.pokemon));
+});
 
-// const desRate = document.getElementById('desRate');
+const notInCapture = document.getElementById('notInCapture');
+const rateHigh = document.getElementById('high');
+const rateMedium = document.getElementById('medium');
+const rateLow = document.getElementById('low');
 
-// desRate.addEventListener('click', () => {
-//   dataContainer = document.getElementById('dataContainer');
-//   dataContainer.innerHTML = showCards(desFleeRate(data.pokemon));
-// });
+notInCapture.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'not in capture'));
+});
+
+rateHigh.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'high'));
+});
+
+rateMedium.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'medium'));
+});
+
+rateLow.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'low'));
+});
+
+// const a = data.pokemon.map((elem) => elem.encounter['base-flee-rate']);
+// console.log(new Set(a));
