@@ -34,6 +34,20 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
-const sortFleeRate = (arrPkm) => {
-  const arrFleeRate = arrPkm.sort();
+export const ascFleeRate = (arrPkm) => {
+  const arrFleeRate = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.encounter['base-flee-rate'] > pkm2.encounter['base-flee-rate']) return 1;
+    if (pkm1.encounter['base-flee-rate'] === pkm2.encounter['base-flee-rate']) return 0;
+    return -1;
+  });
+  return arrFleeRate;
+};
+
+export const desFleeRate = (arrPkm) => {
+  const arrFleeRate = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.encounter['base-flee-rate'] < pkm2.encounter['base-flee-rate']) return 1;
+    if (pkm1.encounter['base-flee-rate'] === pkm2.encounter['base-flee-rate']) return 0;
+    return -1;
+  });
+  return arrFleeRate;
 };
