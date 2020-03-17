@@ -15,23 +15,17 @@ document.querySelectorAll('.menu>ul>li>span').forEach((elem) => {
   });
 });
 
+// FUNCIÓN QUE MUESTRA A LOS POKEMON
 let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
 const ascMaxCPd = document.getElementById('ascMaxCP');
+const desMaxCPd = document.getElementById('desMaxCP');
 
 ascMaxCPd.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(desMaxCP(data.pokemon));
 });
-
-const desMaxCPd = document.getElementById('desMaxCP');
-
-desMaxCPd.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
-  dataContainer.innerHTML = showCards(ascMaxCP(data.pokemon));
-});
-
 
 // const ascRate = document.getElementById('ascRate');
 

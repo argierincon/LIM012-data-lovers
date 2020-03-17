@@ -34,6 +34,17 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
+
+export const orderMaxCP = (data, property, condition) => {
+  let resultCP;
+  if (condition === 'ascendente') {
+    resultCP = data.sort((pkm1, pkm2) => (pkm1.stats[property] - pkm2.stats[property]));
+  } else {
+    resultCP = data.sort((pkm1, pkm2) => (pkm2.stats[property] - pkm1.stats[property]));
+  }
+  return resultCP;
+};
+
 export const ascMaxCP = (arrPkm) => {
   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm1.stats['max-cp'] - pkm2.stats['max-cp']);
   return arrMaxCP;
