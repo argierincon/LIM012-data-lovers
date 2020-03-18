@@ -4,6 +4,7 @@ import {
   orderAscMaxCP,
   orderDesMaxCP,
   filterFleeRate,
+  filterSpawn,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -17,19 +18,20 @@ if (device() === 'Mobile') {
   });
 }
 
-
 // FUNCIÓN QUE MUESTRA A LOS POKEMON
 let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
 
-// FUNCIONES QUE ORDENAN POR MAX-CP ASC Y DESC
+// FUNCIONES QUE ORDENAN POR MAX-CP ASCENDENTE
 const ascMaxCP = document.getElementById('ascMaxCP');
 
 ascMaxCP.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(orderAscMaxCP(data.pokemon));
 });
+
+// FUNCIONES QUE ORDENAN POR MAX-CP DESCENDENTE
 
 const desMaxCP = document.getElementById('desMaxCP');
 
@@ -38,6 +40,7 @@ desMaxCP.addEventListener('click', () => {
   dataContainer.innerHTML = showCards(orderDesMaxCP(data.pokemon));
 });
 
+// FUNCIONES QUE FILTRAN POR % DE HUÍDA
 const notInCapture = document.getElementById('notInCapture');
 const rateHigh = document.getElementById('high');
 const rateMedium = document.getElementById('medium');
@@ -63,5 +66,33 @@ rateLow.addEventListener('click', () => {
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'low'));
 });
 
+
+const nulo = document.getElementById('nulo');
+const spawnHigh = document.getElementById('highSpawn');
+const spawnMedium = document.getElementById('mediumSpawn');
+const spawnLow = document.getElementById('lowSpawn');
+
+nulo.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'nulo'));
+});
+
+spawnHigh.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'high'));
+});
+
+spawnMedium.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'medium'));
+});
+
+spawnLow.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'low'));
+});
 // const a = data.pokemon.map((elem) => elem.encounter['base-flee-rate']);
 // console.log(new Set(a));
+
+const a = data.pokemon.map((elem) => elem['spawn-chance']);
+console.log(new Set(a));

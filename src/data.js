@@ -3,8 +3,11 @@ export const device = () => {
   return dv;
 };
 
+// PARA ORDENAR ASCENDENTE EL FILTRO DE % DE HUÍDA Y % APARICIÓN
 const sortFleeRate = (pkm1, pkm2) => pkm1.encounter['base-flee-rate'] - pkm2.encounter['base-flee-rate'];
+const sortSpawnChance = (pkm1, pkm2) => pkm1['spawn-chance'] - pkm2['spawn-chance'];
 
+// FUNCIÓN PARA MOSTRAR LA DATA EN LOS CARDS
 export const showCards = (arrPkm) => {
   let cards = '';
   arrPkm.forEach((element) => {
@@ -34,17 +37,19 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
+// FUNCIÓN QUE ORDENA POR MAX CP ASCENDENTE
 export const orderAscMaxCP = (arrPkm) => {
   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm1.stats['max-cp'] - pkm2.stats['max-cp']);
   return arrMaxCP;
 };
 
+// FUNCIÓN QUE ORDENA POR MAX CP DESCENDENTE
 export const orderDesMaxCP = (arrPkm) => {
   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm2.stats['max-cp'] - pkm1.stats['max-cp']);
   return arrMaxCP;
 };
 
-
+// FUNCIÓN QUE FILTRA POR % DE HUÍDA
 export const filterFleeRate = (arrPkm, condition) => {
   let fleeRate = [];
   switch (condition) {
@@ -60,5 +65,23 @@ export const filterFleeRate = (arrPkm, condition) => {
     default:
       fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
       return fleeRate;
+  }
+};
+
+export const filterSpawn = (arrPkm, condition) => {
+  let spawnChance = [];
+  switch (condition) {
+    case 'high':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 5.10 && parseFloat(pkm['spawn-chance']) < 8.00);
+      return spawnChance.sort(sortSpawnChance);
+    case 'medium':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 2.51 && parseFloat(pkm['spawn-chance']) < 5.00);
+      return spawnChance.sort(sortSpawnChance);
+    case 'low':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 0.00 && parseFloat(pkm['spawn-chance']) < 2.50);
+      return spawnChance.sort(sortSpawnChance);
+    default:
+      spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === null);
+      return spawnChance.sort();
   }
 };
