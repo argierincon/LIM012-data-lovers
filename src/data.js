@@ -103,3 +103,15 @@ export const filterSpawn = (arrPkm, condition) => {
       return spawnChance;
   }
 };
+
+export const filterRegion = (arrPkm, condition) => {
+  let region = [];
+  switch (condition) {
+    case 'kanto':
+      region = arrPkm.filter(pkm => pkm.generation.name === 'kanto');
+      return region;
+    default:
+      region = arrPkm.filter(pkm => pkm.generation.name === 'johto');
+      return region;
+  }
+};

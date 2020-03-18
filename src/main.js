@@ -7,6 +7,7 @@ import {
   filterSpawn,
   alphaOrderAZ,
   alphaOrderZA,
+  filterRegion,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -81,7 +82,7 @@ rateLow.addEventListener('click', () => {
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'low'));
 });
 
-
+// FUNCIÓN QUE FILTRA POR % APARICIÓN
 const nulo = document.getElementById('nulo');
 const spawnHigh = document.getElementById('highSpawn');
 const spawnMedium = document.getElementById('mediumSpawn');
@@ -105,6 +106,21 @@ spawnMedium.addEventListener('click', () => {
 spawnLow.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'low'));
+});
+
+
+const kanto = document.getElementById('kanto');
+
+kanto.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterRegion(data.pokemon, 'kanto'));
+});
+
+const jhoto = document.getElementById('jhoto');
+
+jhoto.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(filterRegion(data.pokemon, 'jhoto'));
 });
 
 
