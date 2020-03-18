@@ -3,6 +3,8 @@ export const device = () => {
   return dv;
 };
 
+const sortFleeRate = (pkm1, pkm2) => pkm1.encounter['base-flee-rate'] - pkm2.encounter['base-flee-rate'];
+
 export const showCards = (arrPkm) => {
   let cards = '';
   arrPkm.forEach((element) => {
@@ -48,13 +50,13 @@ export const filterFleeRate = (arrPkm, condition) => {
   switch (condition) {
     case 'high':
       fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.21 && parseFloat(pkm.encounter['base-flee-rate']) < 1.00);
-      return fleeRate;
+      return fleeRate.sort(sortFleeRate);
     case 'medium':
       fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.11 && parseFloat(pkm.encounter['base-flee-rate']) < 0.2);
-      return fleeRate;
+      return fleeRate.sort(sortFleeRate);
     case 'low':
       fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.0 && parseFloat(pkm.encounter['base-flee-rate']) < 0.1);
-      return fleeRate;
+      return fleeRate.sort(sortFleeRate);
     default:
       fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
       return fleeRate;
