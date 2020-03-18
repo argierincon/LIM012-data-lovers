@@ -26,6 +26,8 @@ header {
   background: linear-gradient(to right, #639d25, #427768);
   position: fixed;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
 #btnMenu {
@@ -48,12 +50,15 @@ header label:hover {
 }
 
 .menu ul {
-  background-color: #378B7D;
-  background: linear-gradient(to right, #639d25, #427768);
   margin: 0;
   list-style: none;
   padding: 0;
   display: flex;
+}
+
+.menu>ul>li>ul {
+  background-color: #378B7D;
+  background: linear-gradient(to right, #639d25, #427768);
 }
 
 .subMenu {
@@ -96,6 +101,18 @@ header label:hover {
 .menu ul li:hover ul {
   display: none;
 } */
+
+.search {
+  width: 20%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
 
 .logoSlogan {
   display: flex;
@@ -290,10 +307,6 @@ header label:hover {
     position: absolute;
     right: 20px;
   }
-
-  /* .menu ul li:hover ul {
-    display: none;
-  } */
 
   .logoSlogan {
     display: flex;
