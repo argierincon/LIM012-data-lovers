@@ -82,6 +82,6 @@ export const filterSpawn = (arrPkm, condition) => {
       return spawnChance.sort(sortSpawnChance);
     default:
       spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === null);
-      return spawnChance.sort();
+      return spawnChance;
   }
 };
