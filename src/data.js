@@ -37,6 +37,24 @@ export const showCards = (arrPkm) => {
   return cards;
 };
 
+export const alphaOrderAZ = (arrPkm) => {
+  const orderAZ = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.name < pkm2.name) return -1;
+    if (pkm1.name > pkm2.name) return 1;
+    return 0;
+  });
+  return orderAZ;
+};
+
+export const alphaOrderZA = (arrPkm) => {
+  const orderZA = arrPkm.sort((pkm1, pkm2) => {
+    if (pkm1.name > pkm2.name) return -1;
+    if (pkm1.name < pkm2.name) return 1;
+    return 0;
+  });
+  return orderZA;
+};
+
 // FUNCIÓN QUE ORDENA POR MAX CP ASCENDENTE
 export const orderAscMaxCP = (arrPkm) => {
   const arrMaxCP = arrPkm.sort((pkm1, pkm2) => pkm1.stats['max-cp'] - pkm2.stats['max-cp']);

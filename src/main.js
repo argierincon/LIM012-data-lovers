@@ -5,6 +5,8 @@ import {
   orderDesMaxCP,
   filterFleeRate,
   filterSpawn,
+  alphaOrderAZ,
+  alphaOrderZA,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -22,6 +24,19 @@ if (device() === 'Mobile') {
 let dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
+const az = document.getElementById('orderAZ');
+
+az.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(alphaOrderAZ(data.pokemon));
+});
+
+const za = document.getElementById('orderZA');
+
+za.addEventListener('click', () => {
+  dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = showCards(alphaOrderZA(data.pokemon));
+});
 
 // FUNCIONES QUE ORDENAN POR MAX-CP ASCENDENTE
 const ascMaxCP = document.getElementById('ascMaxCP');
@@ -91,8 +106,9 @@ spawnLow.addEventListener('click', () => {
   dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'low'));
 });
-// const a = data.pokemon.map((elem) => elem.encounter['base-flee-rate']);
-// console.log(new Set(a));
 
+
+/* const a = data.pokemon.map((elem) => elem.encounter['base-flee-rate']);
+ console.log(new Set(a));
 const a = data.pokemon.map((elem) => elem['spawn-chance']);
-console.log(new Set(a));
+console.log(new Set(a)); */
