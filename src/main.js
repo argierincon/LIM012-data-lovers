@@ -108,7 +108,6 @@ spawnLow.addEventListener('click', () => {
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'low'));
 });
 
-
 const kanto = document.getElementById('kanto');
 
 kanto.addEventListener('click', () => {
