@@ -4,7 +4,8 @@ export const orderData = (data, property, condition) => {
     result = data.sort((a, b) => {
       if (a[property] > b[property]) {
         return 1;
-      } if (a[property] < b[property]) {
+      }
+      if (a[property] < b[property]) {
         return -1;
       }
       return 0;
@@ -13,7 +14,8 @@ export const orderData = (data, property, condition) => {
     result = data.sort((a, b) => {
       if (a[property] < b[property]) {
         return 1;
-      } if (a[property] > b[property]) {
+      }
+      if (a[property] > b[property]) {
         return -1;
       }
       return 0;
@@ -47,5 +49,23 @@ export const filterFleeRate = (arrPkm, condition) => {
     default:
       fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
       return fleeRate;
+  }
+};
+
+export const filterSpawn = (arrPkm, condition) => {
+  let spawnChance = [];
+  switch (condition) {
+    case 'highSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 5.0 && parseFloat(pkm['spawn-chance']) < 8.0);
+      return spawnChance;
+    case 'mediumSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 2.51 && parseFloat(pkm['spawn-chance']) < 5.0);
+      return spawnChance;
+    case 'lowSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 0.0 && parseFloat(pkm['spawn-chance']) < 2.5);
+      return spawnChance;
+    default:
+      spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === 'null');
+      return spawnChance;
   }
 };
