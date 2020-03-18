@@ -26,8 +26,6 @@ header {
   background: linear-gradient(to right, #639d25, #427768);
   position: fixed;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
 }
 
 #btnMenu {
@@ -102,8 +100,12 @@ header label:hover {
   display: none;
 } */
 
+.searchIcon {
+  color: rgb(31, 28, 28);
+}
+
 .search {
-  width: 20%;
+  width: 300px;
   height: 40px;
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid #554F4F;
@@ -405,6 +407,11 @@ header label:hover {
 }
 
 @media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;S
+  }
+
   .menu ul li:hover ul.hide {
     display: block !important;
     position: absolute;
