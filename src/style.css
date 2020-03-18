@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 /* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
 .hide {
   display: none;
@@ -62,7 +61,6 @@ body {
   justify-content: space-evenly;
   text-align-last: center;
 }
-
 
 /* SEXTO EL ESTILO DE LOS BOTONES */
 .selectStyle{
@@ -235,7 +233,6 @@ body {
 }
 
 
-
 /* .pokeback {
     position: relative;
 }
@@ -246,3 +243,4 @@ body {
     left: 480px;
     bottom: 50px;
 } */
+
