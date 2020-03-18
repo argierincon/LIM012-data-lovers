@@ -60,6 +60,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-align-last: center;
+  flex-wrap: wrap;
 }
 
 /* SEXTO EL ESTILO DE LOS BOTONES */
@@ -214,16 +215,15 @@ body {
   background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
   border: 1px solid #554F4F;
   box-sizing: border-box;
+  text-align: center;
 
 }
 
-.cp, .typeTitle {
-  text-align: center;
+.typeTitle {
   font-family: sans-serif, "Nanum Gothic";
   font-size: 11px;
   position: relative;
   top: 20px;
-  left: 35px;
 }
 
 .rrss {
@@ -232,8 +232,8 @@ body {
   justify-content : space-between;
 }
 
-
-/* .pokeback {
+/* 
+.pokeback {
     position: relative;
 }
 

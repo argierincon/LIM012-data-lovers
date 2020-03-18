@@ -4,19 +4,15 @@ export const orderData = (data, property, condition) => {
     result = data.sort((a, b) => {
       if (a[property] > b[property]) {
         return 1;
-      } if (a[property] < b[property]) {
-        return -1;
       }
-      return 0;
+      return -1;
     });
   } else {
     result = data.sort((a, b) => {
-      if (a[property] < b[property]) {
-        return 1;
-      } if (a[property] > b[property]) {
+      if (a[property] > b[property]) {
         return -1;
       }
-      return 0;
+      return 1;
     });
   }
   return result;
@@ -32,7 +28,12 @@ export const orderMaxCP = (data, property, condition) => {
   return resultcp;
 };
 
-export const orderFilter = (data, property, condition) => {
+export const orderFilterType = (data, property, condition) => {
   const pokeType = data.filter(a => (a[property][0] === condition || a[property][1] === condition));
   return pokeType;
+};
+
+export const orderFilterRegion = (data, property, condition) => {
+  const pokeRegion = data.filter(element => element.generation[property] === condition);
+  return pokeRegion;
 };

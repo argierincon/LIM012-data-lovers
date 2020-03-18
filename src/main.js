@@ -2,7 +2,8 @@ import data from './data/pokemon/pokemon.js';
 import {
   orderData,
   orderMaxCP,
-  orderFilter,
+  orderFilterType,
+  orderFilterRegion,
 } from './data.js';
 
 const pokeData = document.getElementById('pokeData');
@@ -25,7 +26,8 @@ const dataCards = (dataPokemon) => {
           <section id="pokeCard2" class="pokeCard">
             <p class="number" id="number">${element.num}</p>
             <section class="container">
-            <p><span class="cp"><span class:"bold">Max-CP:</span> ${element.stats['max-cp']}</span></p>
+            <p><span class="typeTitle"><span class:"bold">Max-CP:</span> ${element.stats['max-cp']}</span></p>
+            <p><span class="typeTitle"><span class:"bold">Tipo:</span> ${element.type}</span></p>
             <p><span class="typeTitle"><span class:"bold">Tipo:</span> ${element.type}</span></p>
             <p class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></p>
             </section>
@@ -56,5 +58,11 @@ orderMax.addEventListener('change', () => {
 const orderType = document.querySelector('#orderType');
 orderType.addEventListener('change', () => {
   const orderSelectType = orderType.value;
-  dataCards(orderFilter(data.pokemon, 'type', orderSelectType));
+  dataCards(orderFilterType(data.pokemon, 'type', orderSelectType));
+});
+
+const orderRegion = document.querySelector('#orderRegion');
+orderRegion.addEventListener('change', () => {
+  const orderSelectRegion = orderRegion.value;
+  dataCards(orderFilterRegion(data.pokemon, 'name', orderSelectRegion));
 });
