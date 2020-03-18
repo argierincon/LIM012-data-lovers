@@ -53,6 +53,7 @@ body {
   font-size: 1em;
   margin-top: 2%;
   margin-bottom: 3%;
+  font-family: Dosis, sans-serif;
 }
 
 /* QUINTO LA SECCIÓN DE LOS BOTONES (POSICIONES)*/
@@ -208,7 +209,7 @@ body {
   font-family: Dosis, sans-serif;
 }
 
-.maxCP {
+.container {
   width: 135px;
   height: 135px;
   border-radius: 8px;
@@ -218,7 +219,7 @@ body {
 
 }
 
-.cp {
+.cp, .typeTitle {
   text-align: center;
   font-family: sans-serif, "Nanum Gothic";
   font-size: 11px;

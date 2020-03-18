@@ -31,3 +31,8 @@ export const orderMaxCP = (data, property, condition) => {
   }
   return resultcp;
 };
+
+export const orderFilter = (data, property, condition) => {
+  const pokeType = data.filter(a => (a[property][0] === condition || a[property][1] === condition));
+  return pokeType;
+};
