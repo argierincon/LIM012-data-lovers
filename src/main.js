@@ -63,6 +63,6 @@ spawnChance.addEventListener('change', () => {
   return dataCards(filterSpawn(data.pokemon, spawn));
 });
 
-const arr = data.pokemon.map((e) => parseFloat(e['spawn-chance']));
-const huida = [...new Set(arr)];
-console.log(huida.sort());
+// const arr = data.pokemon.map((e) => parseFloat(e['spawn-chance']));
+// const huida = [...new Set(arr)];
+// console.log(huida.sort());

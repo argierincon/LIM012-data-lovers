@@ -56,16 +56,16 @@ export const filterSpawn = (arrPkm, condition) => {
   let spawnChance = [];
   switch (condition) {
     case 'highSpawn':
-      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 5.0 && parseFloat(pkm['spawn-chance']) < 8.0);
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 5.10 && parseFloat(pkm['spawn-chance']) < 8.00);
       return spawnChance;
     case 'mediumSpawn':
-      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 2.51 && parseFloat(pkm['spawn-chance']) < 5.0);
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 2.51 && parseFloat(pkm['spawn-chance']) < 5.00);
       return spawnChance;
     case 'lowSpawn':
-      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 0.0 && parseFloat(pkm['spawn-chance']) < 2.5);
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 0.00 && parseFloat(pkm['spawn-chance']) < 2.50);
       return spawnChance;
     default:
-      spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === 'null');
+      spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === null);
       return spawnChance;
   }
 };
