@@ -47,6 +47,10 @@ header label:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.menu {
+  width: 60%;
+}
+
 .menu ul {
   margin: 0;
   list-style: none;
@@ -83,8 +87,9 @@ header label:hover {
 
 .menu li span {
   display: block;
-  padding: 20px;
+  padding: 20px 0px;
   color: #F5F5F5;
+  text-align: center;
 }
 
 .menu li i {
@@ -299,7 +304,7 @@ header label:hover {
   }
 
   .subMenu li {
-    margin: 8px 0px;
+    padding: 8px 0px;
   }
 
   .logoSlogan h1 {
