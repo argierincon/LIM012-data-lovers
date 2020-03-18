@@ -2,6 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import {
   orderData,
   orderMaxCP,
+  filterFleeRate,
 } from './data.js';
 
 const pokeData = document.getElementById('pokeData');
@@ -47,4 +48,10 @@ const orderMax = document.querySelector('#orderMaxCP');
 orderMax.addEventListener('change', () => {
   const orderSelectcp = orderMax.value;
   return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
+});
+
+const fleeRate = document.getElementById('fleeRate');
+fleeRate.addEventListener('change', () => {
+  const rate = fleeRate.value;
+  return dataCards(filterFleeRate(data.pokemon, rate));
 });

@@ -31,3 +31,21 @@ export const orderMaxCP = (data, property, condition) => {
   }
   return resultcp;
 };
+
+export const filterFleeRate = (arrPkm, condition) => {
+  let fleeRate = [];
+  switch (condition) {
+    case 'highRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.21 && parseFloat(pkm.encounter['base-flee-rate']) < 1.00);
+      return fleeRate;
+    case 'mediumRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.11 && parseFloat(pkm.encounter['base-flee-rate']) < 0.2);
+      return fleeRate;
+    case 'lowRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.0 && parseFloat(pkm.encounter['base-flee-rate']) < 0.1);
+      return fleeRate;
+    default:
+      fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
+      return fleeRate;
+  }
+};
