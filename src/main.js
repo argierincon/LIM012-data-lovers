@@ -4,6 +4,8 @@ import {
   orderMaxCP,
   orderFilterType,
   orderFilterRegion,
+  filterFleeRate,
+  filterSpawn,
 } from './data.js';
 
 
@@ -67,3 +69,19 @@ orderRegion.addEventListener('change', () => {
   const orderSelectRegion = orderRegion.value;
   dataCards(orderFilterRegion(data.pokemon, 'name', orderSelectRegion));
 });
+
+const fleeRate = document.getElementById('fleeRate');
+fleeRate.addEventListener('change', () => {
+  const rate = fleeRate.value;
+  return dataCards(filterFleeRate(data.pokemon, rate));
+});
+
+const spawnChance = document.getElementById('spawnChance');
+spawnChance.addEventListener('change', () => {
+  const spawn = spawnChance.value;
+  return dataCards(filterSpawn(data.pokemon, spawn));
+});
+
+// const arr = data.pokemon.map((e) => parseFloat(e['spawn-chance']));
+// const huida = [...new Set(arr)];
+// console.log(huida.sort());

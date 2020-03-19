@@ -181,5 +181,3 @@ describe('orderFilterRegion', () => {
 
   it('Debe retornar [] si no encentra una región', () => {
     expect(orderFilterRegion(firstTestExpect, 'name', 'johto')).toEqual([]);
-  });
-});

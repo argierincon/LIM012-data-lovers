@@ -9,10 +9,10 @@ export const orderData = (data, property, condition) => {
     });
   } else {
     result = data.sort((a, b) => {
-      if (a[property] > b[property]) {
+      if (a[property] < b[property]) {
         return -1;
       }
-      return 1;
+      return 1
     });
   }
   return result;
@@ -36,4 +36,43 @@ export const orderFilterType = (data, property, condition) => {
 export const orderFilterRegion = (data, property, condition) => {
   const pokeRegion = data.filter(element => element.generation[property] === condition);
   return pokeRegion;
+  
+// FUNCIONES QUE ORDENAN ASCENDENTEMENTE LA DATA FILTRADA POR % DE HUÍDA Y APARICIÓN
+const sortFleeRate = (pkm1, pkm2) => pkm1.encounter['base-flee-rate'] - pkm2.encounter['base-flee-rate'];
+const sortSpawnChance = (pkm1, pkm2) => pkm1['spawn-chance'] - pkm2['spawn-chance'];
+
+export const filterFleeRate = (arrPkm, condition) => {
+  let fleeRate = [];
+  switch (condition) {
+    case 'highRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.21 && parseFloat(pkm.encounter['base-flee-rate']) < 1.00);
+      return fleeRate.sort(sortFleeRate);
+    case 'mediumRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.11 && parseFloat(pkm.encounter['base-flee-rate']) < 0.2);
+      return fleeRate.sort(sortFleeRate);
+    case 'lowRate':
+      fleeRate = arrPkm.filter(pkm => parseFloat(pkm.encounter['base-flee-rate']) > 0.0 && parseFloat(pkm.encounter['base-flee-rate']) < 0.1);
+      return fleeRate.sort(sortFleeRate);
+    default:
+      fleeRate = arrPkm.filter(pkm => pkm.encounter['base-flee-rate'] === 'not in capture');
+      return fleeRate;
+  }
+};
+
+export const filterSpawn = (arrPkm, condition) => {
+  let spawnChance = [];
+  switch (condition) {
+    case 'highSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 5.10 && parseFloat(pkm['spawn-chance']) < 8.00);
+      return spawnChance.sort(sortSpawnChance);
+    case 'mediumSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 2.51 && parseFloat(pkm['spawn-chance']) < 5.00);
+      return spawnChance.sort(sortSpawnChance);
+    case 'lowSpawn':
+      spawnChance = arrPkm.filter(pkm => parseFloat(pkm['spawn-chance']) > 0.00 && parseFloat(pkm['spawn-chance']) < 2.50);
+      return spawnChance.sort(sortSpawnChance);
+    default:
+      spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === null);
+      return spawnChance;
+  }
 };

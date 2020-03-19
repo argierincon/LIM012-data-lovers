@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-/* diana: le aumente .hide para mas adelante, igual no lo estoy usando ahora, eso lo iba a usar para mostrar y ocultar */
 .hide {
   display: none;
 }
@@ -73,8 +72,8 @@ body {
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
+
 .data {
-  
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -216,7 +215,6 @@ body {
   border: 1px solid #554F4F;
   box-sizing: border-box;
   text-align: center;
-
 }
 
 .typeTitle {
@@ -236,8 +234,7 @@ body {
   justify-content : space-between;
 }
 
-/* 
-.pokeback {
+/* .pokeback {
     position: relative;
 }
 
