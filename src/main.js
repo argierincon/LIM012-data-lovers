@@ -2,9 +2,12 @@ import data from './data/pokemon/pokemon.js';
 import {
   orderData,
   orderMaxCP,
+  orderFilterType,
+  orderFilterRegion,
   filterFleeRate,
   filterSpawn,
 } from './data.js';
+
 
 const pokeData = document.getElementById('pokeData');
 
@@ -17,16 +20,20 @@ const dataCards = (dataPokemon) => {
         <section class="card">  
          <section class="side front">    
           <section id="pokeCard" class="pokeCard">
-            <div class="number" id="number">${element.num}</div>
-            <div class="imgPoke" id="imgPoke"><img src=${element.img} alt="" class="imgPkm"></div>
-            <div class="namePoke" id="namePoke">${element.name.toUpperCase()}</div>
+            <p class="number" id="number">${element.num}</p>
+            <p class="imgPoke" id="imgPoke"><img src=${element.img} alt="" class="imgPkm"></p>
+            <p class="namePoke" id="namePoke">${element.name.toUpperCase()}</p>
           </section>
          </section>
          <section class= "side back">
           <section id="pokeCard2" class="pokeCard">
-            <div class="number" id="number">${element.num}</div>
-            <div class="maxCP" id="maxCP"><span class="cp"><span class:"blond">Max-CP:</span> ${element.stats['max-cp']}</span></div>
-            <div class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></div>
+            <p class="number" id="number">${element.num}</p>
+            <section class="container">
+            <p><span class="typeTitle"><span class:"bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
+            <p><span class="typeTitle"><span class:"bold1">Tipo:</span> ${element.type}</span></p>
+            <p><span class="typeTitle"><span class:"bold1">Región:</span> ${element.generation.name}</span></p>
+            <p class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></p>
+            </section>
           </section>
          </section> 
         </section>
@@ -42,13 +49,25 @@ dataCards(data.pokemon);
 const orderAlfabetic = document.querySelector('#order');
 orderAlfabetic.addEventListener('change', () => {
   const orderSelect = orderAlfabetic.value;
-  return dataCards(orderData(data.pokemon, 'name', orderSelect));
+  dataCards(orderData(data.pokemon, 'name', orderSelect));
 });
 
-const orderMax = document.querySelector('#orderMaxCP');
+const orderMax = document.querySelector('#oderMaxCP');
 orderMax.addEventListener('change', () => {
   const orderSelectcp = orderMax.value;
-  return dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
+  dataCards(orderMaxCP(data.pokemon, 'max-cp', orderSelectcp));
+});
+
+const orderType = document.querySelector('#orderType');
+orderType.addEventListener('change', () => {
+  const orderSelectType = orderType.value;
+  dataCards(orderFilterType(data.pokemon, 'type', orderSelectType));
+});
+
+const orderRegion = document.querySelector('#orderRegion');
+orderRegion.addEventListener('change', () => {
+  const orderSelectRegion = orderRegion.value;
+  dataCards(orderFilterRegion(data.pokemon, 'name', orderSelectRegion));
 });
 
 const fleeRate = document.getElementById('fleeRate');
