@@ -6,6 +6,7 @@ import {
   orderFilterRegion,
 } from './data.js';
 
+
 const pokeData = document.getElementById('pokeData');
 
 const dataCards = (dataPokemon) => {
