@@ -77,3 +77,8 @@ export const filterSpawn = (arrPkm, condition) => {
       return spawnChance;
   }
 };
+
+export const searchText = (data, property, condition) => {
+  const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
+  return searchPkm;
+};

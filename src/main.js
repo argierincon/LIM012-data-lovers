@@ -6,10 +6,13 @@ import {
   orderFilterRegion,
   filterFleeRate,
   filterSpawn,
+  searchText,
 } from './data.js';
 
-
+const errorFound = document.querySelector('.errorFound');
+errorFound.classList.add('hide');
 const pokeData = document.getElementById('pokeData');
+
 
 const dataCards = (dataPokemon) => {
   let showData = '';
@@ -82,6 +85,8 @@ spawnChance.addEventListener('change', () => {
   return dataCards(filterSpawn(data.pokemon, spawn));
 });
 
-// const arr = data.pokemon.map((e) => parseFloat(e['spawn-chance']));
-// const huida = [...new Set(arr)];
-// console.log(huida.sort());
+const inputText = document.getElementById('inputText');
+inputText.addEventListener('keyup', () => {
+  const inputTextPkm = inputText.value.toLowerCase();
+  dataCards(searchText(data.pokemon, 'name', inputTextPkm));
+});
