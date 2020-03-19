@@ -12,7 +12,7 @@ export const orderData = (data, property, condition) => {
       if (a[property] < b[property]) {
         return -1;
       }
-      return 1
+      return 1;
     });
   }
   return result;
@@ -36,7 +36,8 @@ export const orderFilterType = (data, property, condition) => {
 export const orderFilterRegion = (data, property, condition) => {
   const pokeRegion = data.filter(element => element.generation[property] === condition);
   return pokeRegion;
-  
+};
+
 // FUNCIONES QUE ORDENAN ASCENDENTEMENTE LA DATA FILTRADA POR % DE HUÍDA Y APARICIÓN
 const sortFleeRate = (pkm1, pkm2) => pkm1.encounter['base-flee-rate'] - pkm2.encounter['base-flee-rate'];
 const sortSpawnChance = (pkm1, pkm2) => pkm1['spawn-chance'] - pkm2['spawn-chance'];
