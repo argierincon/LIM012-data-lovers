@@ -226,6 +226,10 @@ body {
   top: 20px;
 }
 
+.bold1 {
+  font-weight: bold;
+}
+
 .rrss {
   width: 70%;
   display: flex;
@@ -243,4 +247,3 @@ body {
     left: 480px;
     bottom: 50px;
 } */
-
