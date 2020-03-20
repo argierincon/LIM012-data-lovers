@@ -25,7 +25,7 @@ body {
 /* PRIMERO EL HEADER */
 .headerStyle {
   width: 100%;
-  height: 50px;
+  height: 70px;
   background: rgba(139, 166, 184, 0.8);
   display: flex;
   justify-content: flex-end;
@@ -42,13 +42,13 @@ body {
 
 /* TERCERO EL LOGO POKEMON GO */
 .logo {
-  width: 24%;
+  width: 20%;
   margin-top: 0.5%;
 }
 
 /* CUARTO EL SLOGAN */
 .slogan {
-  font-size: 1em;
+  font-size: 20px;
   margin-top: 2%;
   margin-bottom: 3%;
   font-family: Dosis, sans-serif;
@@ -59,16 +59,19 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-align-last: center;
-  flex-wrap: wrap;
 }
 
+/* ********** ESTA FUE LA QUE MODIFIQUÉ PARA EL ESTILO DE BOTONES EN ESCRITORIO ********* */
 /* SEXTO EL ESTILO DE LOS BOTONES */
-.selectStyle{
-  width: 30%;
-  height: 30px;
+.selectStyle {
+  width: 12%;
+  height: 60px;
   background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
   border-radius: 15px;
   list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: NanumG, sans-serif;
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
@@ -80,7 +83,7 @@ body {
   margin-bottom: 80px;
 }
 
-.data1{
+.data1 {
   margin: 90px;
   display: flex;
   justify-content: space-evenly;
@@ -114,7 +117,7 @@ body {
 }
 
 /* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
-.back{
+.back {
   transform: rotateY(180deg);
   backface-visibility: inherit;
 }
@@ -178,31 +181,44 @@ body {
   height: 150px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
+/* MOVÍ PARA SU LUGAR EL CONTENEDOR DE LOS ICONOS DE RRSS LUEGO QUE ACEPTES EL CAMBIO BORRAS EL COMENTARIO PLEASE  */
+.rrss {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .rrssLogo {
   color: #FFFFFF;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .GeneralInformation {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 40%;
 }
 
 .GeneralInformation>a {
-  font-size: 12px;
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
   font-family: Dosis, sans-serif;
+  border-right: 2px solid;
+  padding: 6px 20px 6px;
+}
+
+.GeneralInformation>a:last-child {
+  border: none;
 }
 
 .authors {
-  font-size: 12px;
+  font-size: 20px;
   color: #FFFFFF;
   font-family: Dosis, sans-serif;
 }
@@ -228,12 +244,6 @@ body {
   font-weight: bold;
 }
 
-.rrss {
-  width: 70%;
-  display: flex;
-  justify-content : space-between;
-}
-
 /* .pokeback {
     position: relative;
 }
@@ -255,18 +265,19 @@ body {
   margin-right: 20px;
   margin-left: 10px;
   border-radius: 5px;
-  
 }
+
 *::-webkit-input-placeholder {
   font-family: sans-serif, "Nanum Gothic";
-  
+
 }
-.searching{
+
+/* .searching {
   background-color: #fff;
   color: tomato;
   padding: 10px;
   border-radius: 20px;
-}
+} */
 
 /* BOTON SCROLL UP */
 .buttonUp {
@@ -277,7 +288,8 @@ body {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color:tomato;
+  background-color: tomato;
+  /* background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%); */
   color: white;
   cursor: pointer;
   outline: none;
@@ -288,11 +300,122 @@ body {
   transition-property: background-color, color;
 }
 
-.buttonUp:hover, .buttonUp:focus{
+.buttonUp:hover,
+.buttonUp:focus {
   background-color: rgb(53, 43, 48);
   color: #fff;
 }
 
 .hide {
   display: block;
+}
+
+/* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
+@media only screen and (max-width:768px) {
+  .headerStyle {
+    width: 100%;
+    height: 50px;
+    background: rgba(139, 166, 184, 0.8);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .searching {
+    color: rgb(39, 36, 35);
+    margin: 6px;
+  }
+
+  .inputText {
+    width: 110px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #554F4F;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  ::placeholder {
+    font-family: Dosis, sans-serif;
+  }
+
+  .logo {
+    width: 100px;
+    margin-top: 0.5%;
+  }
+
+  .slogan {
+    font-size: 12px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-family: Dosis, sans-serif;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-evenly;
+    text-align-last: center;
+    flex-wrap: wrap;
+  }
+
+  .selectStyle {
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
+    border-radius: 15px;
+    list-style: none;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: NanumG, sans-serif;
+    margin: 8px;
+  }
+
+  .footerStyle {
+    background: black;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* MOVÍ PARA SU LUGAR EL CONTENEDOR DE LOS ICONOS DE RRSS LUEGO QUE ACEPTES EL CAMBIO BORRAS EL COMENTARIO PLEASE */
+  .rrss {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rrssLogo {
+    color: #FFFFFF;
+    font-size: 30px;
+  }
+
+  .GeneralInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .GeneralInformation>a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Dosis, sans-serif;
+    border: none;
+    padding: 0;
+  }
+
+  .authors {
+    font-size: 12px;
+    color: #FFFFFF;
+    font-family: Dosis, sans-serif;
+  }
+
+
 }
