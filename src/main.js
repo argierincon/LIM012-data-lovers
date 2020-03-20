@@ -9,10 +9,27 @@ import {
   searchText,
 } from './data.js';
 
-const errorFound = document.querySelector('.errorFound');
-errorFound.classList.add('hide');
 const pokeData = document.getElementById('pokeData');
+const buttonUp = document.querySelector('.buttonUp');
 
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonUp.classList.add('hide');
+  } else {
+    buttonUp.classList.remove('hide');
+  }
+};
+
+window.addEventListener('scroll', scrollFunction);
+
+const backTotop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
+buttonUp.addEventListener('click', backTotop);
 
 const dataCards = (dataPokemon) => {
   let showData = '';
