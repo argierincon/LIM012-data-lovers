@@ -224,8 +224,9 @@ body {
   top: 20px;
 }
 
+/* TITULOS DETRAS DE LAS TARJETAS EN NEGRITA */
 .bold1 {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .rrss {
@@ -297,6 +298,7 @@ body {
   display: block;
 }
 
+/* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
 .errorText{
   display: block;
   padding: 20px;
