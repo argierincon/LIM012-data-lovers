@@ -234,7 +234,7 @@ body {
   background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
   border: 1px solid #554F4F;
   box-sizing: border-box;
-padding-left: 15px;
+  padding-left: 10px;
 }
 
 /* OJO ÉSTE TAMBIÉN LO MIDIFIQUÉ */
@@ -249,20 +249,17 @@ padding-left: 15px;
   font-weight: bold;
 }
 
-/* .pokeback {
-    position: relative;
+.pokeback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .backPoke {
-    width: 3.5%;
-    position: relative;
-    left: 480px;
-    bottom: 50px;
-} */
-
-/* .searchPoke {
-  width: 400px;
-} */
+  width: 30px
+}
 
 .inputText {
   width: 75%;
