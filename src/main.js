@@ -106,4 +106,10 @@ const inputText = document.getElementById('inputText');
 inputText.addEventListener('keyup', () => {
   const inputTextPkm = inputText.value.toLowerCase();
   dataCards(searchText(data.pokemon, 'name', inputTextPkm));
+  if (pokeData.innerHTML === '') {
+    // const error = document.querySelector('.error');
+    pokeData.innerHTML = `
+      <img src="img/error4.png" alt="" class="errorImg">
+    `;
+  }
 });
