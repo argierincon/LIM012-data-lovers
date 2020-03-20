@@ -315,11 +315,20 @@ body {
   .headerStyle {
     width: 100%;
     height: 50px;
-    background: rgba(139, 166, 184, 0.8);
+    background: #8BA6B8;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .imgSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px 0px;
   }
 
   .searching {
