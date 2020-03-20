@@ -22,20 +22,18 @@ if (device() === 'Mobile') {
 }
 
 // FUNCIÓN QUE MUESTRA A LOS POKEMON
-let dataContainer = document.getElementById('dataContainer');
+const dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);
 
 const az = document.getElementById('orderAZ');
 
 az.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(alphaOrderAZ(data.pokemon));
 });
 
 const za = document.getElementById('orderZA');
 
 za.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(alphaOrderZA(data.pokemon));
 });
 
@@ -43,7 +41,6 @@ za.addEventListener('click', () => {
 const ascMaxCP = document.getElementById('ascMaxCP');
 
 ascMaxCP.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(orderAscMaxCP(data.pokemon));
 });
 
@@ -52,7 +49,6 @@ ascMaxCP.addEventListener('click', () => {
 const desMaxCP = document.getElementById('desMaxCP');
 
 desMaxCP.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(orderDesMaxCP(data.pokemon));
 });
 
@@ -63,22 +59,18 @@ const rateMedium = document.getElementById('medium');
 const rateLow = document.getElementById('low');
 
 notInCapture.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'not in capture'));
 });
 
 rateHigh.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'high'));
 });
 
 rateMedium.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'medium'));
 });
 
 rateLow.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterFleeRate(data.pokemon, 'low'));
 });
 
@@ -89,36 +81,30 @@ const spawnMedium = document.getElementById('mediumSpawn');
 const spawnLow = document.getElementById('lowSpawn');
 
 nulo.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'nulo'));
 });
 
 spawnHigh.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'high'));
 });
 
 spawnMedium.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'medium'));
 });
 
 spawnLow.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterSpawn(data.pokemon, 'low'));
 });
 
 const kanto = document.getElementById('kanto');
 
 kanto.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterRegion(data.pokemon, 'kanto'));
 });
 
 const jhoto = document.getElementById('jhoto');
 
 jhoto.addEventListener('click', () => {
-  dataContainer = document.getElementById('dataContainer');
   dataContainer.innerHTML = showCards(filterRegion(data.pokemon, 'jhoto'));
 });
 
