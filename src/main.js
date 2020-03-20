@@ -50,9 +50,12 @@ const dataCards = (dataPokemon) => {
           <section id="pokeCard2" class="pokeCard">
             <p class="number" id="number">${element.num}</p>
             <section class="container">
-            <p><span class="typeTitle"><span class:"bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
-            <p><span class="typeTitle"><span class:"bold1">Tipo:</span> ${element.type}</span></p>
-            <p><span class="typeTitle"><span class:"bold1">Región:</span> ${element.generation.name}</span></p>
+            <p><span class="typeTitle"><span class="bold1">Tipo:</span> ${element.type}</span></p>
+            <p><span class="typeTitle"><span class="bold1">Región:</span> ${element.generation.name}</span></p>
+            <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
+            <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
+            <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
+
             <p class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></p>
             </section>
           </section>
