@@ -10,7 +10,6 @@ export const orderData = (data, property, condition) => {
   } else {
     result = data.sort((a, b) => {
       if (a[property] < b[property]) {
-
         return 1;
       }
       return -1;
