@@ -1,5 +1,3 @@
-// import { show } from './main.js';
-
 export const orderData = (data, property, condition) => {
   let result;
   if (condition === 'a-z') {

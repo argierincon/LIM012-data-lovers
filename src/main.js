@@ -109,7 +109,13 @@ inputText.addEventListener('keyup', () => {
   if (pokeData.innerHTML === '') {
     // const error = document.querySelector('.error');
     pokeData.innerHTML = `
-      <img src="img/error4.png" alt="" class="errorImg">
+    <section class="errorText">
+      <p class="text1"> Ningún POKÉMON coincide con tu búsqueda</p>
+      <p class="text"> Intenta lo siguiente para encontrar resusltados: </p>
+      <p class="text"> - Reduce los parámetros de búsqueda</p>
+      <p class="text"> - Ingresa sílabas por nombre de Pokémon</p>
+      <p class="text"> - No ingreses números</p>
+    </section>
     `;
   }
 });
