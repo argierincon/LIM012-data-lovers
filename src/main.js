@@ -55,7 +55,7 @@ const dataCards = (dataPokemon) => {
             <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
             <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
             <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
-            <p class="pokeback" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
+            <p class="pokeBack" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
             </section>
           </section>
          </section> 
