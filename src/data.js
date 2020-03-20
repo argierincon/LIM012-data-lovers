@@ -10,9 +10,10 @@ export const orderData = (data, property, condition) => {
   } else {
     result = data.sort((a, b) => {
       if (a[property] < b[property]) {
-        return -1;
+
+        return 1;
       }
-      return 1;
+      return -1;
     });
   }
   return result;
@@ -79,4 +80,9 @@ export const filterSpawn = (arrPkm, condition) => {
       spawnChance = arrPkm.filter(pkm => pkm['spawn-chance'] === null);
       return spawnChance;
   }
+};
+
+export const searchText = (data, property, condition) => {
+  const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
+  return searchPkm;
 };

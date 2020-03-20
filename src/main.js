@@ -6,10 +6,31 @@ import {
   orderFilterRegion,
   filterFleeRate,
   filterSpawn,
+  searchText,
 } from './data.js';
 
 
 const pokeData = document.getElementById('pokeData');
+const buttonUp = document.querySelector('.buttonUp');
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonUp.classList.add('hide');
+  } else {
+    buttonUp.classList.remove('hide');
+  }
+};
+
+window.addEventListener('scroll', scrollFunction);
+
+const backTotop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
+buttonUp.addEventListener('click', backTotop);
 
 const dataCards = (dataPokemon) => {
   let showData = '';
@@ -84,6 +105,8 @@ spawnChance.addEventListener('change', () => {
   return dataCards(filterSpawn(data.pokemon, spawn));
 });
 
-// const arr = data.pokemon.map((e) => parseFloat(e['spawn-chance']));
-// const huida = [...new Set(arr)];
-// console.log(huida.sort());
+const inputText = document.getElementById('inputText');
+inputText.addEventListener('keyup', () => {
+  const inputTextPkm = inputText.value.toLowerCase();
+  dataCards(searchText(data.pokemon, 'name', inputTextPkm));
+});
