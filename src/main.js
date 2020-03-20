@@ -9,6 +9,7 @@ import {
   searchText,
 } from './data.js';
 
+
 const pokeData = document.getElementById('pokeData');
 const buttonUp = document.querySelector('.buttonUp');
 
@@ -90,12 +91,14 @@ orderRegion.addEventListener('change', () => {
   dataCards(orderFilterRegion(data.pokemon, 'name', orderSelectRegion));
 });
 
+// EVENTO FILTRO HUÍDA
 const fleeRate = document.getElementById('fleeRate');
 fleeRate.addEventListener('change', () => {
   const rate = fleeRate.value;
   return dataCards(filterFleeRate(data.pokemon, rate));
 });
 
+// EVENTO FILTRO APARICIÓN
 const spawnChance = document.getElementById('spawnChance');
 spawnChance.addEventListener('change', () => {
   const spawn = spawnChance.value;

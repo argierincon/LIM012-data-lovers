@@ -10,6 +10,7 @@ export const orderData = (data, property, condition) => {
   } else {
     result = data.sort((a, b) => {
       if (a[property] < b[property]) {
+
         return 1;
       }
       return -1;
@@ -42,6 +43,8 @@ export const orderFilterRegion = (data, property, condition) => {
 const sortFleeRate = (pkm1, pkm2) => pkm1.encounter['base-flee-rate'] - pkm2.encounter['base-flee-rate'];
 const sortSpawnChance = (pkm1, pkm2) => pkm1['spawn-chance'] - pkm2['spawn-chance'];
 
+
+// FUNCIÓN QUE FILTRA POR % DE HUÍDA
 export const filterFleeRate = (arrPkm, condition) => {
   let fleeRate = [];
   switch (condition) {
@@ -60,6 +63,7 @@ export const filterFleeRate = (arrPkm, condition) => {
   }
 };
 
+// FUNCIÓN QUE FILTRA POR % DE APARICIÓN
 export const filterSpawn = (arrPkm, condition) => {
   let spawnChance = [];
   switch (condition) {
