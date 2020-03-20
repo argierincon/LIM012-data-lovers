@@ -26,11 +26,13 @@ body {
 .headerStyle {
   width: 100%;
   height: 70px;
-  background: rgba(139, 166, 184, 0.8);
+  background: #8BA6B8;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  position: fixed;
+  z-index: 1;
 }
 
 /* SEGUNDO LA SECCION DE LOGO Y SLOGAN */
@@ -38,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 90px 0px 0px;
 }
 
 /* TERCERO EL LOGO POKEMON GO */
@@ -211,6 +214,7 @@ body {
   font-family: Dosis, sans-serif;
   border-right: 2px solid;
   padding: 6px 20px 6px;
+  text-align: center;
 }
 
 .GeneralInformation>a:last-child {
@@ -260,24 +264,25 @@ body {
 } */
 
 .inputText {
-  width: 200px;
-  height: 25px;
-  margin-right: 20px;
-  margin-left: 10px;
-  border-radius: 5px;
+  width: 75%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
 }
 
 *::-webkit-input-placeholder {
-  font-family: sans-serif, "Nanum Gothic";
-
+  font-family: Dosis, sans-serif;
 }
 
-/* .searching {
-  background-color: #fff;
-  color: tomato;
-  padding: 10px;
-  border-radius: 20px;
-} */
+.searching {
+  color: rgb(39, 36, 35);
+  font-size: 20px;
+  margin: 0px 15px;
+}
 
 /* BOTON SCROLL UP */
 .buttonUp {
