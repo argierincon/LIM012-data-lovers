@@ -9,6 +9,7 @@ import {
   searchText,
 } from './data.js';
 
+
 const pokeData = document.getElementById('pokeData');
 const buttonUp = document.querySelector('.buttonUp');
 
@@ -49,10 +50,12 @@ const dataCards = (dataPokemon) => {
           <section id="pokeCard2" class="pokeCard">
             <p class="number" id="number">${element.num}</p>
             <section class="container">
-            <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
             <p><span class="typeTitle"><span class="bold1">Tipo:</span> ${element.type}</span></p>
             <p><span class="typeTitle"><span class="bold1">Región:</span> ${element.generation.name}</span></p>
-            <p class="pokeback" id="pokeback"><img src="" alt="" class=".backPoke"></p>
+            <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
+            <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
+            <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
+            <p class="pokeBack" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
             </section>
           </section>
          </section> 
@@ -90,12 +93,14 @@ orderRegion.addEventListener('change', () => {
   dataCards(orderFilterRegion(data.pokemon, 'name', orderSelectRegion));
 });
 
+// EVENTO FILTRO HUÍDA
 const fleeRate = document.getElementById('fleeRate');
 fleeRate.addEventListener('change', () => {
   const rate = fleeRate.value;
   return dataCards(filterFleeRate(data.pokemon, rate));
 });
 
+// EVENTO FILTRO APARICIÓN
 const spawnChance = document.getElementById('spawnChance');
 spawnChance.addEventListener('change', () => {
   const spawn = spawnChance.value;
@@ -107,7 +112,6 @@ inputText.addEventListener('keyup', () => {
   const inputTextPkm = inputText.value.toLowerCase();
   dataCards(searchText(data.pokemon, 'name', inputTextPkm));
   if (pokeData.innerHTML === '') {
-    // const error = document.querySelector('.error');
     pokeData.innerHTML = `
     <section class="errorText">
       <p class="text1"> Ningún POKÉMON coincide con tu búsqueda</p>

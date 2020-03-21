@@ -25,12 +25,14 @@ body {
 /* PRIMERO EL HEADER */
 .headerStyle {
   width: 100%;
-  height: 50px;
-  background: rgba(139, 166, 184, 0.8);
+  height: 70px;
+  background: #8BA6B8;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  position: fixed;
+  z-index: 1;
 }
 
 /* SEGUNDO LA SECCION DE LOGO Y SLOGAN */
@@ -38,17 +40,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 90px 0px 0px;
 }
 
 /* TERCERO EL LOGO POKEMON GO */
 .logo {
-  width: 24%;
+  width: 20%;
   margin-top: 0.5%;
 }
 
 /* CUARTO EL SLOGAN */
 .slogan {
-  font-size: 1em;
+  font-size: 20px;
   margin-top: 2%;
   margin-bottom: 3%;
   font-family: Dosis, sans-serif;
@@ -62,13 +65,17 @@ body {
   flex-wrap: wrap;
 }
 
+/* ********** ESTA FUE LA QUE MODIFIQUÉ PARA EL ESTILO DE BOTONES EN ESCRITORIO ********* */
 /* SEXTO EL ESTILO DE LOS BOTONES */
-.selectStyle{
-  width: 30%;
-  height: 30px;
+.selectStyle {
+  width: 12%;
+  height: 60px;
   background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
   border-radius: 15px;
   list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: NanumG, sans-serif;
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
@@ -80,7 +87,7 @@ body {
   margin-bottom: 80px;
 }
 
-.data1{
+.data1 {
   margin: 90px;
   display: flex;
   justify-content: space-evenly;
@@ -114,7 +121,7 @@ body {
 }
 
 /* CUARTO EL EFECTO GIRATORIO DE LA TARJETA */
-.back{
+.back {
   transform: rotateY(180deg);
   backface-visibility: inherit;
 }
@@ -178,31 +185,44 @@ body {
   height: 150px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
+.rrss {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .rrssLogo {
   color: #FFFFFF;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .GeneralInformation {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 40%;
 }
 
 .GeneralInformation>a {
-  font-size: 12px;
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
   font-family: Dosis, sans-serif;
+  border-right: 2px solid;
+  padding: 6px 20px 6px;
+  text-align: center;
+}
+
+.GeneralInformation>a:last-child {
+  border: none;
 }
 
 .authors {
-  font-size: 12px;
+  font-size: 20px;
   color: #FFFFFF;
   font-family: Dosis, sans-serif;
 }
@@ -214,59 +234,66 @@ body {
   background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
   border: 1px solid #554F4F;
   box-sizing: border-box;
-  text-align: center;
+  padding-left: 10px;
 }
 
+/* OJO ÉSTE TAMBIÉN LO MIDIFIQUÉ */
 .typeTitle {
-  font-family: sans-serif, "Nanum Gothic";
-  font-size: 11px;
+  font-family: NanumG, sans-serif;
+  font-size: 12px;
   position: relative;
   top: 20px;
 }
 
-/* TITULOS DETRAS DE LAS TARJETAS EN NEGRITA */
 .bold1 {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
-.rrss {
-  width: 70%;
+.pokeBack {
   display: flex;
-  justify-content : space-between;
-}
-
-/* .pokeback {
-    position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 .backPoke {
-    width: 3.5%;
-    position: relative;
-    left: 480px;
-    bottom: 50px;
-} */
-
-/* .searchPoke {
-  width: 400px;
-} */
+  width: 30px
+}
 
 .inputText {
-  width: 200px;
-  height: 25px;
-  margin-right: 20px;
-  margin-left: 10px;
-  border-radius: 5px;
-  
+  width: 75%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
 }
+
+input:focus,
+input.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.inputText:focus {
+  border: 1px solid rgba(255, 203, 6, 1);
+  box-shadow: 0px 0px 6px 0px rgba(255, 203, 6, 1);
+}
+
 *::-webkit-input-placeholder {
-  font-family: sans-serif, "Nanum Gothic";
-  
+  font-family: Dosis, sans-serif;
 }
-.searching{
-  background-color: #fff;
-  color: tomato;
-  padding: 10px;
-  border-radius: 20px;
+
+.searching {
+  color: rgb(39, 36, 35);
+  font-size: 20px;
+  margin: 0px 15px;
 }
 
 /* BOTON SCROLL UP */
@@ -289,7 +316,8 @@ body {
   transition-property: background-color, color;
 }
 
-.buttonUp:hover, .buttonUp:focus{
+.buttonUp:hover,
+.buttonUp:focus {
   background-color: rgb(53, 43, 48);
   color: #fff;
 }
@@ -319,4 +347,120 @@ body {
   font-family: Dosis, sans-serif;
   margin: 5px;
   font-size: 14px;
+}
+/* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
+@media only screen and (max-width:768px) {
+  .headerStyle {
+    width: 100%;
+    height: 50px;
+    background: #8BA6B8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .imgSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px 0px;
+  }
+
+  .searching {
+    color: rgb(39, 36, 35);
+    margin: 6px;
+    font-size: 16px;
+  }
+
+  .inputText {
+    width: 120px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #554F4F;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  ::placeholder {
+    font-family: Dosis, sans-serif;
+  }
+
+  .logo {
+    width: 100px;
+    margin-top: 0.5%;
+  }
+
+  .slogan {
+    font-size: 12px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-family: Dosis, sans-serif;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-evenly;
+    text-align-last: center;
+    flex-wrap: wrap;
+  }
+
+  .selectStyle {
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
+    border-radius: 15px;
+    list-style: none;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: NanumG, sans-serif;
+    margin: 8px;
+  }
+
+  .footerStyle {
+    background: black;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .rrss {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rrssLogo {
+    color: #FFFFFF;
+    font-size: 30px;
+  }
+
+  .GeneralInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .GeneralInformation>a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Dosis, sans-serif;
+    border: none;
+    padding: 0;
+  }
+
+  .authors {
+    font-size: 12px;
+    color: #FFFFFF;
+    font-family: Dosis, sans-serif;
+  }
 }
