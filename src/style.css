@@ -62,6 +62,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-align-last: center;
+  flex-wrap: wrap;
 }
 
 /* ********** ESTA FUE LA QUE MODIFIQUÉ PARA EL ESTILO DE BOTONES EN ESCRITORIO ********* */
@@ -188,7 +189,6 @@ body {
   justify-content: space-evenly;
 }
 
-/* MOVÍ PARA SU LUGAR EL CONTENEDOR DE LOS ICONOS DE RRSS LUEGO QUE ACEPTES EL CAMBIO BORRAS EL COMENTARIO PLEASE  */
 .rrss {
   width: 20%;
   display: flex;
@@ -305,7 +305,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color: tomato;
+  background-color:tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -326,6 +326,28 @@ input.form-control:focus {
   display: block;
 }
 
+/* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
+.errorText{
+  display: block;
+  padding: 20px;
+  border: 3px solid rgb(235, 54, 22);
+  border-radius: 15px;
+  margin:20px;
+  background-color: rgba(255, 255,255, 0.6);
+}
+
+.text1 {
+  font-family: sans-serif, "Nanum Gothic" ;
+  color: rgb(235, 54, 22);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-family: Dosis, sans-serif;
+  margin: 5px;
+  font-size: 14px;
+}
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
@@ -410,7 +432,6 @@ input.form-control:focus {
     justify-content: space-evenly;
   }
 
-  /* MOVÍ PARA SU LUGAR EL CONTENEDOR DE LOS ICONOS DE RRSS LUEGO QUE ACEPTES EL CAMBIO BORRAS EL COMENTARIO PLEASE */
   .rrss {
     width: 70%;
     display: flex;
@@ -442,6 +463,4 @@ input.form-control:focus {
     color: #FFFFFF;
     font-family: Dosis, sans-serif;
   }
-
-
 }

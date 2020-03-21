@@ -111,4 +111,15 @@ const inputText = document.getElementById('inputText');
 inputText.addEventListener('keyup', () => {
   const inputTextPkm = inputText.value.toLowerCase();
   dataCards(searchText(data.pokemon, 'name', inputTextPkm));
+  if (pokeData.innerHTML === '') {
+    pokeData.innerHTML = `
+    <section class="errorText">
+      <p class="text1"> Ningún POKÉMON coincide con tu búsqueda</p>
+      <p class="text"> Intenta lo siguiente para encontrar resusltados: </p>
+      <p class="text"> - Reduce los parámetros de búsqueda</p>
+      <p class="text"> - Ingresa sílabas por nombre de Pokémon</p>
+      <p class="text"> - No ingreses números</p>
+    </section>
+    `;
+  }
 });
