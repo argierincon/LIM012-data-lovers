@@ -27,6 +27,11 @@ iconSearch.addEventListener('click', () => {
   document.getElementById('searchBox').classList.toggle('searchBox-opened');
 });
 
+const inputSearch = document.getElementById('searchPkm');
+inputSearch.addEventListener('keyup', () => {
+  const pokeName = inputSearch.value.toLowerCase();
+
+});
 
 // FUNCIÓN QUE MUESTRA A LOS POKEMON
 const dataContainer = document.getElementById('dataContainer');
