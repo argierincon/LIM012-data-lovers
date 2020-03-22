@@ -21,6 +21,13 @@ if (device() === 'Mobile') {
   });
 }
 
+// PARA EL BUSCADOR DESPLEGABLE
+const iconSearch = document.getElementById('searchToggle');
+iconSearch.addEventListener('click', () => {
+  document.getElementById('searchBox').classList.toggle('searchBox-opened');
+});
+
+
 // FUNCIÓN QUE MUESTRA A LOS POKEMON
 const dataContainer = document.getElementById('dataContainer');
 dataContainer.innerHTML = showCards(data.pokemon);

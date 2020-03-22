@@ -136,21 +136,76 @@ header label:hover {
   display: none;
 } */
 
-.searchIcon {
-  color: rgb(56, 49, 49);
-  font-size: 25px;
+.search:active {
+  outline: none;
 }
 
-.search {
-  width: 300px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid #554F4F;
-  box-sizing: border-box;
-  border-radius: 8px;
-  margin: 10px;
+.search:focus {
+  outline: none;
+}
+
+.searchBox {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background: linear-gradient(to right, #24CCAA, #A2DB95);
+  box-shadow: 0px 4px 12px rgba(136, 18, 56, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 250ms ease;
+  margin: 7px;
+}
+
+.searchBox input {
+  padding: 12.2px 4px;
+  font-size: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  left: 45px;
+  top: 0;
+  transition: 250ms ease;
+  width: 0px;
+}
+
+.searchBox:hover {
+  background: linear-gradient(to right, rgb(12, 175, 142), rgb(154, 236, 135));
+  box-shadow: 0px 4px 12px rgba(168, 31, 74, 0.2);
+  border-radius: 6px;
+}
+
+.searchBox i {
+  position: absolute;
+  top: 25%;
+  left: 11px;
+  font-size: 25px;
+  color: rgb(56, 49, 49);
+  transition: 250ms ease;
+  transform: rotateY(-50%);
+}
+
+.searchBox-opened {
+  background: linear-gradient(to right, #24CCAA, #A2DB95) !important;
+  box-shadow: 0px 4px 12px rgba(168, 31, 74, 0.2) !important;
+  border-radius: 6px !important;
+  width: 290px !important;
+}
+
+.searchBox-opened input {
+  width: 236px;
+}
+
+.searchBox-opened i {
+  top: 32%;
+  left: 15px;
   font-size: 20px;
-  text-align: center;
+  transform: rotateY(-50%);
+}
+
+::placeholder {
+  font-family: Dosis, sans-serif;
 }
 
 .logoSlogan {
@@ -356,7 +411,76 @@ header label:hover {
     right: 20px;
   }
 
-  .searchIcon {
+  .searchBox {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: linear-gradient(to right, #24CCAA, #A2DB95);
+    box-shadow: 0px 4px 12px rgba(136, 18, 56, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 250ms ease;
+    margin: 6px;
+  }
+  
+  .searchBox input {
+    padding: 8px 7px 7px;
+    font-size: 15px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    left: 27px;
+    width: 118px;
+    height: 18px;
+    top: 0;
+    transition: 250ms ease;
+    width: 0px;
+  }
+  
+  .searchBox:hover {
+    background: linear-gradient(to right, rgb(12, 175, 142), rgb(154, 236, 135));
+    box-shadow: 0px 4px 12px rgba(168, 31, 74, 0.2);
+    border-radius: 6px;
+  }
+  
+  .searchBox i {
+    position: absolute;
+    top: 28%;
+    left: 10px;
+    font-size: 16px;
+    color: rgb(56, 49, 49);
+    transition: 250ms ease;
+    transform: rotateY(-50%);
+  }
+  
+  .searchBox-opened {
+    background: linear-gradient(to right, #24CCAA, #A2DB95) !important;
+    box-shadow: 0px 4px 12px rgba(168, 31, 74, 0.2) !important;
+    border-radius: 6px !important;
+    width: 160px !important;
+  }
+  
+  .searchBox-opened input {
+    width: 236px;
+  }
+  
+  .searchBox-opened i {
+    top: 28%;
+    left: 10px;
+    font-size: 14px;
+    transform: rotateY(-50%);
+  }
+  
+  ::placeholder {
+    font-family: Dosis, sans-serif;
+  }
+  
+
+  /* .searchIcon {
     position: absolute;
     top: 32%;
     left: 52%;
@@ -371,7 +495,7 @@ header label:hover {
     top: 19%;
     left: 59.3%;
     font-size: 15px;
-  }
+  } */
 
   .logoSlogan {
     display: flex;
