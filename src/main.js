@@ -8,6 +8,7 @@ import {
   alphaOrderAZ,
   alphaOrderZA,
   filterRegion,
+  searchPkm,
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -25,12 +26,6 @@ if (device() === 'Mobile') {
 const iconSearch = document.getElementById('searchToggle');
 iconSearch.addEventListener('click', () => {
   document.getElementById('searchBox').classList.toggle('searchBox-opened');
-});
-
-const inputSearch = document.getElementById('searchPkm');
-inputSearch.addEventListener('keyup', () => {
-  const pokeName = inputSearch.value.toLowerCase();
-
 });
 
 // FUNCIÓN QUE MUESTRA A LOS POKEMON
@@ -120,6 +115,18 @@ jhoto.addEventListener('click', () => {
   dataContainer.innerHTML = showCards(filterRegion(data.pokemon, 'jhoto'));
 });
 
+const inputSearch = document.getElementById('searchPkm');
+inputSearch.addEventListener('keyup', () => {
+  const pokeName = inputSearch.value.toLowerCase().trim();
+  dataContainer.innerHTML = showCards(searchPkm(data.pokemon, 'name', pokeName));
+  if (dataContainer.innerHTML !== data.pokemon.name.indexOF()) {
+    dataContainer.innerHTML = `
+    <section class="errorText">
+      <p class="text1"> Ningún POKÉMON coincide con tu búsqueda</p>
+    </section>
+    `;
+  }
+});
 
 /* const a = data.pokemon.map((elem) => elem.encounter['base-flee-rate']);
  console.log(new Set(a));

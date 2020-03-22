@@ -115,3 +115,8 @@ export const filterRegion = (arrPkm, condition) => {
       return region;
   }
 };
+
+export const searchPkm = (data, property, condition) => {
+  const inputSearch = data.filter(element => (element[property]).indexOf(condition) !== -1);
+  return inputSearch;
+};
