@@ -69,6 +69,37 @@ header label:hover {
   text-align: center;
 }
 
+.type {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.type::-webkit-scrollbar {
+  width: 12px;
+  /* Tamaño del scroll en vertical */
+}
+
+.type::-webkit-scrollbar-thumb {
+  background: rgb(138, 136, 136);
+  border-radius: 4px;
+}
+
+.type::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 94, 94);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.type::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.type::-webkit-scrollbar-track:hover,
+.type::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
 .subMenu li {
   border-top: none !important;
 }
@@ -179,6 +210,7 @@ header label:hover {
 }
 
 .pokeImgName {
+  object-fit: cover;
   background-color: #F2F2F2;
   width: 144px;
   height: 130px;
@@ -210,12 +242,13 @@ header label:hover {
 }
 
 .pokeName {
-  font-weight: bold;
+  font-weight: bolder;
   text-transform: uppercase
 }
 
 .pokeInfo {
-  background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56;
+  /* background: linear-gradient(180deg, #6A81F8 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #61CEE5 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), #50EA56; */
+  background-image: url(./img/back-card.png);
   width: 134px;
   height: 130px;
   border-radius: 10px;
@@ -225,6 +258,7 @@ header label:hover {
   margin-top: 15px;
   padding-top: 20px;
   padding-left: 10px;
+  color: white;
 }
 
 .pokeInfo p span {
@@ -303,12 +337,18 @@ header label:hover {
     margin: 0;
   }
 
-  .subMenu li {
-    padding: 8px 0px;
+  .type {
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
-  .logoSlogan h1 {
-    font-size: 12px;
+  .type::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subMenu li {
+    padding: 8px 0px;
   }
 
   .menu li i {
@@ -332,7 +372,6 @@ header label:hover {
     left: 59.3%;
     font-size: 15px;
   }
-
 
   .logoSlogan {
     display: flex;
