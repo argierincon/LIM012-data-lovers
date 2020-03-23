@@ -390,6 +390,49 @@ header label:hover {
   color: #F5F5F5;
 }
 
+/* CLASES PARA LA FUTURA MODAL */
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.num {
+  top: 12400px
+}
+
+.infoWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(242, 242, 242, 0.7);
+  border-radius: 10px;
+  width: 40%;
+  height: 690px;
+}
+
+.pokeImgInfo {
+  width: 130px;
+  margin: 30px 30px 10px;
+}
+
+.infoWindow h4 {
+  font-size: 18px;
+  margin: 0px 0px 20px;
+}
+
+.infoWindow p {
+  width: 80%;
+  margin: 0px 0px 20px;
+  font-size: 18px;
+}
+
+.infoWindow table {
+  width: 80%;
+  margin: 0px 0px 20px;
+}
+
 @media (max-width: 768px) {
   header label {
     display: block;
@@ -454,7 +497,7 @@ header label:hover {
   }
 
   .searchBox input {
-    padding: 7px 0px 6px 4px ;
+    padding: 7px 0px 6px 4px;
     font-size: 15px;
     color: rgb(56, 49, 49);
     background-color: transparent;
