@@ -121,8 +121,8 @@ inputSearch.addEventListener('keyup', () => {
   dataContainer.innerHTML = showCards(searchPkm(data.pokemon, 'name', pokeName));
   if (dataContainer.innerHTML !== data.pokemon.name.indexOF()) {
     dataContainer.innerHTML = `
-    <section class="errorText">
-      <p class="text1"> Ningún POKÉMON coincide con tu búsqueda</p>
+    <section class="errorMessage">
+      <p class="message"> Ningún POKÉMON coincide con tu búsqueda</p>
     </section>
     `;
   }

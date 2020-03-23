@@ -320,6 +320,22 @@ header label:hover {
   font-weight: bold;
 }
 
+.errorMessage{
+  display: block;
+  padding: 20px;
+  border: 3px solid rgb(235, 54, 22);
+  border-radius: 15px;
+  margin:20px;
+  background-color: rgba(255, 255,255, 0.6);
+}
+
+.message {
+  font-family: sans-serif, "Nanum Gothic" ;
+  color: rgb(235, 54, 22);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .footerStyle {
   background-color: #378B7D;
   background: linear-gradient(to right, #639d25, #427768);
