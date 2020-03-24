@@ -180,6 +180,68 @@ body {
   font-weight: bold;
 }
 
+/* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  font-family: NanumG, sans-serif;
+  margin: 40px;
+}
+
+.num {
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
+  border: 1px solid #554F4F;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+  padding-top: 9.5px;
+  font-family: sans-serif, "Nanum Gothic";
+  font-weight: bold;
+}
+
+.infoWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 40%;
+  height: 610px;
+  color: #FFFFFF;
+}
+
+.pokeImgInfo {
+  margin: 30px 30px 10px;
+}
+
+.infoWindow h4 {
+  font-size: 18px;
+  margin: 0px 0px 30px;
+}
+
+.infoWindow p {
+  width: 80%;
+  margin: 0px 0px 30px;
+  font-size: 18px;
+}
+
+.infoWindow table {
+  width: 80%;
+  margin: 0px 0px 30px;
+  text-align: center;
+}
+
+.infoWindow td {
+  width: 180px;
+}
+
 .footerStyle {
   background: black;
   height: 150px;
@@ -305,7 +367,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color:tomato;
+  background-color: tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -327,17 +389,17 @@ input.form-control:focus {
 }
 
 /* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
-.errorText{
+.errorText {
   display: block;
   padding: 20px;
   border: 3px solid rgb(235, 54, 22);
   border-radius: 15px;
-  margin:20px;
-  background-color: rgba(255, 255,255, 0.6);
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .text1 {
-  font-family: sans-serif, "Nanum Gothic" ;
+  font-family: sans-serif, "Nanum Gothic";
   color: rgb(235, 54, 22);
   font-weight: bold;
   margin-bottom: 10px;
@@ -348,6 +410,7 @@ input.form-control:focus {
   margin: 5px;
   font-size: 14px;
 }
+
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
@@ -420,6 +483,65 @@ input.form-control:focus {
     font-weight: bold;
     font-family: NanumG, sans-serif;
     margin: 8px;
+  }
+
+  /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-family: NanumG, sans-serif;
+    margin: 20px;
+  }
+
+  .num {
+    top: 20px;
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
+    border: 1px solid #554F4F;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-size: 12px;
+    padding-top: 9.5px;
+    font-family: sans-serif, "Nanum Gothic";
+    font-weight: bold;
+  }
+
+  .infoWindow {
+    width: 100%;
+    height: 470px;
+  }
+
+  .pokeImgInfo {
+    width: 100px;
+    margin: 20px 20px 5px;
+  }
+
+  .infoWindow h4 {
+    font-size: 14px;
+    margin: 0px 0px 15px;
+  }
+
+  .infoWindow p {
+    width: 80%;
+    margin: 0px 0px 20px;
+    font-size: 14px;
+  }
+
+  .infoWindow table {
+    width: 80%;
+    margin: 0px 0px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .infoWindow td {
+    width: 200px;
   }
 
   .footerStyle {
