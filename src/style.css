@@ -212,7 +212,7 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  width: 40%;
+  width: 50%;
   height: 640px;
   color: #FFFFFF;
 }
@@ -224,6 +224,7 @@ body {
 .infoWindow h4 {
   font-size: 18px;
   margin: 0px 0px 30px;
+  text-transform: uppercase;
 }
 
 .infoWindow p {
