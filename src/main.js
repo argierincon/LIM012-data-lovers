@@ -7,7 +7,7 @@ import {
   filterFleeRate,
   filterSpawn,
   searchText,
-  calculateSTAB,
+  infoCalculations,
 } from './data.js';
 
 
@@ -125,7 +125,11 @@ inputText.addEventListener('keyup', () => {
   }
 });
 
-console.log(calculateSTAB(data.pokemon[0]['special-attack'], data.pokemon[0].type));
-console.log(data.pokemon[0]['special-attack'][0].type);
+// FUNCIÓN QUE MUESTRA INFORMACIÓN AMPLIADA DE LOS PKM
+// COMO ESTÁ ABAJO SE EJECUTA PRIMERO
+pokeData.innerHTML = infoCalculations(data.pokemon);
+
+// console.log(calculateSTAB(data.pokemon[0]['special-attack'], data.pokemon[0].type));
+// console.log(data.pokemon[0]['special-attack'][0].type);
 // console.log(data.pokemon[0]['special-attack'][0].type);
 // console.log(data.pokemon[0].type);
