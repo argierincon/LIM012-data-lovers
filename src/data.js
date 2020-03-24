@@ -85,3 +85,14 @@ export const searchText = (data, property, condition) => {
   const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
   return searchPkm;
 };
+
+export const calculateSTAB = (attackType, pkmType) => {
+  const result = attackType.map((elem) => {
+    let res = elem['base-damage'];
+    if (elem.type === pkmType) {
+      res *= 0.2;
+    }
+    return res;
+  });
+  return result;
+};
