@@ -7,6 +7,9 @@ import {
   filterFleeRate,
   filterSpawn,
   searchText,
+  calculateSTAB,
+  calculateDPS,
+  calculateEPS,
 } from './data.js';
 
 
@@ -56,6 +59,7 @@ const dataCards = (dataPokemon) => {
             <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
             <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
             <p class="pokeBack" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
+            <button class="buttonInfo">Click</button>
             </section>
           </section>
          </section> 
@@ -124,29 +128,13 @@ inputText.addEventListener('keyup', () => {
   }
 });
 
+// -->INDICACIONES
+// el div con el id=> pokeData1 está en el html
+// el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
+// se debe cambiar y/o eliminar con createElement o attribute
+const pokeData1 = document.getElementById('pokeData1');
+
 const infoCalculations = (dataPokemon) => {
-  const calculateSTAB = (attackType) => {
-    const result = attackType.map((elem) => {
-      const res = elem['base-damage'];
-      return res * 1.2;
-    });
-    return result;
-  };
-
-  const calculateDPS = (attackType, stab) => {
-    const result = attackType.map((elem) => {
-      const res = elem['base-damage'];
-      const resTime = elem['move-duration-seg'];
-      return (res * stab) / resTime;
-    });
-    return result;
-  };
-
-  const calculateEPS = (attackType) => {
-    const result = attackType.map(elem => elem.energy / elem['move-duration-seg']);
-    return result;
-  };
-
   let showInfo = '';
 
   dataPokemon.forEach((elem) => {
@@ -199,14 +187,16 @@ const infoCalculations = (dataPokemon) => {
             <td>${elem.size.weight}</td>
           </tr>
         </table>
-
+    
       </div>
+    
     </section>
+    
     `;
     showInfo += info;
   });
-  return showInfo;
+
+  pokeData1.innerHTML = showInfo;
 };
 
-const pokeData1 = document.getElementById('pokeData1');
-pokeData1.innerHTML = infoCalculations(data.pokemon);
+infoCalculations(data.pokemon);

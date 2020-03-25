@@ -85,3 +85,25 @@ export const searchText = (data, property, condition) => {
   const searchPkm = data.filter(element => (element[property]).indexOf(condition) !== -1);
   return searchPkm;
 };
+
+export const calculateSTAB = (attackType) => {
+  const result = attackType.map((elem) => {
+    const res = elem['base-damage'];
+    return res * 1.2;
+  });
+  return result;
+};
+
+export const calculateDPS = (attackType, stab) => {
+  const result = attackType.map((elem) => {
+    const res = elem['base-damage'];
+    const resTime = elem['move-duration-seg'];
+    return (res * stab) / resTime;
+  });
+  return result;
+};
+
+export const calculateEPS = (attackType) => {
+  const result = attackType.map(elem => elem.energy / elem['move-duration-seg']);
+  return result;
+};
