@@ -401,12 +401,14 @@ input.form-control:focus {
   background: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
 }
 
 #exit {
@@ -520,7 +522,7 @@ input.form-control:focus {
     align-items: center;
     margin: auto;
     font-family: NanumG, sans-serif;
-    margin: 20px;
+    /* margin: 20px; */
   }
 
   .num {

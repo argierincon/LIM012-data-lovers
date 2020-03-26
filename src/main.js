@@ -141,8 +141,10 @@ const dataCards = (dataPokemon) => {
       pokeData1.appendChild(infoCalculations(element));
       pokeData1.querySelector('#exit').addEventListener('click', () => {
         pokeData1.classList.remove('mostrar');
+        pokeData1.innerHTML = '';
       });
     });
+
     pokeData.appendChild(sectionElement);
   });
 };
