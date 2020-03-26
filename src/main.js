@@ -130,7 +130,7 @@ inputText.addEventListener('keyup', () => {
 // -->INDICACIONES
 // el div con el id=> pokeData1 está en el html
 // el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
-// se debe cambiar y/o eliminar con createElement o attribute
+// se debe cambiar y/o eliminar   con createElement o attribute
 const pokeData1 = document.getElementById('pokeData1');
 
 const infoCalculations = (dataPokemon) => {
