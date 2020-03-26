@@ -180,8 +180,27 @@ body {
   font-weight: bold;
 }
 
+.buttonInfo {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
+  margin-top: 10px;
+  /* margin-top: 8px; mobile */
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: NanumG, sans-serif;
+  /* margin: 8px; */
+}
+
+.buttonInfo:hover {
+  cursor: pointer;
+}
+
 /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
 .infoBox {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,7 +231,7 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  width: 50%;
+  width: 650px;
   height: 640px;
   color: #FFFFFF;
 }
@@ -227,7 +246,7 @@ body {
   text-transform: uppercase;
 }
 
-.infoWindow p {
+.infoWindow>p {
   width: 80%;
   margin: 0px 0px 30px;
   font-size: 18px;
@@ -241,6 +260,19 @@ body {
 
 .infoWindow td {
   width: 180px;
+}
+
+.containerRW {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0px 0px 30px;
+}
+
+.title {
+  margin: 0px 0px 2px;
+  font-weight: bold;
 }
 
 .footerStyle {
@@ -305,7 +337,7 @@ body {
   font-family: NanumG, sans-serif;
   font-size: 12px;
   position: relative;
-  top: 20px;
+  top: 14px;
 }
 
 .bold1 {
@@ -314,10 +346,10 @@ body {
 
 .pokeBack {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 5px;
+  flex-direction: row;
+  margin-top: 8px;
   margin-right: 5px;
+  justify-content: space-between;
 }
 
 .backPoke {
@@ -368,7 +400,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color:tomato;
+  background-color: tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -386,7 +418,7 @@ input.form-control:focus {
 }
 
 .hide {
-  display: block;
+  display: none;
 }
 
 /* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
@@ -411,6 +443,7 @@ input.form-control:focus {
   margin: 5px;
   font-size: 14px;
 }
+
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
@@ -487,12 +520,13 @@ input.form-control:focus {
 
   /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
   .infoBox {
-    display: flex;
+    width: 600px;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     font-family: NanumG, sans-serif;
-    margin: 20px;
+    margin: 20px; */
   }
 
   .num {
@@ -513,8 +547,8 @@ input.form-control:focus {
   }
 
   .infoWindow {
-    width: 100%;
-    height: 500px;
+    width: 300px;
+    height: 650px;
   }
 
   .pokeImgInfo {
@@ -527,7 +561,7 @@ input.form-control:focus {
     margin: 0px 0px 15px;
   }
 
-  .infoWindow p {
+  .infoWindow>p {
     width: 80%;
     margin: 0px 0px 20px;
     font-size: 14px;
@@ -543,6 +577,24 @@ input.form-control:focus {
   .infoWindow td {
     width: 200px;
   }
+
+  .containerRW {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 30px;
+}
+
+.title {
+  margin: 0px 0px 2px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resistant, .weaknesses {
+  margin: 10px 0px;
+}
 
   .footerStyle {
     background: black;
