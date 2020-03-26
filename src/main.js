@@ -12,8 +12,6 @@ import {
   calculateEPS,
 } from './data.js';
 
-
-const pokeData = document.getElementById('pokeData');
 const buttonUp = document.querySelector('.buttonUp');
 
 const scrollFunction = () => {
@@ -35,12 +33,82 @@ const backTotop = () => {
 
 buttonUp.addEventListener('click', backTotop);
 
-const dataCards = (dataPokemon) => {
-  let showData = '';
-  dataPokemon.forEach((element) => {
-    const pokeDat = `
 
-       <section class="data1"> 
+// -->INDICACIONES
+// el div con el id=> pokeData1 está en el html
+// el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
+//  se debe cambiar y/o eliminar con createElement o attribute
+const pokeData = document.getElementById('pokeData');
+
+const infoCalculations = (elem) => {
+  const dataPok = document.createElement('div');
+  dataPok.setAttribute('class', 'dataPok');
+  let specialAttack = '';
+
+  elem['special-attack'].forEach((attack, index) => {
+    specialAttack += `<tr>
+                          <td>${attack.name}</td>
+                          <td>${calculateSTAB(elem['special-attack'])[index]}</td>
+                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type)[index])[index].toFixed()}</td>
+                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+                        </tr>`;
+  });
+
+  const info = `    
+    <section id="infoBox" class="infoBox">
+    <button id="exit">X</button>
+    <p class="num">${elem.num}</p>    
+      <div class="infoWindow">
+        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
+        <h4>${elem.name}</h4>
+        <p>${elem.about}</p>
+        
+        <table>
+          <tr>
+            <th>ATTACKS</th>
+            <th>STAB</th>
+            <th>DPS</th>
+            <th>EPS</th>
+          </tr>
+          ${specialAttack}
+        </table>
+        <table>
+          <tr>
+            <th>RESISTENCIA</th>
+            <th>DEBILIDAD</th>
+          </tr>
+          <tr>
+            <td>${elem.resistant}</td>
+            <td>${elem.weaknesses}</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th>ALTURA</th>
+            <th>PESO</th>
+          </tr>
+          <tr>
+            <td>${elem.size.height}</td>
+            <td>${elem.size.weight}</td>
+          </tr>
+        </table>
+    
+      </div>
+    
+    </section>
+    
+    `;
+  dataPok.innerHTML = info;
+  return dataPok;
+};
+
+const dataCards = (dataPokemon) => {
+  pokeData.innerHTML = '';
+  dataPokemon.forEach((element) => {
+    const sectionElement = document.createElement('section');
+    sectionElement.setAttribute('class', 'data1');
+    sectionElement.innerHTML = `
         <section class="card">  
          <section class="side front">    
           <section id="pokeCard" class="pokeCard">
@@ -64,13 +132,21 @@ const dataCards = (dataPokemon) => {
           </section>
          </section> 
         </section>
-       </section> 
-       `;
-    showData += pokeDat;
-  });
+         `;
 
-  pokeData.innerHTML = showData;
+    sectionElement.querySelector('.buttonInfo').addEventListener('click', (event) => {
+      event.preventDefault();
+      const pokeData1 = document.getElementById('pokeData1');
+      pokeData1.classList.add('mostrar');
+      pokeData1.appendChild(infoCalculations(element));
+      pokeData1.querySelector('#exit').addEventListener('click', () => {
+        pokeData1.classList.remove('mostrar');
+      });
+    });
+    pokeData.appendChild(sectionElement);
+  });
 };
+
 dataCards(data.pokemon);
 
 const orderAlfabetic = document.querySelector('#order');
@@ -127,76 +203,3 @@ inputText.addEventListener('keyup', () => {
     `;
   }
 });
-
-// -->INDICACIONES
-// el div con el id=> pokeData1 está en el html
-// el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
-// se debe cambiar y/o eliminar con createElement o attribute
-const pokeData1 = document.getElementById('pokeData1');
-
-const infoCalculations = (dataPokemon) => {
-  let showInfo = '';
-
-  dataPokemon.forEach((elem) => {
-    let specialAttack = '';
-
-    elem['special-attack'].forEach((attack, index) => {
-      specialAttack += `<tr>
-                          <td>${attack.name}</td>
-                          <td>${calculateSTAB(elem['special-attack'])[index]}</td>
-                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'])[index])[index].toFixed()}</td>
-                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
-                        </tr>`;
-    });
-
-    const info = `    
-    <section id="infoBox" class="infoBox">
-      <p class="num">${elem.num}</p>
-      <div class="infoWindow">
-        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
-        <h4>${elem.name}</h4>
-        <p>${elem.about}</p>
-        
-        <table>
-          <tr>
-            <th>ATTACKS</th>
-            <th>STAB</th>
-            <th>DPS</th>
-            <th>EPS</th>
-          </tr>
-          ${specialAttack}
-        </table>
-        <table>
-          <tr>
-            <th>RESISTENCIA</th>
-            <th>DEBILIDAD</th>
-          </tr>
-          <tr>
-            <td>${elem.resistant}</td>
-            <td>${elem.weaknesses}</td>
-          </tr>
-        </table>
-
-        <table>
-          <tr>
-            <th>ALTURA</th>
-            <th>PESO</th>
-          </tr>
-          <tr>
-            <td>${elem.size.height}</td>
-            <td>${elem.size.weight}</td>
-          </tr>
-        </table>
-    
-      </div>
-    
-    </section>
-    
-    `;
-    showInfo += info;
-  });
-
-  pokeData1.innerHTML = showInfo;
-};
-
-infoCalculations(data.pokemon);
