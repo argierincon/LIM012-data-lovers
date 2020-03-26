@@ -9,3 +9,8 @@ Una vez definidos los usuarios con los que ibamos a trabajar desglozamos una a u
 Nuestro primer prototipo de baja fidelidad fue diseñado de la siguiente manera:
 
 ![1er prototipo de baja](./img_readme/HU.png)
+
+En un inicio nuestra idea era mostrarle al usuario una pantalla principal en la que se le mostrara una serie de tarjetas con iconos que hicieran referencia a las categorías mas top para los jugadores, y los filtros y pociones para ordenar se iban a mostrar en un desplegable con un ícono de embudo.
+Testeamos éste primer prototipo con al menos 2 usuarios y notamos que se quedaron un poco trabados al momento de querer ordenar o filtrar a los pokémon es así que tuvimos que replantearnos la pantalla que se iba a mostrar al momento de ingresar a la web y creamos nuestro segundo prototipo de baja fidelidad.
+
+![1er prototipo de baja](./img_readme/HU1-nroDePokedex.png)
