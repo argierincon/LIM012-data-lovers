@@ -56,7 +56,7 @@ const infoCalculations = (elem) => {
 
   const info = `    
     <section id="infoBox" class="infoBox">
-    <button id="exit">X</button>
+    <i class="fas fa-times" id="exit"></i>
     <p class="num">${elem.num}</p>    
       <div class="infoWindow">
         <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
