@@ -431,8 +431,6 @@ input.form-control:focus {
 		0 0 180px rgba(255, 251, 0, 1);
 }
   
-
-
 #exit:hover {
   color: rgb(255, 255, 255);
   text-shadow:
@@ -446,7 +444,6 @@ input.form-control:focus {
   0 0 140px rgba(255, 0, 119, 1),
   0 0 180px rgba(255, 0, 119, 1);
 }
-
 
 /* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
 .errorText {
