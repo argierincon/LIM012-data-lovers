@@ -72,16 +72,18 @@ const infoCalculations = (elem) => {
           </tr>
           ${specialAttack}
         </table>
-        <table>
-          <tr>
-            <th>RESISTENCIA</th>
-            <th>DEBILIDAD</th>
-          </tr>
-          <tr>
-            <td>${elem.resistant}</td>
-            <td>${elem.weaknesses}</td>
-          </tr>
-        </table>
+        
+        <div class="containerRW">
+        <div class="resistant">
+        <p class="title">RESISTENCIA</p>
+        <p>${elem.resistant}</p>
+        </div>
+
+        <div class="weaknesses">
+        <p class="title">DEBILIDAD</p>        
+        <p>${elem.weaknesses}</p>
+        </div>
+        </div>
 
         <table>
           <tr>
@@ -126,8 +128,10 @@ const dataCards = (dataPokemon) => {
             <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
             <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
             <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
-            <p class="pokeBack" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
-            <button class="buttonInfo">Click</button>
+            <div class="pokeBack" id="pokeback"> 
+            <i class="fas fa-plus-circle buttonInfo"></i> 
+            <img src="img/pokebola.png" alt="pokebola" class="backPoke">
+            </div>
             </section>
           </section>
          </section> 

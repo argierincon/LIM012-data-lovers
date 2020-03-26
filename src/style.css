@@ -180,8 +180,43 @@ body {
   font-weight: bold;
 }
 
+.buttonInfo {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: NanumG, sans-serif;
+  color:rgb(255, 255, 255);
+  text-shadow:
+		0 0 5px rgb(34, 255, 14),
+		0 0 10px rgba(34, 255, 14),
+		0 0 20px rgba(34, 255, 14),
+		0 0 40px rgb(145, 255, 0),
+		0 0 80px rgba(145, 255, 0, 1),
+		0 0 90px rgba(34, 255, 14, 1),
+		0 0 100px rgba(34, 255, 14, 1),
+		0 0 140px rgba(145, 255, 0, 1),
+		0 0 180px rgb(145, 255, 0);
+}
+
+.buttonInfo:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  text-shadow:
+		0 0 5px rgb(0, 247, 255),
+		0 0 10px rgba(0, 247, 255),
+		0 0 20px rgba(0, 89, 255),
+		0 0 40px rgb(0, 89, 255),
+		0 0 80px rgba(0, 247, 255, 1),
+		0 0 90px rgba(0, 247, 255, 1),
+		0 0 100px rgba(0, 89, 255),
+		0 0 140px rgb(0, 89, 255),
+		0 0 180px rgb(0, 247, 255);
+}
+
 /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
 .infoBox {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,7 +247,7 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  width: 50%;
+  width: 650px;
   height: 640px;
   color: #FFFFFF;
 }
@@ -227,7 +262,7 @@ body {
   text-transform: uppercase;
 }
 
-.infoWindow p {
+.infoWindow>p {
   width: 80%;
   margin: 0px 0px 30px;
   font-size: 18px;
@@ -243,6 +278,18 @@ body {
   width: 180px;
 }
 
+.containerRW {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0px 0px 30px;
+}
+
+.title {
+  margin: 0px 0px 2px;
+  font-weight: bold;
+}
 .footerStyle {
   background: black;
   height: 150px;
@@ -314,10 +361,10 @@ body {
 
 .pokeBack {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 5px;
+  flex-direction: row;
+  margin-top: 8px;
   margin-right: 5px;
+  justify-content: space-between;
 }
 
 .backPoke {
@@ -543,6 +590,7 @@ input.form-control:focus {
 
   /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
   .infoBox {
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -569,8 +617,8 @@ input.form-control:focus {
   }
 
   .infoWindow {
-    width: 100%;
-    height: 500px;
+    width: 300px;
+    height: 650px;
   }
 
   .pokeImgInfo {
@@ -583,7 +631,7 @@ input.form-control:focus {
     margin: 0px 0px 15px;
   }
 
-  .infoWindow p {
+  .infoWindow>p {
     width: 80%;
     margin: 0px 0px 20px;
     font-size: 14px;
@@ -598,6 +646,25 @@ input.form-control:focus {
 
   .infoWindow td {
     width: 200px;
+  }
+
+  .containerRW {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 30px;
+  }
+
+  .title {
+    margin: 0px 0px 2px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .resistant,
+  .weaknesses {
+    margin: 10px 0px;
   }
 
   .footerStyle {
@@ -640,5 +707,39 @@ input.form-control:focus {
     font-size: 12px;
     color: #FFFFFF;
     font-family: Dosis, sans-serif;
+  }
+
+  #exit {
+    position: relative;
+    font-size: 20px;
+    top: 65px;
+    left: 130px;
+    z-index: 1;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-shadow:
+      0 0 5px rgb(229, 255, 0),
+      0 0 10px rgba(229, 255, 0),
+      0 0 20px rgba(229, 255, 0),
+      0 0 40px rgb(255, 251, 0),
+      0 0 80px rgba(255, 251, 0, 1),
+      0 0 90px rgba(255, 251, 0, 1),
+      0 0 100px rgba(255, 251, 0, 1),
+      0 0 140px rgba(255, 251, 0, 1),
+      0 0 180px rgba(255, 251, 0, 1);
+  }
+    
+  #exit:hover {
+    color: rgb(255, 255, 255);
+    text-shadow:
+    0 0 5px rgb(255, 0, 119),
+    0 0 10px rgba(255, 0, 119),
+    0 0 20px rgba(255, 0, 119),
+    0 0 40px rgb(255, 117, 186),
+    0 0 80px rgba(255, 117, 186, 1),
+    0 0 90px rgba(255, 117, 186, 1),
+    0 0 100px rgba(255, 117, 186, 1),
+    0 0 140px rgba(255, 0, 119, 1),
+    0 0 180px rgba(255, 0, 119, 1);
   }
 }
