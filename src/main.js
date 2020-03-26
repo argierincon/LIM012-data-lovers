@@ -7,7 +7,9 @@ import {
   filterFleeRate,
   filterSpawn,
   searchText,
-  infoCalculations,
+  calculateSTAB,
+  calculateDPS,
+  calculateEPS,
 } from './data.js';
 
 
@@ -57,6 +59,7 @@ const dataCards = (dataPokemon) => {
             <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
             <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
             <p class="pokeBack" id="pokeback"><img src="img/pokebola.png" alt="pokebola" class="backPoke"></p>
+            <button class="buttonInfo">Click</button>
             </section>
           </section>
          </section> 
@@ -125,11 +128,75 @@ inputText.addEventListener('keyup', () => {
   }
 });
 
-// FUNCIÓN QUE MUESTRA INFORMACIÓN AMPLIADA DE LOS PKM
-// COMO ESTÁ ABAJO SE EJECUTA PRIMERO
-pokeData.innerHTML = infoCalculations(data.pokemon);
+// -->INDICACIONES
+// el div con el id=> pokeData1 está en el html
+// el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
+// se debe cambiar y/o eliminar con createElement o attribute
+const pokeData1 = document.getElementById('pokeData1');
 
-// console.log(calculateSTAB(data.pokemon[0]['special-attack'], data.pokemon[0].type));
-// console.log(data.pokemon[0]['special-attack'][0].type);
-// console.log(data.pokemon[0]['special-attack'][0].type);
-// console.log(data.pokemon[0].type);
+const infoCalculations = (dataPokemon) => {
+  let showInfo = '';
+
+  dataPokemon.forEach((elem) => {
+    let specialAttack = '';
+
+    elem['special-attack'].forEach((attack, index) => {
+      specialAttack += `<tr>
+                          <td>${attack.name}</td>
+                          <td>${calculateSTAB(elem['special-attack'])[index]}</td>
+                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'])[index])[index].toFixed()}</td>
+                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+                        </tr>`;
+    });
+
+    const info = `    
+    <section id="infoBox" class="infoBox">
+      <p class="num">${elem.num}</p>
+      <div class="infoWindow">
+        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
+        <h4>${elem.name}</h4>
+        <p>${elem.about}</p>
+        
+        <table>
+          <tr>
+            <th>ATTACKS</th>
+            <th>STAB</th>
+            <th>DPS</th>
+            <th>EPS</th>
+          </tr>
+          ${specialAttack}
+        </table>
+        <table>
+          <tr>
+            <th>RESISTENCIA</th>
+            <th>DEBILIDAD</th>
+          </tr>
+          <tr>
+            <td>${elem.resistant}</td>
+            <td>${elem.weaknesses}</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th>ALTURA</th>
+            <th>PESO</th>
+          </tr>
+          <tr>
+            <td>${elem.size.height}</td>
+            <td>${elem.size.weight}</td>
+          </tr>
+        </table>
+    
+      </div>
+    
+    </section>
+    
+    `;
+    showInfo += info;
+  });
+
+  pokeData1.innerHTML = showInfo;
+};
+
+infoCalculations(data.pokemon);

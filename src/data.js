@@ -86,79 +86,24 @@ export const searchText = (data, property, condition) => {
   return searchPkm;
 };
 
-
-// FUNCIÓN QUE CALCULA SOLO EL STAB (BONIFICACION POR ATAQUE DEL MISMO TIPO)
-const calculateSTAB = (attackType, pkmType) => {
+export const calculateSTAB = (attackType) => {
   const result = attackType.map((elem) => {
-    let res = elem['base-damage'];
-    if (elem.type === pkmType) {
-      res *= 0.2;
-    }
-    return res;
+    const res = elem['base-damage'];
+    return res * 1.2;
   });
   return result;
 };
 
-// AQUI USE EL TEMPLATE STRING PARA LLENAR LA INFO DE LOS POKEMON
-export const infoCalculations = (dataPokemon) => {
-  let showInfo = '';
-
-  dataPokemon.forEach((elem) => {
-    let specialAttack = '';
-
-    // ÉSTO TUVE QUE SACARLO DE LA MAQUETACION PORQUE ALGUNOS TIENEN 3 Y OTROS TIENEN 4 ATAQUES
-    elem['special-attack'].forEach((attack, index) => {
-      specialAttack += `<tr>
-                          <td>${attack.name}</td>
-                          <td>${calculateSTAB(elem['special-attack'], elem.type)[index]}</td>
-                          <td>234</td>
-                          <td>456</td>
-                        </tr>`;
-    });
-
-    const info = `    
-    <section id="infoBox" class="infoBox">
-      <p class="num">${elem.num}</p>
-      <div class="infoWindow">
-        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
-        <h4>${elem.name}</h4>
-        <p>${elem.about}</p>
-        
-        <table>
-          <tr>
-            <th>ATTACKS</th>
-            <th>STAB</th>
-            <th>DPS</th>
-            <th>EPS</th>
-          </tr>
-          ${specialAttack}
-        </table>
-        <table>
-          <tr>
-            <th>RESISTENCIA</th>
-            <th>DEBILIDAD</th>
-          </tr>
-          <tr>
-            <td>${elem.resistant}</td>
-            <td>${elem.weaknesses}</td>
-          </tr>
-        </table>
-
-        <table>
-          <tr>
-            <th>ALTURA</th>
-            <th>PESO</th>
-          </tr>
-          <tr>
-            <td>${elem.size.height}</td>
-            <td>${elem.size.weight}</td>
-          </tr>
-        </table>
-
-      </div>
-    </section>
-    `;
-    showInfo += info;
+export const calculateDPS = (attackType, stab) => {
+  const result = attackType.map((elem) => {
+    const res = elem['base-damage'];
+    const resTime = elem['move-duration-seg'];
+    return (res * stab) / resTime;
   });
-  return showInfo;
+  return result;
+};
+
+export const calculateEPS = (attackType) => {
+  const result = attackType.map(elem => elem.energy / elem['move-duration-seg']);
+  return result;
 };

@@ -368,7 +368,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color: tomato;
+  background-color:tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -411,7 +411,6 @@ input.form-control:focus {
   margin: 5px;
   font-size: 14px;
 }
-
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
