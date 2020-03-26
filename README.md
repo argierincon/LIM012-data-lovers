@@ -8,4 +8,4 @@ Una vez definidos los usuarios con los que ibamos a trabajar desglozamos una a u
 
 Nuestro primer prototipo de baja fidelidad fue diseñado de la siguiente manera:
 
-![Texto alternativo](/img_readme/HU.jpeg)
+![1er prototipo de baja](./img_readme/HU.jpeg)
