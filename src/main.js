@@ -204,3 +204,78 @@ inputText.addEventListener('keyup', () => {
     `;
   }
 });
+
+// -->INDICACIONES
+// el div con el id=> pokeData1 está en el html
+// el id=>"pokeData1" fue creado simplemente para mostrar infoCalculations(showInfo), lo cual
+// se debe cambiar y/o eliminar   con createElement o attribute
+const pokeData1 = document.getElementById('pokeData1');
+
+const infoCalculations = (dataPokemon) => {
+  let showInfo = '';
+
+  dataPokemon.forEach((elem) => {
+    let specialAttack = '';
+
+    elem['special-attack'].forEach((attack, index) => {
+      specialAttack += `<tr>
+                          <td>${attack.name}</td>
+                          <td>${calculateSTAB(elem['special-attack'])[index]}</td>
+                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'])[index])[index].toFixed()}</td>
+                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+                        </tr>`;
+    });
+
+    const info = `    
+    <section id="infoBox" class="infoBox">
+      <p class="num">${elem.num}</p>
+      <div class="infoWindow">
+        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
+        <h4>${elem.name}</h4>
+        <p>${elem.about}</p>
+        
+        <table>
+          <tr>
+            <th>ATTACKS</th>
+            <th>STAB</th>
+            <th>DPS</th>
+            <th>EPS</th>
+          </tr>
+          ${specialAttack}
+        </table>
+
+        <div class="containerRW">
+        <div class="resistant">
+        <p class="title">RESISTENCIA</p>
+        <p>${elem.resistant}</p>
+        </div>
+
+        <div class="weaknesses">
+        <p class="title">DEBILIDAD</p>        
+        <p>${elem.weaknesses}</p>
+        </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>ALTURA</th>
+            <th>PESO</th>
+          </tr>
+          <tr>
+            <td>${elem.size.height}</td>
+            <td>${elem.size.weight}</td>
+          </tr>
+        </table>
+    
+      </div>
+    
+    </section>
+    
+    `;
+    showInfo += info;
+  });
+
+  pokeData1.innerHTML = showInfo;
+};
+
+infoCalculations(data.pokemon);

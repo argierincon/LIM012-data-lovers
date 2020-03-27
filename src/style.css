@@ -197,10 +197,13 @@ body {
 		0 0 100px rgba(34, 255, 14, 1),
 		0 0 140px rgba(145, 255, 0, 1),
 		0 0 180px rgb(145, 255, 0);
+  border: none;
+  border-radius: 10px;
 }
 
 .buttonInfo:hover {
   cursor: pointer;
+
   color: #FFFFFF;
   text-shadow:
 		0 0 5px rgb(0, 247, 255),
@@ -212,6 +215,7 @@ body {
 		0 0 100px rgba(0, 89, 255),
 		0 0 140px rgb(0, 89, 255),
 		0 0 180px rgb(0, 247, 255);
+/*   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50; */
 }
 
 /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
@@ -290,6 +294,7 @@ body {
   margin: 0px 0px 2px;
   font-weight: bold;
 }
+
 .footerStyle {
   background: black;
   height: 150px;
@@ -352,7 +357,7 @@ body {
   font-family: NanumG, sans-serif;
   font-size: 12px;
   position: relative;
-  top: 20px;
+  top: 14px;
 }
 
 .bold1 {
@@ -433,7 +438,7 @@ input.form-control:focus {
 }
 
 .hide {
-  display: block;
+  display: none;
 }
 
 .ocultar {
@@ -592,11 +597,11 @@ input.form-control:focus {
   .infoBox {
     width: 600px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
     margin: auto;
     font-family: NanumG, sans-serif;
-    /* margin: 20px; */
+    margin: 20px; */
   }
 
   .num {
