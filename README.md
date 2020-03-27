@@ -38,13 +38,16 @@ Lo testeamos nuevamente con 1 usuario y nos hizo notar que la barra donde mostr�
 
 Luego de trabajar con las primeras 8 historias que priorizamos, creamos una que consideramos que nos había faltado para completar el proyecto:
 
-COMO jugador con experiencia
-QUIERO visualizar el STAB, DPS, EPS de los ataques especiales
-PARA saber que ataque escoger al momento de combatir por un Gimnasio.
+**COMO** jugador con experiencia
+**QUIERO** visualizar el STAB, DPS, EPS de los ataques especiales
+**PARA** saber que ataque escoger al momento de combatir por un Gimnasio.
 
 Trabajamos en varios prototipos de baja fidelidad para poder llegar al término de ésta historia, ya que no solo queríamos dejarle visible al usuario los ataques y sus respectivas bonificaciones sino también información que le podía resultar relevante como los tipos a los que es vulnerable un Pokémon y a los que es resistente.
 
 ![4to prototipo de baja fidelidad](./img_readme/HU-9.1.jpeg)
+
+Incluso también estabamos considerando mostrar las evoluciones de los pokémon, pero notamos que ésto se desviaba un poco del objetivo de nuestra historia de usiario, así que lo simplificamos para centrarnos en la bonificacion de los ataques.
+
 ![5to prototipo de baja fidelidad](./img_readme/HU-9.2.png)
 
 Entre tantas ideas de mostrar ésta información procedimos a hacer varios diseños en alta fidelidad para escoger el más sencillo en intuitivo para nuestros usuarios:
@@ -53,8 +56,7 @@ Entre tantas ideas de mostrar ésta información procedimos a hacer varios dise�
 
 Consultamos a varios usuarios cuál le resultaba más fácil de entender y visualizar al momento de buscar éstos datos y se decidió usar el prototipo más simple con fondo negro.
 
-En el siguiente link podrán acceder a nuestro prototipo de alta fidelidad en [Figma](https://www.figma.com/file/wHKJrtfoKdeg3MppD8o1rK/POKEMON-GO?node-id=0%3A1)
-
+[Aquí](https://www.figma.com/file/wHKJrtfoKdeg3MppD8o1rK/POKEMON-GO?node-id=0%3A1) podrán acceder a nuestro prototipo de alta fidelidad en Figma.
 
 Y con ésta HU damos por terminado nuestro proyecto DATA LOVERS - Nueva Pokédex.
 
