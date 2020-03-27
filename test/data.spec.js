@@ -6,6 +6,7 @@ import {
   orderFilterRegion,
   filterFleeRate,
   filterSpawn,
+  searchText,
   calculateSTAB,
   calculateDPS,
   calculateEPS,
@@ -141,6 +142,23 @@ const fifthTestoBe = [
   },
 ];
 
+const searchTestExpect = [
+  {
+    num: 5,
+    name: 'charmeleon',
+    stats: { 'base-stamina': 151, 'max-cp': 1653, 'max-hp': 131 },
+    type: ['fire'],
+    generation: { name: 'kanto', num: 'generation i' },
+  },
+  {
+    num: 10,
+    name: 'caterpie',
+    stats: { 'base-stamina': 128, 'max-cp': 437, 'max-hp': 113 },
+    type: ['bug'],
+    generation: { name: 'kanto', num: 'generation i' },
+  },
+];
+
 describe('orderData', () => {
   it('is a function', () => {
     expect(typeof orderData).toBe('function');
@@ -185,8 +203,12 @@ describe('orderFilterRegion', () => {
     expect(typeof orderFilterRegion).toBe('function');
   });
 
-  it('Debe retornar [] si no encentra una región', () => {
+  it('Debe retornar [] al no encontrar coincidencias con la región ', () => {
     expect(orderFilterRegion(firstTestExpect, 'name', 'johto')).toEqual([]);
+  });
+
+  it('Debe retornar un arreglo de pokémmons que sean de la región kanto', () => {
+    expect(orderFilterRegion(firstTestExpect, 'name', 'kanto')).toEqual(firstTestExpect);
   });
 });
 
@@ -237,7 +259,6 @@ describe('filterSpawn', () => {
   });
 });
 
-// TEST DE LA FUNCIÓN STAB
 const arrayInput = [
   {
     type: 'fire',
@@ -260,13 +281,25 @@ const arrayInput = [
 
 const type1 = ['fire'];
 
+// TEST DE LA FUNCIÓN BUSCADOR
+describe('searchText', () => {
+  it('es una función', () => {
+    expect(typeof searchText).toBe('function');
+  });
+
+  it('deberia retornar un array de objetos que contengan la letra buscada (e)', () => {
+    expect(searchText(firstTestExpect, 'name', 'e')).toEqual(searchTestExpect);
+  });
+});
+
+// TEST DE LA FUNCIÓN STAB
 describe('calculateSTAB', () => {
   it('es una función', () => {
     expect(typeof calculateSTAB).toBe('function');
   });
 
   it('debe retornar [84, 84, 84] para STAB tipo fire', () => {
-    expect(calculateSTAB(arrayInput, type1, 'fire')).toEqual([84, 84, 84]);
+    expect(calculateSTAB(arrayInput, type1, arrayInput.type)).toEqual([84, 84, 84]);
   });
 });
 
