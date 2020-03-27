@@ -14,7 +14,7 @@ Una vez definidos los usuarios con los que ibamos a trabajar desglozamos una a u
 
 ![1er prototipo de baja fidelidad](./img_readme/HU.png)
 
-En un inicio nuestra idea era mostrarle al usuario una pantalla principal en la que se le visualizara una serie de tarjetas con iconos que hicieran referencia a las categorías mas top para los jugadores, y los filtros y pociones para ordenar se iban a mostrar en un desplegable con un ícono de embudo al que podían acceder solo al hacerle click.
+En un inicio nuestra idea era mostrarle al usuario una pantalla principal en la que se le visualizara una serie de tarjetas con iconos que hicieran referencia a las categorías mas top para los jugadores, y los filtros y pociones para o rdenar se iban a mostrar en un desplegable con un ícono de embudo al que podían acceder solo al hacerle click.
 Testeamos éste primer prototipo con al menos 2 usuarios y al asignarles tareas notamos que se trabaron al momento de querer ordenar o aplicar los filtros a los pokémon es así que tuvimos que replantearnos la pantalla que se iba a mostrar al momento de ingresar a la web y creamos nuestro segundo prototipo de baja fidelidad.
 
 ![2do prototipo de baja fidelidad](./img_readme/HU-1.png)
@@ -38,8 +38,8 @@ Lo testeamos nuevamente con 1 usuario y nos hizo notar que la barra donde mostr�
 
 Luego de trabajar con las primeras 8 historias que priorizamos, creamos una que consideramos que nos había faltado para completar el proyecto:
 
-**COMO** jugador con experiencia
-**QUIERO** visualizar el STAB, DPS, EPS de los ataques especiales
+**COMO** jugador con experiencia  
+**QUIERO** visualizar el STAB, DPS, EPS de los ataques especiales  
 **PARA** saber que ataque escoger al momento de combatir por un Gimnasio.
 
 Trabajamos en varios prototipos de baja fidelidad para poder llegar al término de ésta historia, ya que no solo queríamos dejarle visible al usuario los ataques y sus respectivas bonificaciones sino también información que le podía resultar relevante como los tipos a los que es vulnerable un Pokémon y a los que es resistente.
