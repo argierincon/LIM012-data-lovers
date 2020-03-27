@@ -74,6 +74,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
   font-family: NanumG, sans-serif;
+  cursor: pointer;
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
