@@ -16,9 +16,9 @@ const buttonUp = document.querySelector('.buttonUp');
 
 const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    buttonUp.classList.add('hide');
+    buttonUp.classList.add('showScrollUp');
   } else {
-    buttonUp.classList.remove('hide');
+    buttonUp.classList.remove('showScrollUp');
   }
 };
 
