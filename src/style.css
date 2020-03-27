@@ -289,7 +289,6 @@ body {
   margin: 0px 0px 2px;
   font-weight: bold;
 }
-
 .footerStyle {
   background: black;
   height: 150px;
@@ -428,7 +427,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color: tomato;
+  background-color:tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -505,6 +504,62 @@ input.form-control:focus {
     0 0 180px rgba(255, 0, 119, 1);
 }
 
+.ocultar {
+  visibility: hidden;
+}
+
+.mostrar {
+  visibility: visible;
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+}
+
+#exit {
+  position: relative;
+  font-size: 30px;
+  top: 80px;
+  left: 285px;
+  z-index: 1;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-shadow:
+		0 0 5px rgb(229, 255, 0),
+		0 0 10px rgba(229, 255, 0),
+		0 0 20px rgba(229, 255, 0),
+		0 0 40px rgb(255, 251, 0),
+		0 0 80px rgba(255, 251, 0, 1),
+		0 0 90px rgba(255, 251, 0, 1),
+		0 0 100px rgba(255, 251, 0, 1),
+		0 0 140px rgba(255, 251, 0, 1),
+		0 0 180px rgba(255, 251, 0, 1);
+}
+  
+#exit:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+  0 0 5px rgb(255, 0, 119),
+  0 0 10px rgba(255, 0, 119),
+  0 0 20px rgba(255, 0, 119),
+  0 0 40px rgb(255, 117, 186),
+  0 0 80px rgba(255, 117, 186, 1),
+  0 0 90px rgba(255, 117, 186, 1),
+  0 0 100px rgba(255, 117, 186, 1),
+  0 0 140px rgba(255, 0, 119, 1),
+  0 0 180px rgba(255, 0, 119, 1);
+}
+
 /* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
 .errorText {
   display: block;
@@ -527,7 +582,6 @@ input.form-control:focus {
   margin: 5px;
   font-size: 14px;
 }
-
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
