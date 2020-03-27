@@ -327,6 +327,19 @@ body {
   text-align: center;
 }
 
+.GeneralInformation>a:hover {
+  text-shadow:
+  0 0 5px rgb(229, 255, 0),
+  0 0 10px rgba(229, 255, 0),
+  0 0 20px rgba(229, 255, 0),
+  0 0 40px rgb(255, 251, 0),
+  0 0 80px rgba(255, 251, 0, 1),
+  0 0 90px rgba(255, 251, 0, 1),
+  0 0 100px rgba(255, 251, 0, 1),
+  0 0 140px rgba(255, 251, 0, 1),
+  0 0 180px rgba(255, 251, 0, 1);
+}
+
 .GeneralInformation>a:last-child {
   border: none;
 }

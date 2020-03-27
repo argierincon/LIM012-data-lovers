@@ -3,8 +3,8 @@
 Se trata de una web en la que los Jugadores de Pokémon GO podrán familiarizarse mejor con los pokémons de la primera y segunda generación.
 
 Para éste proyecto hemos considerado trabajar con dos tipos de usuarios:
-- Primero nos enfocamos principalmente en jugadores principiantes que buscan coleccionar el mayor numero de pokémons en el juego,
-- y luego nos enfocamos en jugadores experimentados que tienen como objetivo combatir con otros entrenadores y ganar gimnasios.
+- En primer lugar nos enfocamos en jugadores principiantes que buscan coleccionar el mayor numero de pokémons en el juego,
+- y luego en jugadores experimentados que tienen como objetivo combatir con otros entrenadores y ganar gimnasios.
 
 ##Proceso de Diseño
 
@@ -14,17 +14,17 @@ Nuestro primer prototipo de baja fidelidad fue diseñado de la siguiente manera:
 
 ![1er prototipo de baja fidelidad](./img_readme/HU.png)
 
-En un inicio nuestra idea era mostrarle al usuario una pantalla principal en la que se le mostrara una serie de tarjetas con iconos que hicieran referencia a las categorías mas top para los jugadores, y los filtros y pociones para ordenar se iban a mostrar en un desplegable con un ícono de embudo.
-Testeamos éste primer prototipo con al menos 2 usuarios y al asignarles tareas notamos que se trabaron al momento de querer ordenar o filtrar a los pokémon es así que tuvimos que replantearnos la pantalla que se iba a mostrar al momento de ingresar a la web y creamos nuestro segundo prototipo de baja fidelidad.
+En un inicio nuestra idea era mostrarle al usuario una pantalla principal en la que se le visualizara una serie de tarjetas con iconos que hicieran referencia a las categorías mas top para los jugadores, y los filtros y pociones para ordenar se iban a mostrar en un desplegable con un ícono de embudo al que podían acceder solo al hacerle click.
+Testeamos éste primer prototipo con al menos 2 usuarios y al asignarles tareas notamos que se trabaron al momento de querer ordenar o aplicar los filtros a los pokémon es así que tuvimos que replantearnos la pantalla que se iba a mostrar al momento de ingresar a la web y creamos nuestro segundo prototipo de baja fidelidad.
 
 ![2do prototipo de baja fidelidad](./img_readme/HU-1.png)
 
 Enfocándonos un poco más en nuestra 1era historia de usuario (Mostrar a los Pokémons ordenados por número de pokédex)  cambiamos la vista de la pantalla inicial de la web.
-Luego empezamos a trabajar en los prototipos de alta de las demás historias de usuario, quedando así:
+Luego empezamos a trabajar en los prototipos de alta fidelidad de las demás historias de usuario, quedando así:
 
 ![1er prototipo de alta fidelidad](./img_readme/prototipo1.png)
 
-Lo testeamos nuevamente con 1 usuario y nos hizo notar que la barra donde mostrábamos los filtros estaba muy ajustada y no era muy comodo a la vista ni mucho menos al intentar acceder a alguna opción con el dedo, ya que podía escoger otra por error. Así que rediseñamos el área de los filtros:
+Lo testeamos nuevamente con 1 usuario y nos hizo notar que la barra donde mostrábamos los filtros estaba muy ajustada y no era muy comodo a la vista ni mucho menos al intentar acceder a alguna opción con el dedo, ya que podía escoger otra por error. Así que rediseñamos el área de los filtros de la siguiente manera:
 
 ![3er prototipo de baja fidelidad](./img_readme/HU-2y3.png)
 
@@ -47,16 +47,25 @@ Trabajamos en varios prototipos de baja fidelidad para poder llegar al término 
 ![4to prototipo de baja fidelidad](./img_readme/HU-9.1.jpeg)
 ![5to prototipo de baja fidelidad](./img_readme/HU-9.2.png)
 
-Entre tantas ideas de mostrar ésta información procedimos a hacer varios diseños en altafidelidad para escoger el más sencillo para nuestros usuarios:
+Entre tantas ideas de mostrar ésta información procedimos a hacer varios diseños en alta fidelidad para escoger el más sencillo en intuitivo para nuestros usuarios:
 
 ![5to prototipo de alta fidelidad](./img_readme/prototipo5.png)
 
-Consultamos a varios usuarios cuál le resultaba más fácil de entender y visualizar al momento de buscar éstos datos y se decidió usar el prototipo más simple con fondo negro. Y con ésta HU damos por terminado nuestro proyecto DATA LOVERS - Nueva Pokédex.
+Consultamos a varios usuarios cuál le resultaba más fácil de entender y visualizar al momento de buscar éstos datos y se decidió usar el prototipo más simple con fondo negro.
 
-En el siguiente link se encuentra el prototipo de alta fidelidad en [Figma](https://www.figma.com/file/wHKJrtfoKdeg3MppD8o1rK/POKEMON-GO?node-id=0%3A1)
+En el siguiente link podrán acceder a nuestro prototipo de alta fidelidad en [Figma](https://www.figma.com/file/wHKJrtfoKdeg3MppD8o1rK/POKEMON-GO?node-id=0%3A1)
 
 
-## 9. Checklist
+Y con ésta HU damos por terminado nuestro proyecto DATA LOVERS - Nueva Pokédex.
+
+Quedando así:
+
+![Vista 1 de la web](./img_readme/vista1.gif)
+![vista 2 de la web](./img_readme/vista2.gif)
+
+Les invitamos a que visiten nuestra web, y si tienen alguna sugerencia llenar nuestra encuesta de **Ayudanos a mejorar!**  ubicada en la sección del pie de página. :)
+
+## 9. Checklist del Proyecto
 
 * [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
