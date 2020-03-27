@@ -16,9 +16,9 @@ const buttonUp = document.querySelector('.buttonUp');
 
 const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    buttonUp.classList.add('hide');
+    buttonUp.classList.add('showScrollUp');
   } else {
-    buttonUp.classList.remove('hide');
+    buttonUp.classList.remove('showScrollUp');
   }
 };
 
@@ -82,16 +82,16 @@ const infoCalculations = (elem) => {
         </div>
         </div>
 
-        <table>
-          <tr>
-            <th>ALTURA</th>
-            <th>PESO</th>
-          </tr>
-          <tr>
-            <td>${elem.size.height}</td>
-            <td>${elem.size.weight}</td>
-          </tr>
-        </table>
+        <div class="containerRW size">
+          <div>
+            <p>ALTURA</p>
+            <p>PESO</p>
+          </div>
+          <div>
+            <p>${elem.size.height}</p>
+            <p>${elem.size.weight}</p>
+          </div>
+        </div>
     
       </div>
     

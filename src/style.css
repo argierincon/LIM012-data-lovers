@@ -18,7 +18,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* background-size: 100% 100%; */
 }
 
 /* AREA GENERAL */
@@ -65,7 +64,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* ********** ESTA FUE LA QUE MODIFIQUÉ PARA EL ESTILO DE BOTONES EN ESCRITORIO ********* */
 /* SEXTO EL ESTILO DE LOS BOTONES */
 .selectStyle {
   width: 12%;
@@ -79,7 +77,6 @@ body {
 }
 
 /* SEPTIMO LA SECCION DE LOS CARDS (POSICIONES) */
-
 .data {
   display: flex;
   justify-content: space-evenly;
@@ -186,32 +183,35 @@ body {
   margin-top: 10px;
   font-size: 18px;
   font-family: NanumG, sans-serif;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   text-shadow:
-		0 0 5px rgb(145, 255, 0),
-		0 0 10px rgba(34, 255, 14),
-		0 0 20px rgba(34, 255, 14),
-		0 0 40px rgb(145, 255, 0),
-		0 0 80px rgba(145, 255, 0, 1),
-		0 0 90px rgba(34, 255, 14, 1),
-		0 0 100px rgba(34, 255, 14, 1),
-		0 0 140px rgba(145, 255, 0, 1),
-		0 0 180px rgb(145, 255, 0);
+    0 0 5px rgb(145, 255, 0),
+    0 0 10px rgba(34, 255, 14),
+    0 0 20px rgba(34, 255, 14),
+    0 0 40px rgb(145, 255, 0),
+    0 0 80px rgba(145, 255, 0, 1),
+    0 0 90px rgba(34, 255, 14, 1),
+    0 0 100px rgba(34, 255, 14, 1),
+    0 0 140px rgba(145, 255, 0, 1),
+    0 0 180px rgb(145, 255, 0);
+  border: none;
+  border-radius: 10px;
 }
 
 .buttonInfo:hover {
   cursor: pointer;
+
   color: #FFFFFF;
   text-shadow:
-		0 0 5px rgb(0, 247, 255),
-		0 0 10px rgba(0, 247, 255),
-		0 0 20px rgba(0, 89, 255),
-		0 0 40px rgb(0, 89, 255),
-		0 0 80px rgba(0, 247, 255, 1),
-		0 0 90px rgba(0, 247, 255, 1),
-		0 0 100px rgba(0, 89, 255),
-		0 0 140px rgb(0, 89, 255),
-		0 0 180px rgb(0, 247, 255);
+    0 0 5px rgb(0, 247, 255),
+    0 0 10px rgba(0, 247, 255),
+    0 0 20px rgba(0, 89, 255),
+    0 0 40px rgb(0, 89, 255),
+    0 0 80px rgba(0, 247, 255, 1),
+    0 0 90px rgba(0, 247, 255, 1),
+    0 0 100px rgba(0, 89, 255),
+    0 0 140px rgb(0, 89, 255),
+    0 0 180px rgb(0, 247, 255);
 }
 
 /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
@@ -222,7 +222,6 @@ body {
   align-items: center;
   margin: auto;
   font-family: NanumG, sans-serif;
-  margin: 40px;
 }
 
 .num {
@@ -245,7 +244,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   width: 650px;
   height: 640px;
@@ -327,6 +326,19 @@ body {
   text-align: center;
 }
 
+.GeneralInformation>a:hover {
+  text-shadow:
+  0 0 5px rgb(229, 255, 0),
+  0 0 10px rgba(229, 255, 0),
+  0 0 20px rgba(229, 255, 0),
+  0 0 40px rgb(255, 251, 0),
+  0 0 80px rgba(255, 251, 0, 1),
+  0 0 90px rgba(255, 251, 0, 1),
+  0 0 100px rgba(255, 251, 0, 1),
+  0 0 140px rgba(255, 251, 0, 1),
+  0 0 180px rgba(255, 251, 0, 1);
+}
+
 .GeneralInformation>a:last-child {
   border: none;
 }
@@ -352,7 +364,7 @@ body {
   font-family: NanumG, sans-serif;
   font-size: 12px;
   position: relative;
-  top: 20px;
+  top: 14px;
 }
 
 .bold1 {
@@ -432,8 +444,64 @@ input.form-control:focus {
   color: #fff;
 }
 
-.hide {
-  display: block;
+.showScrollUp {
+  display: block
+}
+
+.ocultar {
+  visibility: hidden;
+}
+
+.mostrar {
+  visibility: visible;
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+}
+
+#exit {
+  position: relative;
+  font-size: 30px;
+  top: 80px;
+  left: 285px;
+  z-index: 1;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-shadow:
+    0 0 5px rgb(229, 255, 0),
+    0 0 10px rgba(229, 255, 0),
+    0 0 20px rgba(229, 255, 0),
+    0 0 40px rgb(255, 251, 0),
+    0 0 80px rgba(255, 251, 0, 1),
+    0 0 90px rgba(255, 251, 0, 1),
+    0 0 100px rgba(255, 251, 0, 1),
+    0 0 140px rgba(255, 251, 0, 1),
+    0 0 180px rgba(255, 251, 0, 1);
+}
+
+#exit:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(255, 0, 119),
+    0 0 10px rgba(255, 0, 119),
+    0 0 20px rgba(255, 0, 119),
+    0 0 40px rgb(255, 117, 186),
+    0 0 80px rgba(255, 117, 186, 1),
+    0 0 90px rgba(255, 117, 186, 1),
+    0 0 100px rgba(255, 117, 186, 1),
+    0 0 140px rgba(255, 0, 119, 1),
+    0 0 180px rgba(255, 0, 119, 1);
 }
 
 .ocultar {
@@ -588,17 +656,6 @@ input.form-control:focus {
     margin: 8px;
   }
 
-  /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
-  .infoBox {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    font-family: NanumG, sans-serif;
-    /* margin: 20px; */
-  }
-
   .num {
     top: 20px;
     width: 35px;
@@ -660,6 +717,11 @@ input.form-control:focus {
     margin: 0px 0px 2px;
     font-weight: bold;
     text-align: center;
+  }
+
+  .size {
+    display: flex;
+    flex-direction: row;
   }
 
   .resistant,
@@ -728,18 +790,18 @@ input.form-control:focus {
       0 0 140px rgba(255, 251, 0, 1),
       0 0 180px rgba(255, 251, 0, 1);
   }
-    
+
   #exit:hover {
     color: rgb(255, 255, 255);
     text-shadow:
-    0 0 5px rgb(255, 0, 119),
-    0 0 10px rgba(255, 0, 119),
-    0 0 20px rgba(255, 0, 119),
-    0 0 40px rgb(255, 117, 186),
-    0 0 80px rgba(255, 117, 186, 1),
-    0 0 90px rgba(255, 117, 186, 1),
-    0 0 100px rgba(255, 117, 186, 1),
-    0 0 140px rgba(255, 0, 119, 1),
-    0 0 180px rgba(255, 0, 119, 1);
+      0 0 5px rgb(255, 0, 119),
+      0 0 10px rgba(255, 0, 119),
+      0 0 20px rgba(255, 0, 119),
+      0 0 40px rgb(255, 117, 186),
+      0 0 80px rgba(255, 117, 186, 1),
+      0 0 90px rgba(255, 117, 186, 1),
+      0 0 100px rgba(255, 117, 186, 1),
+      0 0 140px rgba(255, 0, 119, 1),
+      0 0 180px rgba(255, 0, 119, 1);
   }
 }
