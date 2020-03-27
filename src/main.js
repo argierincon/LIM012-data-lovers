@@ -12,8 +12,6 @@ import {
   calculateEPS,
 } from './data.js';
 
-
-const pokeData = document.getElementById('pokeData');
 const buttonUp = document.querySelector('.buttonUp');
 
 const scrollFunction = () => {
@@ -35,12 +33,79 @@ const backTotop = () => {
 
 buttonUp.addEventListener('click', backTotop);
 
-const dataCards = (dataPokemon) => {
-  let showData = '';
-  dataPokemon.forEach((element) => {
-    const pokeDat = `
+const pokeData = document.getElementById('pokeData');
 
-       <section class="data1"> 
+const infoCalculations = (elem) => {
+  const dataPok = document.createElement('div');
+  dataPok.setAttribute('class', 'dataPok');
+  let specialAttack = '';
+
+  elem['special-attack'].forEach((attack, index) => {
+    specialAttack += `<tr>
+                          <td>${attack.name}</td>
+                          <td>${calculateSTAB(elem['special-attack'], elem.type, attack.type)[index]}</td>
+                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type, attack.type)[index])[index].toFixed()}</td>
+                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+                        </tr>`;
+  });
+
+  const info = `    
+    <section id="infoBox" class="infoBox">
+    <i class="fas fa-times" id="exit"></i>
+    <p class="num">${elem.num}</p>    
+      <div class="infoWindow">
+        <img src="${elem.img}" alt="Pokémon" class="pokeImgInfo">
+        <h4>${elem.name}</h4>
+        <p>${elem.about}</p>
+        
+        <table>
+          <tr>
+            <th>ATTACKS</th>
+            <th>STAB</th>
+            <th>DPS</th>
+            <th>EPS</th>
+          </tr>
+          ${specialAttack}
+        </table>
+
+        <div class="containerRW">
+        <div class="resistant">
+        <p class="title">RESISTENCIA</p>
+        <p>${elem.resistant}</p>
+        </div>
+
+        <div class="weaknesses">
+        <p class="title">DEBILIDAD</p>        
+        <p>${elem.weaknesses}</p>
+        </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>ALTURA</th>
+            <th>PESO</th>
+          </tr>
+          <tr>
+            <td>${elem.size.height}</td>
+            <td>${elem.size.weight}</td>
+          </tr>
+        </table>
+    
+      </div>
+    
+    </section>
+    
+    `;
+  dataPok.innerHTML = info;
+  return dataPok;
+};
+
+const dataCards = (dataPokemon) => {
+  pokeData.innerHTML = '';
+  dataPokemon.forEach((element) => {
+    const sectionElement = document.createElement('section');
+    sectionElement.setAttribute('class', 'data1');
+    sectionElement.innerHTML = `
         <section class="card">  
          <section class="side front">    
           <section id="pokeCard" class="pokeCard">
@@ -58,18 +123,31 @@ const dataCards = (dataPokemon) => {
             <p><span class="typeTitle"><span class="bold1">Max-CP:</span> ${element.stats['max-cp']}</span></p>
             <p><span class="typeTitle"><span class="bold1">Huída:</span> ${parseFloat(element.encounter['base-flee-rate'] * 100).toFixed(2)}%</span></p>
             <p><span class="typeTitle"><span class="bold1">Aparición:</span> ${parseFloat(element['spawn-chance'] * 100).toFixed(2)}%</span></p>
-            <div class="pokeBack" id="pokeback"> <button class="buttonInfo">+</button> <img src="img/pokebola.png" alt="pokebola" class="backPoke"></div>
+            <div class="pokeBack" id="pokeback"> 
+            <i class="fas fa-plus-circle buttonInfo"></i> 
+            <img src="img/pokebola.png" alt="pokebola" class="backPoke">
+            </div>
             </section>
           </section>
          </section> 
         </section>
-       </section> 
-       `;
-    showData += pokeDat;
-  });
+         `;
 
-  pokeData.innerHTML = showData;
+    sectionElement.querySelector('.buttonInfo').addEventListener('click', (event) => {
+      event.preventDefault();
+      const pokeData1 = document.getElementById('pokeData1');
+      pokeData1.classList.add('mostrar');
+      pokeData1.appendChild(infoCalculations(element));
+      pokeData1.querySelector('#exit').addEventListener('click', () => {
+        pokeData1.classList.remove('mostrar');
+        pokeData1.innerHTML = '';
+      });
+    });
+
+    pokeData.appendChild(sectionElement);
+  });
 };
+
 dataCards(data.pokemon);
 
 const orderAlfabetic = document.querySelector('#order');

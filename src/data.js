@@ -86,10 +86,13 @@ export const searchText = (data, property, condition) => {
   return searchPkm;
 };
 
-export const calculateSTAB = (attackType) => {
+export const calculateSTAB = (attackType, pkmType, attack) => {
   const result = attackType.map((elem) => {
-    const res = elem['base-damage'];
-    return res * 1.2;
+    if (pkmType[0] === attack || pkmType[1] === attack) {
+      const res = elem['base-damage'];
+      return res * 1.2;
+    }
+    return elem['base-damage'];
   });
   return result;
 };

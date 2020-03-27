@@ -183,19 +183,39 @@ body {
 .buttonInfo {
   width: 20px;
   height: 20px;
-  background: linear-gradient(90deg, #FFCB06 1.35%, #FFFD00 102.81%);
   margin-top: 10px;
-  /* margin-top: 8px; mobile */
+  font-size: 18px;
+  font-family: NanumG, sans-serif;
+  color:rgb(255, 255, 255);
+  text-shadow:
+		0 0 5px rgb(145, 255, 0),
+		0 0 10px rgba(34, 255, 14),
+		0 0 20px rgba(34, 255, 14),
+		0 0 40px rgb(145, 255, 0),
+		0 0 80px rgba(145, 255, 0, 1),
+		0 0 90px rgba(34, 255, 14, 1),
+		0 0 100px rgba(34, 255, 14, 1),
+		0 0 140px rgba(145, 255, 0, 1),
+		0 0 180px rgb(145, 255, 0);
   border: none;
   border-radius: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: NanumG, sans-serif;
 }
 
 .buttonInfo:hover {
   cursor: pointer;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50;
+
+  color: #FFFFFF;
+  text-shadow:
+		0 0 5px rgb(0, 247, 255),
+		0 0 10px rgba(0, 247, 255),
+		0 0 20px rgba(0, 89, 255),
+		0 0 40px rgb(0, 89, 255),
+		0 0 80px rgba(0, 247, 255, 1),
+		0 0 90px rgba(0, 247, 255, 1),
+		0 0 100px rgba(0, 89, 255),
+		0 0 140px rgb(0, 89, 255),
+		0 0 180px rgb(0, 247, 255);
+/*   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 100%), #FBFE50; */
 }
 
 /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
@@ -332,7 +352,7 @@ body {
   padding-left: 10px;
 }
 
-/* OJO ÉSTE TAMBIÉN LO MIDIFIQUÉ */
+
 .typeTitle {
   font-family: NanumG, sans-serif;
   font-size: 12px;
@@ -400,7 +420,7 @@ input.form-control:focus {
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color: tomato;
+  background-color:tomato;
   color: white;
   cursor: pointer;
   outline: none;
@@ -419,6 +439,62 @@ input.form-control:focus {
 
 .hide {
   display: none;
+}
+
+.ocultar {
+  visibility: hidden;
+}
+
+.mostrar {
+  visibility: visible;
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+}
+
+#exit {
+  position: relative;
+  font-size: 30px;
+  top: 80px;
+  left: 285px;
+  z-index: 1;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-shadow:
+		0 0 5px rgb(229, 255, 0),
+		0 0 10px rgba(229, 255, 0),
+		0 0 20px rgba(229, 255, 0),
+		0 0 40px rgb(255, 251, 0),
+		0 0 80px rgba(255, 251, 0, 1),
+		0 0 90px rgba(255, 251, 0, 1),
+		0 0 100px rgba(255, 251, 0, 1),
+		0 0 140px rgba(255, 251, 0, 1),
+		0 0 180px rgba(255, 251, 0, 1);
+}
+  
+#exit:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+  0 0 5px rgb(255, 0, 119),
+  0 0 10px rgba(255, 0, 119),
+  0 0 20px rgba(255, 0, 119),
+  0 0 40px rgb(255, 117, 186),
+  0 0 80px rgba(255, 117, 186, 1),
+  0 0 90px rgba(255, 117, 186, 1),
+  0 0 100px rgba(255, 117, 186, 1),
+  0 0 140px rgba(255, 0, 119, 1),
+  0 0 180px rgba(255, 0, 119, 1);
 }
 
 /* FORMATO PARA EL MENSAJE DE ERROR DE BUSQUEDA */
@@ -443,7 +519,6 @@ input.form-control:focus {
   margin: 5px;
   font-size: 14px;
 }
-
 /* AQUÍ AGREGUÉ EL @MEDIA PARA MOVIL */
 @media only screen and (max-width:768px) {
   .headerStyle {
@@ -521,8 +596,8 @@ input.form-control:focus {
   /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
   .infoBox {
     width: 600px;
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
+    /* flex-direction: column;
     align-items: center;
     margin: auto;
     font-family: NanumG, sans-serif;
@@ -637,5 +712,39 @@ input.form-control:focus {
     font-size: 12px;
     color: #FFFFFF;
     font-family: Dosis, sans-serif;
+  }
+
+  #exit {
+    position: relative;
+    font-size: 20px;
+    top: 65px;
+    left: 130px;
+    z-index: 1;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-shadow:
+      0 0 5px rgb(229, 255, 0),
+      0 0 10px rgba(229, 255, 0),
+      0 0 20px rgba(229, 255, 0),
+      0 0 40px rgb(255, 251, 0),
+      0 0 80px rgba(255, 251, 0, 1),
+      0 0 90px rgba(255, 251, 0, 1),
+      0 0 100px rgba(255, 251, 0, 1),
+      0 0 140px rgba(255, 251, 0, 1),
+      0 0 180px rgba(255, 251, 0, 1);
+  }
+    
+  #exit:hover {
+    color: rgb(255, 255, 255);
+    text-shadow:
+    0 0 5px rgb(255, 0, 119),
+    0 0 10px rgba(255, 0, 119),
+    0 0 20px rgba(255, 0, 119),
+    0 0 40px rgb(255, 117, 186),
+    0 0 80px rgba(255, 117, 186, 1),
+    0 0 90px rgba(255, 117, 186, 1),
+    0 0 100px rgba(255, 117, 186, 1),
+    0 0 140px rgba(255, 0, 119, 1),
+    0 0 180px rgba(255, 0, 119, 1);
   }
 }
