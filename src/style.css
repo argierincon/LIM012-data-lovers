@@ -222,7 +222,6 @@ body {
   align-items: center;
   margin: auto;
   font-family: NanumG, sans-serif;
-  margin: 40px;
 }
 
 .num {
@@ -590,11 +589,6 @@ input.form-control:focus {
     margin: 8px;
   }
 
-  /* ESTILOS DE LA VENTANA CON INFORMACION ADICIONAL */
-  .infoBox {
-    width: 600px;
-  }
-
   .num {
     top: 20px;
     width: 35px;
@@ -656,6 +650,11 @@ input.form-control:focus {
     margin: 0px 0px 2px;
     font-weight: bold;
     text-align: center;
+  }
+
+  .size {
+    display: flex;
+    flex-direction: row;
   }
 
   .resistant,

@@ -41,12 +41,14 @@ const infoCalculations = (elem) => {
   let specialAttack = '';
 
   elem['special-attack'].forEach((attack, index) => {
-    specialAttack += `<tr>
-                          <td>${attack.name}</td>
-                          <td>${calculateSTAB(elem['special-attack'], elem.type, attack.type)[index]}</td>
-                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type, attack.type)[index])[index].toFixed()}</td>
-                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
-                        </tr>`;
+    specialAttack += `
+    <tr>
+      <td>${attack.name}</td>
+      <td>${calculateSTAB(elem['special-attack'], elem.type, attack.type)[index]}</td>
+      <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type, attack.type)[index])[index].toFixed()}</td>
+      <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+    </tr>
+`;
   });
 
   const info = `    
@@ -80,16 +82,16 @@ const infoCalculations = (elem) => {
         </div>
         </div>
 
-        <table>
-          <tr>
-            <th>ALTURA</th>
-            <th>PESO</th>
-          </tr>
-          <tr>
-            <td>${elem.size.height}</td>
-            <td>${elem.size.weight}</td>
-          </tr>
-        </table>
+        <div class="containerRW size">
+          <div>
+            <p>ALTURA</p>
+            <p>PESO</p>
+          </div>
+          <div>
+            <p>${elem.size.height}</p>
+            <p>${elem.size.weight}</p>
+          </div>
+        </div>
     
       </div>
     
