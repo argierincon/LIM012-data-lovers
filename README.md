@@ -6,11 +6,11 @@ Para éste proyecto hemos considerado trabajar con dos tipos de usuarios:
 - En primer lugar nos enfocamos en jugadores principiantes que buscan coleccionar el mayor numero de pokémons en el juego,
 - y luego en jugadores experimentados que tienen como objetivo combatir con otros entrenadores y ganar gimnasios.
 
-##Proceso de Diseño
+### Proceso de Diseño
 
 Una vez definidos los usuarios con los que ibamos a trabajar desglozamos una a una sus necesidades en un total [9 historias de usuario](https://trello.com/b/d4r6cbB8/data-lovers).
 
-Nuestro primer prototipo de baja fidelidad fue diseñado de la siguiente manera:
+**Nuestro primer prototipo de baja fidelidad fue diseñado de la siguiente manera:**
 
 ![1er prototipo de baja fidelidad](./img_readme/HU.png)
 
