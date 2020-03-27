@@ -28,7 +28,12 @@ lo testeamos nuevamente con 1 usuario y nos hizo ver que la barra donde mostráb
 
 ![3er prototipo de alta fidelidad](./img_readme/prototipo4.png)
 
- De barra con desplegables cambiamos a "botones" los botones que responderían a la segunsa y tercera historia de usuario, lo testeamos nuevamente y éste prototipo resultó ser más intutitivo que el anterior. Quedando así en alta fidelidad:
+ De barra con desplegables cambiamos a "botones", testeamos nuevamente con al menos 2 usuarios éste prototipo y resultó ser más intutitivo que el anterior, y luego pasamos a diseñarlo en versión Desktop.
+
+![4to prototipo de alta fidelidad](./img_readme/prototipo5.png)
+
+![5to prototipo de alta fidelidad](./img_readme/prototipo6.png)
+
 
 
 
