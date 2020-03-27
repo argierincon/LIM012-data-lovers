@@ -6,6 +6,9 @@ import {
   orderFilterRegion,
   filterFleeRate,
   filterSpawn,
+  calculateSTAB,
+  calculateDPS,
+  calculateEPS,
 } from '../src/data.js';
 
 const firstTestExpect = [
@@ -231,5 +234,60 @@ describe('filterSpawn', () => {
 
   it('debería retornar "zubat" para "highSpawn"', () => {
     expect(filterSpawn(data.pokemon, 'highSpawn')[0].name).toBe('zubat');
+  });
+});
+
+// TEST DE LA FUNCIÓN STAB
+const arrayInput = [
+  {
+    type: 'fire',
+    'base-damage': 70,
+    energy: -33,
+    'move-duration-seg': 3,
+  },
+  {
+    type: 'fire',
+    'base-damage': 70,
+    energy: -50,
+    'move-duration-seg': 2,
+  },
+  {
+    type: 'fire',
+    'base-damage': 70,
+    energy: -50,
+    'move-duration-seg': 2,
+  }];
+
+const type1 = ['fire'];
+
+describe('calculateSTAB', () => {
+  it('es una función', () => {
+    expect(typeof calculateSTAB).toBe('function');
+  });
+
+  it('debe retornar [84, 84, 84] para STAB tipo fire', () => {
+    expect(calculateSTAB(arrayInput, type1, 'fire')).toEqual([84, 84, 84]);
+  });
+});
+
+// TEST DE LA FUNCIÓN DPS
+describe('calculateDPS', () => {
+  it('es una función', () => {
+    expect(typeof calculateDPS).toBe('function');
+  });
+
+  it('debe retornar [1960, 2940, 2940]', () => {
+    expect(calculateDPS(arrayInput, 84)).toEqual([1960, 2940, 2940]);
+  });
+});
+
+// TEST DE LA FUNCIÓN EPS
+describe('calculateEPS', () => {
+  it('es una función', () => {
+    expect(typeof calculateEPS).toBe('function');
+  });
+
+  it('debe retornar [-11,-25,-25] al calcularEPS', () => {
+    expect(calculateEPS(arrayInput)).toEqual([-11, -25, -25]);
   });
 });

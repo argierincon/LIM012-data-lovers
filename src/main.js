@@ -41,12 +41,14 @@ const infoCalculations = (elem) => {
   let specialAttack = '';
 
   elem['special-attack'].forEach((attack, index) => {
-    specialAttack += `<tr>
-                          <td>${attack.name}</td>
-                          <td>${calculateSTAB(elem['special-attack'], elem.type, attack.type)[index]}</td>
-                          <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type, attack.type)[index])[index].toFixed()}</td>
-                          <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
-                        </tr>`;
+    specialAttack += `
+      <tr>
+        <td>${attack.name}</td>
+        <td>${calculateSTAB(elem['special-attack'], elem.type, attack.type)[index]}</td>
+        <td>${calculateDPS(elem['special-attack'], calculateSTAB(elem['special-attack'], elem.type, attack.type)[index])[index].toFixed()}</td>
+        <td>${calculateEPS(elem['special-attack'])[index].toFixed()}</td>
+      </tr>
+    `;
   });
 
   const info = `    
