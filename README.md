@@ -62,8 +62,12 @@ Y con ésta HU damos por terminado nuestro proyecto DATA LOVERS - Nueva Pokédex
 
 Quedando así:
 
+## Versión Desktop
 ![Vista 1 de la web](./img_readme/vista1.gif)
 ![vista 2 de la web](./img_readme/vista2.gif)
+
+## Versión Mobile
+![vista 2 de la web](./img_readme/vista_mobile.gif)
 
 Les invitamos a que visiten nuestra web, y si tienen alguna sugerencia llenar nuestra encuesta de **Ayudanos a mejorar!**  ubicada en la sección del pie de página. :)
 
